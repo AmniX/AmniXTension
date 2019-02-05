@@ -1,7 +1,6 @@
 package com.amnix.utils.extensions
 
 import android.os.AsyncTask
-import java.lang.Exception
 
 
 fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
@@ -9,7 +8,7 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
         runnable.invoke()
         return null
     }
-}
+}.execute()
 
 fun tryCatch(runnable: () -> Unit) = try {
     runnable()
@@ -29,3 +28,5 @@ fun loop(till: Int, loop: (i: Int) -> Unit) = repeat(till, loop)
 fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
     runnable(it)
 }
+
+inline val currentTimeMillis: Long get() = System.currentTimeMillis()
