@@ -11,4 +11,7 @@ fun Number.spFromPx() =
 
 fun Number.loop(runnable: (Int) -> Unit) = com.amnix.utils.extensions.loop(this.toInt(), runnable)
 
+/**
+ * if Number != 0 then return true else false so 0 == false else true
+ */
 fun Number.toBoolean() : Boolean = toInt() != 0
