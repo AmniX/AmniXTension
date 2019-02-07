@@ -8,19 +8,47 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
         runnable.invoke()
         return null
     }
-}.execute()
+}.execute()!!
 
-fun tryCatch(runnable: () -> Unit) = try {
+fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit) =
+    object : AsyncTask<Void, Void, T>() {
+        override fun doInBackground(vararg params: Void?): T? {
+            return try {
+                asyncRunnable()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                null
+            }
+        }
+
+        override fun onPostExecute(result: T?) {
+            super.onPostExecute(result)
+            awaitRunnable(result)
+        }
+
+    }.execute()!!
+
+fun tryOrIgnore(runnable: () -> Unit) = try {
     runnable()
-} catch (e: Exception) {
+} catch (ignore: Exception) {
 }
 
-fun tryCatch(runnable: () -> Unit, onCatch: ((e: Throwable?) -> Unit)? = null, onFinally: (() -> Unit)? = null) = try {
-    runnable.invoke()
-} catch (e: Throwable) {
-    onCatch?.invoke(e)
-} finally {
-    onFinally?.invoke()
+
+fun tryAndCatch(runnable: () -> Unit, onCatch: ((e: Throwable?) -> Unit)? = null, onFinally: (() -> Unit)? = null) =
+    try {
+        runnable.invoke()
+    } catch (e: Throwable) {
+        onCatch?.invoke(e)
+    } finally {
+        onFinally?.invoke()
+    }
+
+fun guardRun(runnable: () -> Unit): Boolean = try {
+    runnable()
+    true
+} catch (ignore: Exception) {
+    ignore.printStackTrace()
+    false
 }
 
 fun loop(till: Int, loop: (i: Int) -> Unit) = repeat(till, loop)
