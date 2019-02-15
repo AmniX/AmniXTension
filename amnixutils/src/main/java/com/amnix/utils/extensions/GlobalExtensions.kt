@@ -1,6 +1,8 @@
 package com.amnix.utils.extensions
 
 import android.os.AsyncTask
+import com.amnix.utils.extras.InMemoryCache
+import java.io.Closeable
 
 
 fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
@@ -33,6 +35,9 @@ fun tryOrIgnore(runnable: () -> Unit) = try {
 } catch (ignore: Exception) {
 }
 
+fun putInMemory(key: String, any: Any?) = InMemoryCache.put(key, any)
+
+fun getFromMemory(key: String): Any? = InMemoryCache.get(key)
 
 fun tryAndCatch(runnable: () -> Unit, onCatch: ((e: Throwable?) -> Unit)? = null, onFinally: (() -> Unit)? = null) =
     try {
@@ -43,6 +48,29 @@ fun tryAndCatch(runnable: () -> Unit, onCatch: ((e: Throwable?) -> Unit)? = null
         onFinally?.invoke()
     }
 
+fun closeSafely(vararg closeables: Closeable) {
+    closeables.forEach {
+        try {
+            it.close()
+        } catch (e: Error) {
+        }
+    }
+}
+
+fun isDeviceRooted(): Boolean {
+    val locs = arrayOf(
+        "/system/bin/", "/system/xbin/", "/sbin/", "/system/sd/xbin/",
+        "/system/bin/failsafe/", "/data/local/xbin/", "/data/local/bin/", "/data/local/",
+        "/system/sbin/", "/usr/bin/", "/vendor/bin/"
+    )
+    locs.forEach {
+        if ((it + "su").toFile().exists())
+            return true
+    }
+    return false
+
+}
+
 fun guardRun(runnable: () -> Unit): Boolean = try {
     runnable()
     true
@@ -52,6 +80,10 @@ fun guardRun(runnable: () -> Unit): Boolean = try {
 }
 
 fun loop(till: Int, loop: (i: Int) -> Unit) = repeat(till, loop)
+
+fun loopWhile(boolean: Boolean, loop: () -> Unit) {
+    while (boolean) loop()
+}
 
 fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
     runnable(it)

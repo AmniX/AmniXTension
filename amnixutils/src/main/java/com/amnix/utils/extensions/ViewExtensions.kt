@@ -1,5 +1,6 @@
 package com.amnix.utils.extensions
 
+import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -99,3 +100,9 @@ fun View.isVisible() = visibility == View.VISIBLE
 fun View.isGone() = visibility == View.GONE
 
 fun View.isInvisible() = visibility == View.INVISIBLE
+
+fun View.getActivity(): Activity? {
+    if(context is Activity)
+        return context as Activity
+    return null
+}

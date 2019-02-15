@@ -1,11 +1,14 @@
 package com.amnix.utils.extensions
 
+import android.Manifest
 import android.accounts.AccountManager
 import android.app.*
 import android.app.admin.DevicePolicyManager
 import android.bluetooth.BluetoothManager
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.hardware.SensorManager
 import android.hardware.display.DisplayManager
 import android.hardware.input.InputManager
@@ -23,6 +26,8 @@ import android.os.PowerManager
 import android.os.UserManager
 import android.os.Vibrator
 import android.os.storage.StorageManager
+import android.support.annotation.RequiresPermission
+import android.support.v4.content.ContextCompat
 import android.telephony.TelephonyManager
 import android.view.LayoutInflater
 import android.view.WindowManager
@@ -30,6 +35,7 @@ import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
 import android.widget.Toast
+import com.amnix.utils.extras.InMemoryCache
 
 inline val Context.screenWidth: Int
     get() = resources.displayMetrics.widthPixels
@@ -70,6 +76,40 @@ fun Context.showMultiPicker(
         )
     }.setPositiveButton("Done", null).show()
 
+@RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
+fun Context.isNetworkAvailable(): Boolean {
+    val info = getConnectivityManager().activeNetworkInfo
+    return info != null && info.isConnected
+}
+
+fun Context.checkSelfPermissions(vararg permissions: String): Boolean {
+    permissions.forEach {
+        if (ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED)
+            return false
+    }
+    return true
+}
+
+fun Context.isIntentResolvable(intent: Intent) =
+    packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY).isNotEmpty()
+
+fun Context.startApp(pName: String) =
+    if (isAppInstalled(pName)) startActivity(packageManager.getLaunchIntentForPackage(pName)) else {
+    }
+
+fun Context.isAppInstalled(packageName: String): Boolean {
+    return try {
+        packageManager.getApplicationInfo(packageName, 0)
+        true
+    } catch (ignore: Exception) {
+        false
+    }
+}
+
+
+
+fun Context.startActivity(cls: Class<out Activity>) = startActivity(Intent(this, cls))
+fun Context.startService(cls: Class<out Service>) = startService(Intent(this, cls))
 fun Context.getActivityManager() = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 fun Context.getAlarmManager() = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 fun Context.getAudioManager() = getSystemService(Context.AUDIO_SERVICE) as AudioManager

@@ -1,2 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.amnix.utils"/>
+          package="com.amnix.utils">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+</manifest>
