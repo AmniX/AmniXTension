@@ -26,6 +26,7 @@ import android.os.PowerManager
 import android.os.UserManager
 import android.os.Vibrator
 import android.os.storage.StorageManager
+import android.provider.MediaStore
 import android.support.annotation.RequiresPermission
 import android.support.v4.content.ContextCompat
 import android.telephony.TelephonyManager
@@ -35,7 +36,8 @@ import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
 import android.widget.Toast
-import com.amnix.utils.extras.InMemoryCache
+import com.amnix.utils.enums.ContentColums
+import com.amnix.utils.enums.ContentOrder
 
 inline val Context.screenWidth: Int
     get() = resources.displayMetrics.widthPixels
@@ -106,7 +108,86 @@ fun Context.isAppInstalled(packageName: String): Boolean {
     }
 }
 
+@RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+fun Context.getAllImages(
+    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    order: ContentOrder = ContentOrder.DESCENDING
+): List<String> {
+    val data = mutableListOf<String>()
+    val cursor = contentResolver.query(
+        MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+        arrayOf(MediaStore.Images.Media.DATA),
+        null,
+        null,
+        sortBy.s + " " + order.s
+    )
+    cursor?.let {
+        val columnIndexData = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        while (cursor.isClosed.not() && cursor.moveToNext()) {
+            cursor.getString(columnIndexData).let {
+                if (it.toFile().exists()) {
+                    data.add(it)
+                }
+            }
+        }
+        cursor.close()
+    }
+    return data.toList()
+}
 
+@RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+fun Context.getAllVideos(
+    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    order: ContentOrder = ContentOrder.DESCENDING
+): List<String> {
+    val data = mutableListOf<String>()
+    val cursor = contentResolver.query(
+        MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
+        arrayOf(MediaStore.Video.Media.DATA),
+        null,
+        null,
+        sortBy.s + " " + order.s
+    )
+    cursor?.let {
+        val columnIndexData = cursor.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
+        while (cursor.isClosed.not() && cursor.moveToNext()) {
+            cursor.getString(columnIndexData).let {
+                if (it.toFile().exists()) {
+                    data.add(it)
+                }
+            }
+        }
+        cursor.close()
+    }
+    return data.toList()
+}
+
+@RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+fun Context.getAllAudios(
+    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    order: ContentOrder = ContentOrder.DESCENDING
+): List<String> {
+    val data = mutableListOf<String>()
+    val cursor = contentResolver.query(
+        MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
+        arrayOf(MediaStore.Audio.Media.DATA),
+        null,
+        null,
+        sortBy.s + " " + order.s
+    )
+    cursor?.let {
+        val columnIndexData = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
+        while (cursor.isClosed.not() && cursor.moveToNext()) {
+            cursor.getString(columnIndexData).let {
+                if (it.toFile().exists()) {
+                    data.add(it)
+                }
+            }
+        }
+        cursor.close()
+    }
+    return data.toList()
+}
 
 fun Context.startActivity(cls: Class<out Activity>) = startActivity(Intent(this, cls))
 fun Context.startService(cls: Class<out Service>) = startService(Intent(this, cls))

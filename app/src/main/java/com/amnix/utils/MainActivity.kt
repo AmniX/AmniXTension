@@ -1,30 +1,24 @@
 package com.amnix.utils
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import com.amnix.utils.demo.R
-import com.amnix.utils.extensions.asyncAwait
-import com.amnix.utils.extensions.guardRun
-import com.amnix.utils.extensions.showMultiPicker
-import com.amnix.utils.logs.L
+import com.amnix.utils.extensions.async
+import com.amnix.utils.extensions.getAllAudios
 
 class MainActivity : Activity() {
 
+    @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        asyncAwait({
-
-        }, {
-            L.d(it)
-            L.d(Thread.currentThread().name)
-        })
-        if(guardRun { 100/0 })
-            L.d("Run Completed!")
-
-        showMultiPicker(arrayOf("One", "Two", "Three", "Four"), { it, checked ->
-            L.d(it)
-        })
+        async {
+            getAllAudios().forEach {
+                Log.d("Aman",it)
+            }
+        }
 
     }
 }
