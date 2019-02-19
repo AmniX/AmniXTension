@@ -5,8 +5,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import com.amnix.utils.demo.R
-import com.amnix.utils.extensions.async
-import com.amnix.utils.extensions.getAllAudios
+import com.amnix.utils.extensions.showTimePicker
 
 class MainActivity : Activity() {
 
@@ -14,10 +13,8 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        async {
-            getAllAudios().forEach {
-                Log.d("Aman",it)
-            }
+        showTimePicker (is24Hour = true){ hour, minute ->
+            Log.d("Aman","hour$hour minute$minute")
         }
     }
 }

@@ -41,6 +41,7 @@ import android.widget.Toast
 import com.amnix.utils.enums.ContentColumns
 import com.amnix.utils.enums.ContentOrder
 import java.io.File
+import java.util.*
 
 inline val Context.screenWidth: Int
     get() = resources.displayMetrics.widthPixels
@@ -175,6 +176,23 @@ fun Context.getAllVideos(
         cursor.close()
     }
     return data.toList()
+}
+
+fun Context.showDatePicker(year:Int,month:Int,day:Int, onDatePicked: (year:Int,month:Int,day:Int) -> Unit) {
+    DatePickerDialog(this, { view, year, month, dayOfMonth ->
+        onDatePicked(year, month, dayOfMonth)
+    }, year,month,day).show()
+}
+
+fun Context.showTimePicker(
+    currentDate: Date = currentDate(),
+    is24Hour: Boolean = false,
+    onDatePicked: (hour: Int, minute: Int) -> Unit
+) {
+    TimePickerDialog(this, { view, hourOfDay, minute ->
+        onDatePicked(hourOfDay, minute)
+
+    }, currentDate.hours, currentDate.minutes, is24Hour).show()
 }
 
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)

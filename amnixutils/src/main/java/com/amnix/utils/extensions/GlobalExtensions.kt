@@ -3,6 +3,7 @@ package com.amnix.utils.extensions
 import android.os.AsyncTask
 import com.amnix.utils.extras.InMemoryCache
 import java.io.Closeable
+import java.util.*
 
 
 fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
@@ -78,6 +79,8 @@ fun guardRun(runnable: () -> Unit): Boolean = try {
     ignore.printStackTrace()
     false
 }
+
+fun currentDate() = Date(System.currentTimeMillis())
 
 fun loop(till: Int, loop: (i: Int) -> Unit) = repeat(till, loop)
 
