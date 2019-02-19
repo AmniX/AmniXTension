@@ -267,7 +267,6 @@ class DeviceUtils private constructor() {
         }
 
         private fun getSystemPropertyByShell(propName: String): String {
-            val line: String
             var input: BufferedReader? = null
             try {
                 val p = Runtime.getRuntime().exec("getprop $propName")

@@ -1,6 +1,9 @@
 package com.amnix.utils.enums
 
-enum class ContentColums(internal val s: String) {
+/**
+ * Enum to choose between multiple column type
+ */
+enum class ContentColumns(internal val s: String) {
     SIZE ("_size"),
     DISPLAY_NAME ("_display_name"),
     TITLE ("title"),

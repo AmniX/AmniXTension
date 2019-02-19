@@ -19,6 +19,5 @@ class MainActivity : Activity() {
                 Log.d("Aman",it)
             }
         }
-
     }
 }

@@ -92,7 +92,9 @@ fun File.isImage(): Boolean {
     options.inJustDecodeBounds = true
     return try {
         val bitmap = BitmapFactory.decodeFile(absolutePath, options)
-        options.outWidth != -1 && options.outHeight != -1
+        val result = options.outWidth != -1 && options.outHeight != -1
+        bitmap.recycle()
+        return result
     } catch (e: Exception) {
         false
     }

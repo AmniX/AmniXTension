@@ -151,6 +151,7 @@ fun Bitmap.toGrayScale(recycle: Boolean): Bitmap? {
     return ret
 }
 
+fun Bitmap.decodeUrl()= null
 
 fun Bitmap.toByteArray(compressFormat: Bitmap.CompressFormat = Bitmap.CompressFormat.PNG): ByteArray {
     val stream = ByteArrayOutputStream()

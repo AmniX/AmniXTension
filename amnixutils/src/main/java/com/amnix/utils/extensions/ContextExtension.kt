@@ -17,6 +17,7 @@ import android.location.LocationManager
 import android.media.AudioManager
 import android.media.MediaRouter
 import android.net.ConnectivityManager
+import android.net.Uri
 import android.net.nsd.NsdManager
 import android.net.wifi.WifiManager
 import android.net.wifi.p2p.WifiP2pManager
@@ -27,6 +28,7 @@ import android.os.UserManager
 import android.os.Vibrator
 import android.os.storage.StorageManager
 import android.provider.MediaStore
+import android.provider.Settings
 import android.support.annotation.RequiresPermission
 import android.support.v4.content.ContextCompat
 import android.telephony.TelephonyManager
@@ -36,8 +38,9 @@ import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
 import android.widget.Toast
-import com.amnix.utils.enums.ContentColums
+import com.amnix.utils.enums.ContentColumns
 import com.amnix.utils.enums.ContentOrder
+import java.io.File
 
 inline val Context.screenWidth: Int
     get() = resources.displayMetrics.widthPixels
@@ -78,11 +81,23 @@ fun Context.showMultiPicker(
         )
     }.setPositiveButton("Done", null).show()
 
+fun Context.isGPSEnable(): Boolean = getLocationManager().isProviderEnabled(LocationManager.GPS_PROVIDER)
+
 @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
 fun Context.isNetworkAvailable(): Boolean {
     val info = getConnectivityManager().activeNetworkInfo
     return info != null && info.isConnected
 }
+
+fun Context.requestMediaScanner(url: String) {
+    val mediaScanIntent = Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE)
+    val contentUri = Uri.fromFile(File(url))
+    mediaScanIntent.data = contentUri
+    this.sendBroadcast(mediaScanIntent)
+}
+
+@RequiresPermission(Manifest.permission.VIBRATE)
+fun Context.vibrate(millis: Long) = getVibrator().vibrate(millis)
 
 fun Context.checkSelfPermissions(vararg permissions: String): Boolean {
     permissions.forEach {
@@ -110,7 +125,7 @@ fun Context.isAppInstalled(packageName: String): Boolean {
 
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
 fun Context.getAllImages(
-    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    sortBy: ContentColumns = ContentColumns.DATE_ADDED,
     order: ContentOrder = ContentOrder.DESCENDING
 ): List<String> {
     val data = mutableListOf<String>()
@@ -137,7 +152,7 @@ fun Context.getAllImages(
 
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
 fun Context.getAllVideos(
-    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    sortBy: ContentColumns = ContentColumns.DATE_ADDED,
     order: ContentOrder = ContentOrder.DESCENDING
 ): List<String> {
     val data = mutableListOf<String>()
@@ -164,7 +179,7 @@ fun Context.getAllVideos(
 
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
 fun Context.getAllAudios(
-    sortBy: ContentColums = ContentColums.DATE_ADDED,
+    sortBy: ContentColumns = ContentColumns.DATE_ADDED,
     order: ContentOrder = ContentOrder.DESCENDING
 ): List<String> {
     val data = mutableListOf<String>()
@@ -188,6 +203,11 @@ fun Context.getAllAudios(
     }
     return data.toList()
 }
+
+fun Context.getAndroidID() = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+fun Context.getDeviceID() = getAndroidID()
+@RequiresPermission(Manifest.permission.READ_PHONE_STATE)
+fun Context.getIMEI(slot: Int = -1) = getTelephonyManager().deviceId
 
 fun Context.startActivity(cls: Class<out Activity>) = startActivity(Intent(this, cls))
 fun Context.startService(cls: Class<out Service>) = startService(Intent(this, cls))

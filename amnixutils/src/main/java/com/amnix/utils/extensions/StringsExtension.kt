@@ -7,8 +7,10 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.Charset
 import java.security.MessageDigest
+import javax.crypto.Cipher
+import javax.crypto.spec.SecretKeySpec
 
-inline fun String.append(other: String) = this + other
+fun String.append(other: String) = this + other
 
 fun String.isPhone(): Boolean {
     val p = "^1([34578])\\d{9}\$".toRegex()
@@ -42,10 +44,50 @@ fun String.encodeToUrl(charSet: String = "UTF-8"): String = URLEncoder.encode(th
 
 fun String.decodeToUrl(charSet: String = "UTF-8"): String = URLDecoder.decode(this, charSet)
 
-fun String.encodeToBase64(charSet: String = "UTF-8"): String = Base64.encodeToString(this.toByteArray(), Base64.NO_WRAP)
+fun String.encodeToBase64(): String = Base64.encodeToString(this.toByteArray(), Base64.DEFAULT)
 
-fun String.decodeToBase64(charSet: String = "UTF-8"): String =
-    String(Base64.decode(this.toByteArray(), Base64.NO_WRAP), Charset.defaultCharset())
+fun String.decodeToBase64(): String =
+    String(Base64.decode(this.toByteArray(), Base64.DEFAULT), Charset.defaultCharset())
+
+
+fun String.toCamelCase(): String {
+    if (length == 0)
+        return this
+    val parts = split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+    var camelCaseString = ""
+    for (part in parts) camelCaseString = camelCaseString + part.toTitleCase() + " "
+    return camelCaseString
+}
+
+fun String.toTitleCase(): String {
+    return substring(0, 1).toUpperCase() + substring(1).toLowerCase()
+}
+
+fun String.encryptAES(key: String): String {
+    var crypted: ByteArray? = null
+    try {
+        val skey = SecretKeySpec(key.toByteArray(), "AES")
+        val cipher = Cipher.getInstance("AES/ECB/PKCS5Padding")
+        cipher.init(Cipher.ENCRYPT_MODE, skey)
+        crypted = cipher.doFinal(toByteArray())
+    } catch (e: Exception) {
+        println(e.toString())
+    }
+    return String(Base64.encode(crypted, Base64.DEFAULT))
+}
+
+fun String.decryptAES(key: String): String {
+    var output: ByteArray? = null
+    try {
+        val skey = SecretKeySpec(key.toByteArray(), "AES")
+        val cipher = Cipher.getInstance("AES/ECB/PKCS5Padding")
+        cipher.init(Cipher.DECRYPT_MODE, skey)
+        output = cipher.doFinal(Base64.decode(this, Base64.DEFAULT))
+    } catch (e: Exception) {
+        println(e.toString())
+    }
+    return output?.let { String(it) } ?: ""
+}
 
 fun String.encodeToBinary(): String {
     val stringBuilder = StringBuilder()
