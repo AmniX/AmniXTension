@@ -29,13 +29,17 @@ fun Activity.startActivityForResults(cls: Class<out Activity>, requestCode: Int,
 }
 
 /**
- * Returns the StatusBarHeight
+ * Returns the StatusBarHeight in Pixels
  */
 fun Activity.getStatusBarHeight(): Int {
     val rect = Rect()
     window.decorView.getWindowVisibleDisplayFrame(rect)
     return rect.top
 }
+
+/**
+ * Returns the NavigationBar Height in Pixels
+ */
 
 fun Activity.getNavigationBarSize(context: Context): Point {
     val appUsableSize = getAppUsableScreenSize(context)
@@ -48,21 +52,32 @@ fun Activity.getNavigationBarSize(context: Context): Point {
     } else Point()
 }
 
+/**
+ * Set Status Bar Color if Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
+ */
 fun Activity.setStatusBarColor(@ColorInt color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         window.statusBarColor = color
 }
-
+/**
+ * Set Navigation Bar Color if Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
+ */
 fun Activity.setNavigationBarColor(@ColorInt color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         window.navigationBarColor = color
 }
+/**
+ * Set Navigation Bar Divider Color if Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+ */
 
 fun Activity.setNavigationBarDividerColor(@ColorInt color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
         window.navigationBarDividerColor = color
 }
 
+/**
+ * add an Callback to ViewTreeObserver which let the developer know when contentView is inflated to the Activity Content
+ */
 fun Activity.onViewInflated(onInflated: () -> Unit) {
     window.decorView.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
@@ -70,6 +85,16 @@ fun Activity.onViewInflated(onInflated: () -> Unit) {
             onInflated()
         }
     })
+}
+
+/**
+ * get #rootVIew of the Activity
+ */
+fun Activity.getRootView(): View? {
+    var rootVIew = findViewById<View>(android.R.id.content)
+    if (rootVIew == null)
+        rootVIew = window.decorView.findViewById(android.R.id.content)
+    return rootVIew
 }
 
 //Private Methods are below
@@ -99,11 +124,4 @@ private fun getRealScreenSize(context: Context): Point {
 
     }
     return size
-}
-
-fun Activity.getRootView(): View? {
-    var rootVIew = findViewById<View>(android.R.id.content)
-    if (rootVIew == null)
-        rootVIew = window.decorView.findViewById(android.R.id.content)
-    return rootVIew
 }

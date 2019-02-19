@@ -10,10 +10,15 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 
-
-
-
+/**
+ * Returns Bitmap Width And Height Presented as a Pair of two Int where pair.first is width and pair.second is height
+ */
 fun Bitmap.size(): Pair<Int, Int> = Pair(width, height)
+
+/**
+ * Save Bitmap to the provided Path.
+ * Make Sure you have the permission to write the file to.
+ */
 @RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
 fun Bitmap.save(
     to: String,
@@ -30,6 +35,11 @@ fun Bitmap.save(
         true
     }
 
+/**
+ * Save Bitmap to the provided Path <b>Asynchronously</b> and private a callback when its done.
+ *
+ * Make Sure you have the permission to write the file to.
+ */
 @RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
 fun Bitmap.saveAsync(
     to: String,
@@ -40,9 +50,18 @@ fun Bitmap.saveAsync(
     this.save(to, format, quality, recycle)
 }
 
+/**
+ * Crop image easily.
+ * @param r is the Rect to crop from the Bitmap
+ *
+ * @return cropped #android.graphics.Bitmap
+ */
 fun Bitmap.crop(r: Rect) =
     if (Rect(0, 0, width, height).contains(r)) Bitmap.createBitmap(this, r.left, r.top, r.width(), r.height()) else null
 
+/**
+ * Converts Bitmap to Base64 Easily.
+ */
 fun Bitmap.toBase64(compressFormat: Bitmap.CompressFormat = Bitmap.CompressFormat.PNG): String {
     val result: String
     val baos = ByteArrayOutputStream()
@@ -56,7 +75,10 @@ fun Bitmap.toBase64(compressFormat: Bitmap.CompressFormat = Bitmap.CompressForma
     return result
 }
 
-fun Bitmap.resize(w: Number, h: Number): Bitmap {
+/**
+ * resize Bitmap With a ease. Just call [resize] with the [w] and [h] and you will get new Resized Bitmap
+ */
+fun Bitmap.resize(w: Number, h: Number, recycle:Boolean = true): Bitmap {
     val width = width
     val height = height
     val scaleWidth = w.toFloat() / width
@@ -64,11 +86,17 @@ fun Bitmap.resize(w: Number, h: Number): Bitmap {
     val matrix = Matrix()
     matrix.postScale(scaleWidth, scaleHeight)
     if (width > 0 && height > 0) {
-        return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
+        val newBitmap = Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
+        if (recycle && isRecycled.not() && newBitmap != this)
+            recycle()
+        return newBitmap
     }
     return this
 }
 
+/**
+ * rotate Bitmap With a ease. Just call [rotateTo] with the [angle] and you will get new Resized Bitmap
+ */
 fun Bitmap.rotateTo(angle: Float, recycle: Boolean = true): Bitmap {
     val matrix = Matrix()
     matrix.setRotate(angle)
@@ -78,6 +106,9 @@ fun Bitmap.rotateTo(angle: Float, recycle: Boolean = true): Bitmap {
     return newBitmap
 }
 
+/**
+ * Makes the Bitmap Round with given params
+ */
 fun Bitmap.toRound(borderSize: Float = 0f, borderColor: Int = 0, recycle: Boolean = true): Bitmap {
     val width = width
     val height = height
@@ -109,6 +140,9 @@ fun Bitmap.toRound(borderSize: Float = 0f, borderColor: Int = 0, recycle: Boolea
     return ret
 }
 
+/**
+ * Blend the Bitmap Corners to Round with Given radius
+ */
 fun Bitmap.toRoundCorner(
     radius: Float,
     borderSize: Float = 0f,
@@ -138,6 +172,9 @@ fun Bitmap.toRoundCorner(
     return ret
 }
 
+/**
+ * Want the Image to GreyScale? Just call [toGrayScale] and get the grey Image.
+ */
 fun Bitmap.toGrayScale(recycle: Boolean): Bitmap? {
     val ret = Bitmap.createBitmap(width, height, config)
     val canvas = Canvas(ret)
@@ -151,10 +188,67 @@ fun Bitmap.toGrayScale(recycle: Boolean): Bitmap? {
     return ret
 }
 
-fun Bitmap.decodeUrl()= null
-
+/**
+ * Converts Bitmap to ByteArray Easily.
+ */
 fun Bitmap.toByteArray(compressFormat: Bitmap.CompressFormat = Bitmap.CompressFormat.PNG): ByteArray {
     val stream = ByteArrayOutputStream()
     compress(compressFormat, 100, stream)
     return stream.toByteArray()
+}
+
+/**
+ * Compress Bitmap by Sample Size
+ */
+fun Bitmap.compressBySampleSize(
+    maxWidth: Int,
+    maxHeight: Int,
+    recycle: Boolean = true
+): Bitmap? {
+    val options = BitmapFactory.Options()
+    options.inJustDecodeBounds = true
+    val baos = ByteArrayOutputStream()
+    this.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+    val bytes = baos.toByteArray()
+    BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)
+    options.inSampleSize = calculateInSampleSize(options, maxWidth, maxHeight)
+    options.inJustDecodeBounds = false
+    if (recycle && !isRecycled) recycle()
+    return BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)
+}
+
+/**
+ * Compress Bitmap by Quality
+ */
+fun Bitmap.compressByQuality(
+    quality: Int,
+    recycle: Boolean = true
+): Bitmap? {
+    val baos = ByteArrayOutputStream()
+    compress(Bitmap.CompressFormat.JPEG, quality, baos)
+    val bytes = baos.toByteArray()
+    if (recycle && !isRecycled) recycle()
+    return BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+}
+
+
+//***********Private Methods Are below**********************
+private fun calculateInSampleSize(
+    options: BitmapFactory.Options,
+    maxWidth: Int,
+    maxHeight: Int
+): Int {
+    var height = options.outHeight
+    var width = options.outWidth
+    var inSampleSize = 1
+    do {
+        width = width shr 1
+        height = height shr 1
+        val bool = width >= maxWidth && height >= maxHeight
+        if (bool.not())
+            break
+        else
+            inSampleSize = inSampleSize shl 1
+    } while (true)
+    return inSampleSize
 }

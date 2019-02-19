@@ -21,12 +21,29 @@ object InMemoryCache {
      */
     fun get(key: String): Any? = map[key]
 
+    /**
+     * check if have the value on the Given Key
+     */
     fun have(key: String) = map.containsKey(key)
 
-    fun clear() = map.clear()::class.java.getDeclaredMethod("",null,null)
+    /**
+     * check if have the value on the Given Key
+     */
+    fun contains(key: String) = have(key)
 
+    /**
+     * Clear all the InMemoryCache
+     */
+    fun clear() = map.clear()::class.java.getDeclaredMethod("", null, null)
+
+    /**
+     * get All The InMemoryCache
+     */
     fun getAll() = map.toMap()
 
+    /**
+     * get All the InMemoryCache of an Specific Type.
+     */
     fun getAllByType(clazz: Class<*>) = getAll().filter {
         it.value != null && it.value!!::class.java == clazz
     }

@@ -10,46 +10,75 @@ import java.security.MessageDigest
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
+/**
+ * Append String to Current
+ */
 fun String.append(other: String) = this + other
 
+/**
+ * True if String is a Phone Number
+ */
 fun String.isPhone(): Boolean {
     val p = "^1([34578])\\d{9}\$".toRegex()
     return matches(p)
 }
 
+/**
+ * True if Email
+ */
 fun String.isEmail(): Boolean {
     val p = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)\$".toRegex()
     return matches(p)
 }
 
+/**
+ * True if Numeric
+ */
 fun String.isNumeric(): Boolean {
     val p = "^[0-9]+$".toRegex()
     return matches(p)
 }
 
+/**
+ * returns the md5 of the String
+ */
 fun String.md5() = encrypt(this, "MD5")
 
+/**
+ * return SHA1 of the String
+ */
 fun String.sha1() = encrypt(this, "SHA-1")
 
-fun String.isIdcard(): Boolean {
-    val p18 =
-        "^[1-9]\\d{5}(18|19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]\$".toRegex()
-    val p15 = "^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{2}[0-9Xx]\$".toRegex()
-    return matches(p18) || matches(p15)
-}
-
+/**
+ * Returns a new File Object with the Current String as Its path
+ */
 fun String.toFile() = File(this)
 
+/**
+ * Encode String to URL
+ */
 fun String.encodeToUrl(charSet: String = "UTF-8"): String = URLEncoder.encode(this, charSet)
 
+/**
+ * Decode String to URL
+ */
 fun String.decodeToUrl(charSet: String = "UTF-8"): String = URLDecoder.decode(this, charSet)
+
+/**
+ * Encode To Base64
+ */
 
 fun String.encodeToBase64(): String = Base64.encodeToString(this.toByteArray(), Base64.DEFAULT)
 
+/**
+ * Decode to Base64
+ */
 fun String.decodeToBase64(): String =
     String(Base64.decode(this.toByteArray(), Base64.DEFAULT), Charset.defaultCharset())
 
-
+/**
+ * Converts the String to Camel Case
+ */
 fun String.toCamelCase(): String {
     if (length == 0)
         return this
@@ -59,10 +88,16 @@ fun String.toCamelCase(): String {
     return camelCaseString
 }
 
+/**
+ * Converts the String to Title Case
+ */
 fun String.toTitleCase(): String {
     return substring(0, 1).toUpperCase() + substring(1).toLowerCase()
 }
 
+/**
+ * Encrypt String to AES with the specific Key
+ */
 fun String.encryptAES(key: String): String {
     var crypted: ByteArray? = null
     try {
@@ -75,7 +110,9 @@ fun String.encryptAES(key: String): String {
     }
     return String(Base64.encode(crypted, Base64.DEFAULT))
 }
-
+/**
+ * Decrypt String to AES with the specific Key
+ */
 fun String.decryptAES(key: String): String {
     var output: ByteArray? = null
     try {
@@ -89,6 +126,9 @@ fun String.decryptAES(key: String): String {
     return output?.let { String(it) } ?: ""
 }
 
+/**
+ * encode The String to Binary
+ */
 fun String.encodeToBinary(): String {
     val stringBuilder = StringBuilder()
     toCharArray().forEach {
@@ -98,6 +138,9 @@ fun String.encodeToBinary(): String {
     return stringBuilder.toString()
 }
 
+/**
+ * Decode the String from binary
+ */
 fun String.deCodeToBinary(): String {
     val stringBuilder = StringBuilder()
     split(" ").forEach {
@@ -106,12 +149,15 @@ fun String.deCodeToBinary(): String {
     return stringBuilder.toString()
 }
 
+/**
+ * Save String to a Given File
+ */
 fun String.saveToFile(file: File) = FileOutputStream(file).bufferedWriter().use {
     it.write(this)
     it.flush()
     it.close()
 }
-
+// Private Method Below....
 private fun encrypt(string: String?, type: String): String {
     val bytes = MessageDigest.getInstance(type).digest(string!!.toByteArray())
     return bytes2Hex(bytes)

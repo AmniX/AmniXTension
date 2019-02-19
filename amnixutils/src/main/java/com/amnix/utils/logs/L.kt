@@ -14,6 +14,9 @@ object L {
     private val codeLocation: CodeLocation
         get() = getCodeLocation(3)
 
+    /**
+     * Similar of Log.d but with many params
+     */
     fun d(vararg objects: Any?) {
         if (SHOW_LOGS)
             for (objs in objects) {
@@ -22,6 +25,9 @@ object L {
             }
     }
 
+    /**
+     * Log the Json into the Logcat as a DEBUG Log
+     */
     fun json(json: Any?) {
         if (SHOW_LOGS)
             when (json) {
@@ -40,31 +46,42 @@ object L {
 
     }
 
+    /**
+     * Similar of Log.e but with many params
+     */
     fun e(vararg objects: Any?) {
         if (SHOW_LOGS)
             for (objs in objects) {
                 Log.e(codeLocation.toString(), if (objs == null) "null" else "" + objs)
             }
     }
-
+    /**
+     * Similar of Log.i but with many params
+     */
     fun i(vararg objects: Any?) {
         if (SHOW_LOGS)
             for (`object` in objects)
                 Log.i(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
     }
-
+    /**
+     * Similar of Log.v but with many params
+     */
     fun v(vararg objects: Any?) {
         if (SHOW_LOGS)
             for (`object` in objects)
                 Log.v(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
     }
-
+    /**
+     * Similar of Log.w but with many params
+     */
     fun w(vararg objects: Any?) {
         if (SHOW_LOGS)
             for (`object` in objects)
                 Log.w(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
     }
-
+    /**
+     * Similar of Log.wtf but with many params
+     */
     fun wtf(vararg throwables: Throwable?) {
         if (SHOW_LOGS)
             for (throwable in throwables) {
