@@ -8,7 +8,7 @@ A Kotlin extensions + Utils library with Bunch of Help inbuild.
 [ ![Download](https://api.bintray.com/packages/amnix/AmniXUtils/AmniXtension/images/download.svg) ](https://bintray.com/amnix/AmniXUtils/AmniXtension/_latestVersion)
 
 [Documentation](docs/-amni-xtension/index.md) |
-[FileTree](docs/fileTree.md) | [FAQ's](#) | [RoadMap](#) | [Demo](#) |
+[FileTree](docs/fileTree.md) | [FAQ's](#) | [RoadMap](#) | [Demo](https://github.com/AmniX/AmniXTension#demo) |
 [Suggestion](https://github.com/AmniX/AmniXTension/issues/new) |
 [Bugs](https://github.com/AmniX/AmniXTension/issues)
 
@@ -23,17 +23,15 @@ AmniXTension is On Jcenter, Simply implementat the library and simplify Your Lif
  ```
  
 # Demo
-Wanna See Some Demo?
- 
-## collapsible markdown?
+Wanna See Some Demo? Few are mention, Many to explore.
 
-<details><summary>CLICK ME</summary>
+<details><summary>Save Bitmap</summary>
 <p>
 
-#### yes, even hidden code blocks!
-
-```python
-print("hello world!")
+```kotlin
+Bitmap.save("/path/..../image.jpg")
+OR
+Bitmap.saveAsync("/path/..../image.jpg")
 ```
 
 </p>
