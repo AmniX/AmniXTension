@@ -2,7 +2,7 @@
 
 # AmniXtension
 
-`object AmniXtension`
+`object AmniXtension` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/AmniXtension.kt#L6)
 
 The Class to configure the Configurable variables for further Process.
 

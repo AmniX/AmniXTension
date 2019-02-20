@@ -2,7 +2,7 @@
 
 # DISPLAY_NAME
 
-`DISPLAY_NAME`
+`DISPLAY_NAME` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L14)
 
 the displayName Column
 

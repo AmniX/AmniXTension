@@ -2,7 +2,7 @@
 
 # asyncAwait
 
-`fun <T> asyncAwait(asyncRunnable: () -> `[`T`](async-await.md#T)`?, awaitRunnable: (result: `[`T`](async-await.md#T)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): AsyncTask<`[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`T`](async-await.md#T)`>`
+`fun <T> asyncAwait(asyncRunnable: () -> `[`T`](async-await.md#T)`?, awaitRunnable: (result: `[`T`](async-await.md#T)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): AsyncTask<`[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`T`](async-await.md#T)`>` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/GlobalExtensions.kt#L26)
 
 Want to run some code on another thread?
 

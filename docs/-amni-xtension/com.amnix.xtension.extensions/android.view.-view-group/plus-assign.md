@@ -2,7 +2,7 @@
 
 # plusAssign
 
-`operator fun ViewGroup.plusAssign(child: View): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`operator fun ViewGroup.plusAssign(child: View): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ViewGroupExtensions.kt#L13)
 
 Add View with the (+) Operator
 

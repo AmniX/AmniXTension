@@ -2,7 +2,7 @@
 
 # ContentColumns
 
-`enum class ContentColumns`
+`enum class ContentColumns` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L6)
 
 Enum to choose between multiple column type
 

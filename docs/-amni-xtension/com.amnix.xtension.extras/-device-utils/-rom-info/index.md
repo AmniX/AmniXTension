@@ -2,7 +2,7 @@
 
 # RomInfo
 
-`class RomInfo`
+`class RomInfo` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/DeviceUtils.kt#L335)
 
 Model Class for RomInfo Provides [name](name.md) and [version](version.md) of ROM
 

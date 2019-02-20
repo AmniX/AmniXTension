@@ -2,7 +2,7 @@
 
 # getBluetoothManager
 
-`fun Context.getBluetoothManager(): BluetoothManager`
+`fun Context.getBluetoothManager(): BluetoothManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L490)
 
 get BlueTooth Manager
 

@@ -2,7 +2,7 @@
 
 # startActivityForResults
 
-`fun Activity.startActivityForResults(cls: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>, requestCode: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, extra: Bundle? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun Activity.startActivityForResults(cls: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<out Activity>, requestCode: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, extra: Bundle? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L23)
 
 startsActivityForResult With a Class Name and Extra Data Followed by RequestCode
 

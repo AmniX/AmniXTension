@@ -2,7 +2,7 @@
 
 # BenchMarkUtils
 
-`class BenchMarkUtils`
+`class BenchMarkUtils` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/BenchMarkUtils.kt#L21)
 
 This Class is Responsible to BenchMark Any Lines of Code and Its Execution Time in Logcat.
 

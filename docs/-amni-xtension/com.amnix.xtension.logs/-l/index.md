@@ -2,7 +2,7 @@
 
 # L
 
-`object L`
+`object L` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/logs/L.kt#L13)
 
 A Custom Log Class for the developer Ease
 

@@ -2,7 +2,7 @@
 
 # clear
 
-`fun clear(): `[`Method`](http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Method.html)
+`fun clear(): `[`Method`](http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Method.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/InMemoryCache.kt#L37)
 
 Clear all the InMemoryCache
 

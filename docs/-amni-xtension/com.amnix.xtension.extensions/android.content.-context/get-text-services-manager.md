@@ -2,7 +2,7 @@
 
 # getTextServicesManager
 
-`fun Context.getTextServicesManager(): TextServicesManager`
+`fun Context.getTextServicesManager(): TextServicesManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L455)
 
 get TextService Manager
 

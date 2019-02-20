@@ -34,8 +34,8 @@ dokka {
     outputFormat = 'gfm'
     outputDirectory = "docs"
     linkMapping {
-        dir = "$rootDir/amnixutils/src/main/java"
-        url = "https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java"
+        dir = "$rootDir/AmniXtension/src/main/java"
+        url = "https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java"
         suffix = "#L"
     }
 }

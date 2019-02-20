@@ -2,7 +2,7 @@
 
 # open
 
-`fun `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.open(): `[`InputStream`](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)
+`fun `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.open(): `[`InputStream`](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/FileExtensions.kt#L25)
 
 Open File in InputStream
 

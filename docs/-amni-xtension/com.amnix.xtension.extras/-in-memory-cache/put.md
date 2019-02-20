@@ -2,7 +2,7 @@
 
 # put
 
-`fun put(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, value: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`InMemoryCache`](index.md)
+`fun put(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, value: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`InMemoryCache`](index.md) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/InMemoryCache.kt#L14)
 
 put [key](put.md#com.amnix.xtension.extras.InMemoryCache$put(kotlin.String, kotlin.Any)/key) &amp; [value](put.md#com.amnix.xtension.extras.InMemoryCache$put(kotlin.String, kotlin.Any)/value) where
 

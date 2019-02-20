@@ -2,7 +2,7 @@
 
 # getClipboardManager
 
-`fun Context.getClipboardManager(): ClipboardManager`
+`fun Context.getClipboardManager(): ClipboardManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L340)
 
 get ClipBoard Manager
 
