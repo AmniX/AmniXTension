@@ -24,67 +24,27 @@ fun File.readToString(): String {
  */
 fun File.open(): InputStream = FileInputStream(this)
 
-/**
- * Cope File to destination
- */
-fun File.copy(dest: File) {
-    var fi: FileInputStream? = null
-    var fo: FileOutputStream? = null
-    var ic: FileChannel? = null
-    var oc: FileChannel? = null
-    try {
-        if (!dest.exists()) {
-            dest.createNewFile()
-        }
-        fi = FileInputStream(this)
-        fo = FileOutputStream(dest)
-        ic = fi.channel
-        oc = fo.channel
-        ic.transferTo(0, ic.size(), oc)
-    } catch (e: Exception) {
-        e.printStackTrace()
-    } finally {
-        fi?.close()
-        fo?.close()
-        ic?.close()
-        oc?.close()
-    }
-}
 
 /**
- * Move File to Another Destination
+ * Move File/Dir to new Destination
  */
 fun File.move(dest: File) {
-    renameTo(dest)
+    if (isFile)
+        renameTo(dest)
+    else
+        moveDirectory(dest)
 }
 
 /**
- * Cope Directory with All contents to new Destination
+ * Copy File/Dir to new Destination
  */
-fun File.copyDirectory(dest: File) {
-    if (!dest.exists()) {
-        dest.mkdirs()
-    }
-    val files = listFiles()
-    files?.forEach {
-        if (it.isFile) {
-            it.copy(File("${dest.absolutePath}/${it.name}"))
-        }
-        if (it.isDirectory) {
-            val dirSrc = File("$absolutePath/${it.name}")
-            val dirDest = File("${dest.absolutePath}/${it.name}")
-            dirSrc.copyDirectory(dirDest)
-        }
-    }
+fun File.copy(dest: File) {
+    if (isDirectory)
+        copyDirectory(dest)
+    else
+        copyFile(dest)
 }
 
-/**
- * Move the Full Directory to another location
- */
-fun File.moveDirectory(dest: File) {
-    copyDirectory(dest)
-    deleteAll()
-}
 
 /**
  * Delete the File or if its a Directory the delete all the contents
@@ -139,3 +99,49 @@ fun File.toByteArray(): ByteArray {
     return bos.toByteArray()
 }
 
+// Private Methods
+private fun File.copyFile(dest: File) {
+    var fi: FileInputStream? = null
+    var fo: FileOutputStream? = null
+    var ic: FileChannel? = null
+    var oc: FileChannel? = null
+    try {
+        if (!dest.exists()) {
+            dest.createNewFile()
+        }
+        fi = FileInputStream(this)
+        fo = FileOutputStream(dest)
+        ic = fi.channel
+        oc = fo.channel
+        ic.transferTo(0, ic.size(), oc)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    } finally {
+        fi?.close()
+        fo?.close()
+        ic?.close()
+        oc?.close()
+    }
+}
+
+private fun File.copyDirectory(dest: File) {
+    if (!dest.exists()) {
+        dest.mkdirs()
+    }
+    val files = listFiles()
+    files?.forEach {
+        if (it.isFile) {
+            it.copyFile(File("${dest.absolutePath}/${it.name}"))
+        }
+        if (it.isDirectory) {
+            val dirSrc = File("$absolutePath/${it.name}")
+            val dirDest = File("${dest.absolutePath}/${it.name}")
+            dirSrc.copyDirectory(dirDest)
+        }
+    }
+}
+
+private fun File.moveDirectory(dest: File) {
+    copyDirectory(dest)
+    deleteAll()
+}
