@@ -2,7 +2,7 @@
 
 # getDisplayManager
 
-`fun Context.getDisplayManager(): DisplayManager`
+`fun Context.getDisplayManager(): DisplayManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L476)
 
 get Display manager
 

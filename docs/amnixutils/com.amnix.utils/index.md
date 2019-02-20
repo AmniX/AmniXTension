@@ -8,4 +8,3 @@
 |---|---|
 | [AmniXUtils](-amni-x-utils/index.md) | `object AmniXUtils`<br>The Class to configure the Configurable variables for further Process. |
 | [BuildConfig](-build-config/index.md) | `class BuildConfig`<br>`class BuildConfig` |
-| [MainActivity](-main-activity/index.md) | `class MainActivity : Activity` |

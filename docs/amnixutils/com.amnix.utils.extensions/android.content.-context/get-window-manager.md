@@ -2,7 +2,7 @@
 
 # getWindowManager
 
-`fun Context.getWindowManager(): WindowManager`
+`fun Context.getWindowManager(): WindowManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L396)
 
 get Window Manager
 

@@ -2,7 +2,7 @@
 
 # InMemoryCache
 
-`object InMemoryCache`
+`object InMemoryCache` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extras/InMemoryCache.kt#L6)
 
 Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want.
 

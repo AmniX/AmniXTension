@@ -2,7 +2,7 @@
 
 # getMediaRouter
 
-`fun Context.getMediaRouter(): MediaRouter`
+`fun Context.getMediaRouter(): MediaRouter` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L466)
 
 get Media Router
 

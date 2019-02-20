@@ -2,7 +2,7 @@
 
 # isOppo
 
-`val isOppo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+`val isOppo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extras/DeviceUtils.kt#L64)
 
 If Device is a Oppo Device
 

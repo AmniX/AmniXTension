@@ -2,7 +2,7 @@
 
 # DeviceUtils
 
-`object DeviceUtils`
+`object DeviceUtils` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extras/DeviceUtils.kt#L13)
 
 Helper Class to Provide the Device Informations
 

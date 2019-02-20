@@ -2,7 +2,7 @@
 
 # AmniXCameraWrapper
 
-`class AmniXCameraWrapper`
+`class AmniXCameraWrapper` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extras/AmniXCameraWrapper.kt#L8)
 
 Class to wrap Camera and Provide Ease Modifications
 

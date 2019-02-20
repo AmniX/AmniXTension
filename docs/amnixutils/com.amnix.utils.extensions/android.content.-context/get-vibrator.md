@@ -2,7 +2,7 @@
 
 # getVibrator
 
-`fun Context.getVibrator(): Vibrator`
+`fun Context.getVibrator(): Vibrator` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L386)
 
 get Vibrater Service
 

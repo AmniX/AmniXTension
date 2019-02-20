@@ -20,7 +20,6 @@
 | [java.io.File](../com.amnix.utils.extensions/java.io.-file/index.md) (extensions in package com.amnix.utils.extensions) |  |
 | [com.amnix.utils.extras.InMemoryCache](../com.amnix.utils.extras/-in-memory-cache/index.md) | Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want. |
 | [com.amnix.utils.logs.L](../com.amnix.utils.logs/-l/index.md) | A Custom Log Class for the developer Ease |
-| [com.amnix.utils.MainActivity](../com.amnix.utils/-main-activity/index.md) |  |
 | [kotlin.Number](../com.amnix.utils.extensions/kotlin.-number/index.md) (extensions in package com.amnix.utils.extensions) |  |
 | [com.amnix.utils.extras.PlaceHolders](../com.amnix.utils.extras/-place-holders/index.md) | Class for Several PlaceHolders |
 | [kotlin.String](../com.amnix.utils.extensions/kotlin.-string/index.md) (extensions in package com.amnix.utils.extensions) |  |

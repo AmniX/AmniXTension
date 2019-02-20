@@ -2,7 +2,7 @@
 
 # getWifiManager
 
-`fun Context.getWifiManager(): WifiManager`
+`fun Context.getWifiManager(): WifiManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L391)
 
 get WiFi Manager
 

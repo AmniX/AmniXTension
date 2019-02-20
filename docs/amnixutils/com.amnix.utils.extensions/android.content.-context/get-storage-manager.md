@@ -2,7 +2,7 @@
 
 # getStorageManager
 
-`fun Context.getStorageManager(): StorageManager`
+`fun Context.getStorageManager(): StorageManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L436)
 
 get Storage Manager
 

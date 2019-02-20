@@ -2,7 +2,7 @@
 
 # getAccountManager
 
-`fun Context.getAccountManager(): AccountManager`
+`fun Context.getAccountManager(): AccountManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L411)
 
 get Account Manager
 

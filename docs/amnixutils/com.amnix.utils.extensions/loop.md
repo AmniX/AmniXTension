@@ -2,7 +2,7 @@
 
 # loop
 
-`fun loop(till: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, loop: (i: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun loop(till: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, loop: (i: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/GlobalExtensions.kt#L124)
 
 Loop with a single Int, It will call the [loop](loop.md#com.amnix.utils.extensions$loop(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Unit)))/loop) till the value of [till](loop.md#com.amnix.utils.extensions$loop(kotlin.Int, kotlin.Function1((kotlin.Int, kotlin.Unit)))/till)
 

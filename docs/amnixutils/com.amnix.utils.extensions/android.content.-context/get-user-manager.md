@@ -2,7 +2,7 @@
 
 # getUserManager
 
-`fun Context.getUserManager(): UserManager`
+`fun Context.getUserManager(): UserManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L481)
 
 get UserManager
 

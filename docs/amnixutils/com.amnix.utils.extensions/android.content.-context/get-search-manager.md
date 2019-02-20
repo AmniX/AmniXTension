@@ -2,7 +2,7 @@
 
 # getSearchManager
 
-`fun Context.getSearchManager(): SearchManager`
+`fun Context.getSearchManager(): SearchManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L371)
 
 get Search Manager
 

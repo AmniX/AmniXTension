@@ -2,7 +2,7 @@
 
 # getLocationManager
 
-`fun Context.getLocationManager(): LocationManager`
+`fun Context.getLocationManager(): LocationManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L356)
 
 get Location manager
 

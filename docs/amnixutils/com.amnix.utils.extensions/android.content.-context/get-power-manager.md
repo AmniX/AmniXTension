@@ -2,7 +2,7 @@
 
 # getPowerManager
 
-`fun Context.getPowerManager(): PowerManager`
+`fun Context.getPowerManager(): PowerManager` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extensions/ContextExtension.kt#L366)
 
 get Power Manager
 

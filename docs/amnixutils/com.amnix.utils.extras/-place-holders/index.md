@@ -2,7 +2,7 @@
 
 # PlaceHolders
 
-`object PlaceHolders`
+`object PlaceHolders` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/extras/PlaceHolders.kt#L9)
 
 Class for Several PlaceHolders
 

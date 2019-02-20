@@ -2,7 +2,7 @@
 
 # SIZE
 
-`SIZE`
+`SIZE` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/enums/ContentColumns.kt#L10)
 
 the size Column
 
