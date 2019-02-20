@@ -1,6 +1,8 @@
 package com.amnix.xtension.extensions
 
 import android.os.AsyncTask
+import android.os.Handler
+import android.os.Looper
 import com.amnix.xtension.extras.InMemoryCache
 import java.io.Closeable
 import java.util.*
@@ -136,6 +138,11 @@ fun loopWhile(boolean: Boolean, loop: () -> Unit) {
 fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
     runnable(it)
 }
+
+/**
+ * Run the UI Code on UI Thread From AnyWhere, No need the Activity Refrence
+ */
+fun runOnUIThread(runnable:()->Unit) = Handler(Looper.getMainLooper()).post(runnable)
 
 /**
  * get CurrentTimeInMillis from System.currentTimeMillis

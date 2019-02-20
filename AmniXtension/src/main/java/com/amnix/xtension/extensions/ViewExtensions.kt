@@ -20,6 +20,22 @@ fun View.screenshot(): Bitmap {
 }
 
 /**
+ * Set On Single Click Listener,
+ * It will allow user to click on the button after the specified tolerance. So no multiClick Or FastClick From Now
+ *
+ * @property tolerance the Millis to Skip the User Click
+ */
+fun View.setOnSingleClickListener(tolerance : Long = 500, onClick:(v:View)->Unit){
+    var lastClicked = 0L
+    setOnClickListener {
+        if(currentTimeMillis - lastClicked > tolerance){
+            onClick(it)
+            lastClicked = currentTimeMillis
+        }
+    }
+}
+
+/**
  * Start The FadeIn Animation on This View
  */
 fun View.fadeIn(duration: Int = 400) {
