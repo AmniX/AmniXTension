@@ -29,7 +29,8 @@ Extensions:-
 
 <details><summary>Global Extensions</summary>
 <p>
-### Global Extensions Means You can Use them Anywhere
+
+**Global Extensions Means You can Use them Anywhere**
 
 ```kotlin
 async{
@@ -303,6 +304,74 @@ isGone()
 isInvisible()
 
 getActivity()
+
+```
+
+</p>
+</details>
+
+Extras:-
+
+<details><summary>Code benchMarking</summary>
+<p>
+
+Want to Know How Much Does You Code takes to Execute? <br/> Let me show
+you how you can do the same Easily.
+
+```kotlin
+val bench = BenchMarkUtils()
+
+Your Code Goes Here
+And Maybe Here Too
+And Might Be Here Too...
+
+
+val time = bench.dump() // Dumps The Time to Logcat and Returns The Same Too
+//Now Check the Logcat With Tha Class name Tag and You will see the Results
+
+```
+
+</p>
+</details>
+
+<details><summary>InMemoryCache</summary>
+<p>
+
+Keep AnyThing In Memory and Access From Anywhere Easily
+
+```kotlin
+val myData = "HelloData"
+
+InMemoryCache.put("data",myData)
+
+val data = InMemoryCache.get("data")
+
+InMemoryCache.clear()
+
+More Methods To Explore.
+
+```
+
+</p>
+</details>
+
+<details><summary>Logging</summary>
+<p>
+
+Logging is Simple Now, Auto TAGS, Will Embed The Tag From Its Invoked
+Class Name Automatically.
+
+```kotlin
+AmniXtension.isLoggingEnabled = true // Sets The Logging Enable Or Disable
+
+L.d("Hello", 400, object, model, anything)
+L.e("Hello", 400, object, model, anything)
+L.i("Hello", 400, object, model, anything)
+L.w("Hello", 400, object, model, anything)
+L.v("Hello", 400, object, model, anything)
+L.json(jsonObject) // Log Josn With Beautification
+
+L.wtf(exception)
 
 ```
 
