@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.amnix.xtension.extras
 
 import android.hardware.Camera

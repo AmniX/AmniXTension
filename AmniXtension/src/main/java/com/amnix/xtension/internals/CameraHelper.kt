@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.amnix.xtension.internals
 
 import android.content.ContentValues

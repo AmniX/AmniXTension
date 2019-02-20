@@ -2,6 +2,7 @@ package com.amnix.xtension.extensions
 
 import android.Manifest
 import android.accounts.AccountManager
+import android.annotation.SuppressLint
 import android.app.*
 import android.app.admin.DevicePolicyManager
 import android.bluetooth.BluetoothManager
@@ -126,6 +127,7 @@ fun Context.requestMediaScanner(url: String) {
 /**
  * Vanna Vibrate the Device Vibrator for some Feedback? do it with the ease of [vibrate] method with the specific millis
  */
+@Suppress("DEPRECATION")
 @RequiresPermission(Manifest.permission.VIBRATE)
 fun Context.vibrate(millis: Long) = getVibrator().vibrate(millis)
 
@@ -268,8 +270,8 @@ fun Context.getAllAudios(
  * Show Date Picker and Get the Picked Date Easily
  */
 fun Context.showDatePicker(year: Int, month: Int, day: Int, onDatePicked: (year: Int, month: Int, day: Int) -> Unit) {
-    DatePickerDialog(this, { view, year, month, dayOfMonth ->
-        onDatePicked(year, month, dayOfMonth)
+    DatePickerDialog(this, { _, pyear, pmonth, pdayOfMonth ->
+        onDatePicked(pyear, pmonth, pdayOfMonth)
     }, year, month, day).show()
 }
 
@@ -281,7 +283,8 @@ fun Context.showTimePicker(
     is24Hour: Boolean = false,
     onDatePicked: (hour: Int, minute: Int) -> Unit
 ) {
-    TimePickerDialog(this, { view, hourOfDay, minute ->
+    @Suppress("DEPRECATION")
+    TimePickerDialog(this, { _, hourOfDay, minute ->
         onDatePicked(hourOfDay, minute)
 
     }, currentDate.hours, currentDate.minutes, is24Hour).show()
@@ -302,6 +305,7 @@ fun Context.getDeviceID() = getAndroidID()
  *
  * Requires READ_PHONE_STATE Permission
  */
+@SuppressLint("HardwareIds")
 @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
 fun Context.getIMEI() = getTelephonyManager().deviceId
 

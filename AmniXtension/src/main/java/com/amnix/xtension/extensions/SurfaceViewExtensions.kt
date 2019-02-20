@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.amnix.xtension.extensions
 
 import android.Manifest
