@@ -45,6 +45,12 @@ dependencies {
 }
 
 dokka {
-    outputFormat = 'html'
+    outputFormat = 'gfm'
     outputDirectory = "$buildDir/javadoc"
+    linkMapping {
+        dir = "src/main/java"
+        url = "https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java"
+        // Suffix which is used to append the line number to the URL. Use #L for GitHub
+        suffix = "#L"
+    }
 }

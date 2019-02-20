@@ -3,6 +3,9 @@ package com.amnix.utils.extras
 import android.graphics.Color
 import kotlin.random.Random
 
+/**
+ * Class for Several PlaceHolders
+ */
 object PlaceHolders {
     /**
      * Random Number But below the Max Value

@@ -7,6 +7,9 @@ import com.amnix.utils.AmniXUtils
 import org.json.JSONException
 import org.json.JSONObject
 
+/**
+ * A Custom Log Class for the developer Ease
+ */
 object L {
 
     private val SHOW_LOGS = AmniXUtils.isLoggingEnabled
@@ -19,8 +22,8 @@ object L {
      */
     fun d(vararg objects: Any?) {
         if (SHOW_LOGS)
-            for (objs in objects) {
-                val msg = if (objs == null) "null" else "" + objs
+            for (obj in objects) {
+                val msg = if (obj == null) "null" else "" + obj
                 Log.d(codeLocation.toString(), msg)
             }
     }
@@ -51,8 +54,8 @@ object L {
      */
     fun e(vararg objects: Any?) {
         if (SHOW_LOGS)
-            for (objs in objects) {
-                Log.e(codeLocation.toString(), if (objs == null) "null" else "" + objs)
+            for (obj in objects) {
+                Log.e(codeLocation.toString(), if (obj == null) "null" else "" + obj)
             }
     }
     /**
@@ -60,24 +63,24 @@ object L {
      */
     fun i(vararg objects: Any?) {
         if (SHOW_LOGS)
-            for (`object` in objects)
-                Log.i(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
+            for (obj in objects)
+                Log.i(codeLocation.toString(), if (obj == null) "null" else "" + obj)
     }
     /**
      * Similar of Log.v but with many params
      */
     fun v(vararg objects: Any?) {
         if (SHOW_LOGS)
-            for (`object` in objects)
-                Log.v(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
+            for (obj in objects)
+                Log.v(codeLocation.toString(), if (obj == null) "null" else "" + obj)
     }
     /**
      * Similar of Log.w but with many params
      */
     fun w(vararg objects: Any?) {
         if (SHOW_LOGS)
-            for (`object` in objects)
-                Log.w(codeLocation.toString(), if (`object` == null) "null" else "" + `object`)
+            for (obj in objects)
+                Log.w(codeLocation.toString(), if (obj == null) "null" else "" + obj)
     }
     /**
      * Similar of Log.wtf but with many params
