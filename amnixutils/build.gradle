@@ -53,4 +53,5 @@ dokka {
         // Suffix which is used to append the line number to the URL. Use #L for GitHub
         suffix = "#L"
     }
+    samples = ['../app/src/main/java/com/amnix/utils/MainActivity.kt']
 }
