@@ -1,0 +1,152 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:com.amnix.utils.extensions$append(kotlin.String, kotlin.String)com.amnix.utils.extensions/kotlin.-string/append.md
+$dokka.location:com.amnix.utils.extensions$checkSelfPermissions(android.content.Context, kotlin.Array((kotlin.String)))com.amnix.utils.extensions/android.content.-context/check-self-permissions.md
+$dokka.location:com.amnix.utils.extensions$childs(android.view.ViewGroup)com.amnix.utils.extensions/android.view.-view-group/childs.md
+$dokka.location:com.amnix.utils.extensions$compressByQuality(android.graphics.Bitmap, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/compress-by-quality.md
+$dokka.location:com.amnix.utils.extensions$compressBySampleSize(android.graphics.Bitmap, kotlin.Int, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/compress-by-sample-size.md
+$dokka.location:com.amnix.utils.extensions$contains(android.view.ViewGroup, android.view.View)com.amnix.utils.extensions/android.view.-view-group/contains.md
+$dokka.location:com.amnix.utils.extensions$copy(java.io.File, java.io.File)com.amnix.utils.extensions/java.io.-file/copy.md
+$dokka.location:com.amnix.utils.extensions$copyDirectory(java.io.File, java.io.File)com.amnix.utils.extensions/java.io.-file/copy-directory.md
+$dokka.location:com.amnix.utils.extensions$crop(android.graphics.Bitmap, android.graphics.Rect)com.amnix.utils.extensions/android.graphics.-bitmap/crop.md
+$dokka.location:com.amnix.utils.extensions$deCodeToBinary(kotlin.String)com.amnix.utils.extensions/kotlin.-string/de-code-to-binary.md
+$dokka.location:com.amnix.utils.extensions$decodeToBase64(kotlin.String)com.amnix.utils.extensions/kotlin.-string/decode-to-base64.md
+$dokka.location:com.amnix.utils.extensions$decodeToUrl(kotlin.String, kotlin.String)com.amnix.utils.extensions/kotlin.-string/decode-to-url.md
+$dokka.location:com.amnix.utils.extensions$decryptAES(kotlin.String, kotlin.String)com.amnix.utils.extensions/kotlin.-string/decrypt-a-e-s.md
+$dokka.location:com.amnix.utils.extensions$deleteAll(java.io.File)com.amnix.utils.extensions/java.io.-file/delete-all.md
+$dokka.location:com.amnix.utils.extensions$dpFromPx(kotlin.Number)com.amnix.utils.extensions/kotlin.-number/dp-from-px.md
+$dokka.location:com.amnix.utils.extensions$encodeToBase64(kotlin.String)com.amnix.utils.extensions/kotlin.-string/encode-to-base64.md
+$dokka.location:com.amnix.utils.extensions$encodeToBinary(kotlin.String)com.amnix.utils.extensions/kotlin.-string/encode-to-binary.md
+$dokka.location:com.amnix.utils.extensions$encodeToUrl(kotlin.String, kotlin.String)com.amnix.utils.extensions/kotlin.-string/encode-to-url.md
+$dokka.location:com.amnix.utils.extensions$encryptAES(kotlin.String, kotlin.String)com.amnix.utils.extensions/kotlin.-string/encrypt-a-e-s.md
+$dokka.location:com.amnix.utils.extensions$fadeIn(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/fade-in.md
+$dokka.location:com.amnix.utils.extensions$fadeOut(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/fade-out.md
+$dokka.location:com.amnix.utils.extensions$getAccessibilityManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-accessibility-manager.md
+$dokka.location:com.amnix.utils.extensions$getAccountManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-account-manager.md
+$dokka.location:com.amnix.utils.extensions$getActivity(android.view.View)com.amnix.utils.extensions/android.view.-view/get-activity.md
+$dokka.location:com.amnix.utils.extensions$getActivityManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-activity-manager.md
+$dokka.location:com.amnix.utils.extensions$getAlarmManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-alarm-manager.md
+$dokka.location:com.amnix.utils.extensions$getAllAudios(android.content.Context, com.amnix.utils.enums.ContentColumns, com.amnix.utils.enums.ContentOrder)com.amnix.utils.extensions/android.content.-context/get-all-audios.md
+$dokka.location:com.amnix.utils.extensions$getAllImages(android.content.Context, com.amnix.utils.enums.ContentColumns, com.amnix.utils.enums.ContentOrder)com.amnix.utils.extensions/android.content.-context/get-all-images.md
+$dokka.location:com.amnix.utils.extensions$getAllVideos(android.content.Context, com.amnix.utils.enums.ContentColumns, com.amnix.utils.enums.ContentOrder)com.amnix.utils.extensions/android.content.-context/get-all-videos.md
+$dokka.location:com.amnix.utils.extensions$getAndroidID(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-android-i-d.md
+$dokka.location:com.amnix.utils.extensions$getAudioManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-audio-manager.md
+$dokka.location:com.amnix.utils.extensions$getBluetoothManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-bluetooth-manager.md
+$dokka.location:com.amnix.utils.extensions$getClipboardManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-clipboard-manager.md
+$dokka.location:com.amnix.utils.extensions$getConnectivityManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-connectivity-manager.md
+$dokka.location:com.amnix.utils.extensions$getDeviceID(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-device-i-d.md
+$dokka.location:com.amnix.utils.extensions$getDevicePolicyManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-device-policy-manager.md
+$dokka.location:com.amnix.utils.extensions$getDisplayManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-display-manager.md
+$dokka.location:com.amnix.utils.extensions$getDownloadManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-download-manager.md
+$dokka.location:com.amnix.utils.extensions$getDropBoxManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-drop-box-manager.md
+$dokka.location:com.amnix.utils.extensions$getIMEI(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-i-m-e-i.md
+$dokka.location:com.amnix.utils.extensions$getInputManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-input-manager.md
+$dokka.location:com.amnix.utils.extensions$getInputMethodManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-input-method-manager.md
+$dokka.location:com.amnix.utils.extensions$getKeyguardManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-keyguard-manager.md
+$dokka.location:com.amnix.utils.extensions$getLayoutInflater(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-layout-inflater.md
+$dokka.location:com.amnix.utils.extensions$getLocationManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-location-manager.md
+$dokka.location:com.amnix.utils.extensions$getMediaRouter(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-media-router.md
+$dokka.location:com.amnix.utils.extensions$getNavigationBarSize(android.app.Activity, android.content.Context)com.amnix.utils.extensions/android.app.-activity/get-navigation-bar-size.md
+$dokka.location:com.amnix.utils.extensions$getNfcManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-nfc-manager.md
+$dokka.location:com.amnix.utils.extensions$getNotificationManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-notification-manager.md
+$dokka.location:com.amnix.utils.extensions$getNsdManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-nsd-manager.md
+$dokka.location:com.amnix.utils.extensions$getPowerManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-power-manager.md
+$dokka.location:com.amnix.utils.extensions$getRootView(android.app.Activity)com.amnix.utils.extensions/android.app.-activity/get-root-view.md
+$dokka.location:com.amnix.utils.extensions$getSearchManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-search-manager.md
+$dokka.location:com.amnix.utils.extensions$getSensorManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-sensor-manager.md
+$dokka.location:com.amnix.utils.extensions$getStatusBarHeight(android.app.Activity)com.amnix.utils.extensions/android.app.-activity/get-status-bar-height.md
+$dokka.location:com.amnix.utils.extensions$getStorageManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-storage-manager.md
+$dokka.location:com.amnix.utils.extensions$getTelephonyManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-telephony-manager.md
+$dokka.location:com.amnix.utils.extensions$getTextServicesManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-text-services-manager.md
+$dokka.location:com.amnix.utils.extensions$getUiModeManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-ui-mode-manager.md
+$dokka.location:com.amnix.utils.extensions$getUsbManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-usb-manager.md
+$dokka.location:com.amnix.utils.extensions$getUserManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-user-manager.md
+$dokka.location:com.amnix.utils.extensions$getVibrator(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-vibrator.md
+$dokka.location:com.amnix.utils.extensions$getWifiManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-wifi-manager.md
+$dokka.location:com.amnix.utils.extensions$getWifiP2pManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-wifi-p2p-manager.md
+$dokka.location:com.amnix.utils.extensions$getWindowManager(android.content.Context)com.amnix.utils.extensions/android.content.-context/get-window-manager.md
+$dokka.location:com.amnix.utils.extensions$hideKeyboard(android.view.View)com.amnix.utils.extensions/android.view.-view/hide-keyboard.md
+$dokka.location:com.amnix.utils.extensions$isAppInstalled(android.content.Context, kotlin.String)com.amnix.utils.extensions/android.content.-context/is-app-installed.md
+$dokka.location:com.amnix.utils.extensions$isEmail(kotlin.String)com.amnix.utils.extensions/kotlin.-string/is-email.md
+$dokka.location:com.amnix.utils.extensions$isGPSEnable(android.content.Context)com.amnix.utils.extensions/android.content.-context/is-g-p-s-enable.md
+$dokka.location:com.amnix.utils.extensions$isGone(android.view.View)com.amnix.utils.extensions/android.view.-view/is-gone.md
+$dokka.location:com.amnix.utils.extensions$isImage(java.io.File)com.amnix.utils.extensions/java.io.-file/is-image.md
+$dokka.location:com.amnix.utils.extensions$isIntentResolvable(android.content.Context, android.content.Intent)com.amnix.utils.extensions/android.content.-context/is-intent-resolvable.md
+$dokka.location:com.amnix.utils.extensions$isInvisible(android.view.View)com.amnix.utils.extensions/android.view.-view/is-invisible.md
+$dokka.location:com.amnix.utils.extensions$isNetworkAvailable(android.content.Context)com.amnix.utils.extensions/android.content.-context/is-network-available.md
+$dokka.location:com.amnix.utils.extensions$isNumeric(kotlin.String)com.amnix.utils.extensions/kotlin.-string/is-numeric.md
+$dokka.location:com.amnix.utils.extensions$isPhone(kotlin.String)com.amnix.utils.extensions/kotlin.-string/is-phone.md
+$dokka.location:com.amnix.utils.extensions$isVisible(android.view.View)com.amnix.utils.extensions/android.view.-view/is-visible.md
+$dokka.location:com.amnix.utils.extensions$loop(kotlin.Number, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.utils.extensions/kotlin.-number/loop.md
+$dokka.location:com.amnix.utils.extensions$md5(kotlin.String)com.amnix.utils.extensions/kotlin.-string/md5.md
+$dokka.location:com.amnix.utils.extensions$minusAssign(android.view.ViewGroup, android.view.View)com.amnix.utils.extensions/android.view.-view-group/minus-assign.md
+$dokka.location:com.amnix.utils.extensions$move(java.io.File, java.io.File)com.amnix.utils.extensions/java.io.-file/move.md
+$dokka.location:com.amnix.utils.extensions$moveDirectory(java.io.File, java.io.File)com.amnix.utils.extensions/java.io.-file/move-directory.md
+$dokka.location:com.amnix.utils.extensions$onViewInflated(android.app.Activity, kotlin.Function0((kotlin.Unit)))com.amnix.utils.extensions/android.app.-activity/on-view-inflated.md
+$dokka.location:com.amnix.utils.extensions$open(java.io.File)com.amnix.utils.extensions/java.io.-file/open.md
+$dokka.location:com.amnix.utils.extensions$plusAssign(android.view.ViewGroup, android.view.View)com.amnix.utils.extensions/android.view.-view-group/plus-assign.md
+$dokka.location:com.amnix.utils.extensions$pxFromDp(kotlin.Number)com.amnix.utils.extensions/kotlin.-number/px-from-dp.md
+$dokka.location:com.amnix.utils.extensions$pxFromSp(kotlin.Number)com.amnix.utils.extensions/kotlin.-number/px-from-sp.md
+$dokka.location:com.amnix.utils.extensions$readToString(java.io.File)com.amnix.utils.extensions/java.io.-file/read-to-string.md
+$dokka.location:com.amnix.utils.extensions$requestMediaScanner(android.content.Context, kotlin.String)com.amnix.utils.extensions/android.content.-context/request-media-scanner.md
+$dokka.location:com.amnix.utils.extensions$resize(android.graphics.Bitmap, kotlin.Number, kotlin.Number, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/resize.md
+$dokka.location:com.amnix.utils.extensions$resize(android.view.View, kotlin.Int, kotlin.Int)com.amnix.utils.extensions/android.view.-view/resize.md
+$dokka.location:com.amnix.utils.extensions$rotateTo(android.graphics.Bitmap, kotlin.Float, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/rotate-to.md
+$dokka.location:com.amnix.utils.extensions$save(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/save.md
+$dokka.location:com.amnix.utils.extensions$saveAsync(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/save-async.md
+$dokka.location:com.amnix.utils.extensions$saveToFile(kotlin.String, java.io.File)com.amnix.utils.extensions/kotlin.-string/save-to-file.md
+$dokka.location:com.amnix.utils.extensions$screenHeight#android.content.Contextcom.amnix.utils.extensions/android.content.-context/screen-height.md
+$dokka.location:com.amnix.utils.extensions$screenWidth#android.content.Contextcom.amnix.utils.extensions/android.content.-context/screen-width.md
+$dokka.location:com.amnix.utils.extensions$screenshot(android.view.View)com.amnix.utils.extensions/android.view.-view/screenshot.md
+$dokka.location:com.amnix.utils.extensions$setAfterTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.utils.extensions/android.widget.-edit-text/set-after-text-changed-listener.md
+$dokka.location:com.amnix.utils.extensions$setBeforeTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.utils.extensions/android.widget.-edit-text/set-before-text-changed-listener.md
+$dokka.location:com.amnix.utils.extensions$setHeight(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-height.md
+$dokka.location:com.amnix.utils.extensions$setNavigationBarColor(android.app.Activity, kotlin.Int)com.amnix.utils.extensions/android.app.-activity/set-navigation-bar-color.md
+$dokka.location:com.amnix.utils.extensions$setNavigationBarDividerColor(android.app.Activity, kotlin.Int)com.amnix.utils.extensions/android.app.-activity/set-navigation-bar-divider-color.md
+$dokka.location:com.amnix.utils.extensions$setOnPageScrollStateChangedListener(android.support.v4.view.ViewPager, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.utils.extensions/android.support.v4.view.-view-pager/set-on-page-scroll-state-changed-listener.md
+$dokka.location:com.amnix.utils.extensions$setOnPageSelectedListener(android.support.v4.view.ViewPager, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.utils.extensions/android.support.v4.view.-view-pager/set-on-page-selected-listener.md
+$dokka.location:com.amnix.utils.extensions$setOnTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.utils.extensions/android.widget.-edit-text/set-on-text-changed-listener.md
+$dokka.location:com.amnix.utils.extensions$setPaddingBottom(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-bottom.md
+$dokka.location:com.amnix.utils.extensions$setPaddingEnd(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-end.md
+$dokka.location:com.amnix.utils.extensions$setPaddingHorizontal(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-horizontal.md
+$dokka.location:com.amnix.utils.extensions$setPaddingLeft(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-left.md
+$dokka.location:com.amnix.utils.extensions$setPaddingRight(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-right.md
+$dokka.location:com.amnix.utils.extensions$setPaddingStart(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-start.md
+$dokka.location:com.amnix.utils.extensions$setPaddingTop(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-top.md
+$dokka.location:com.amnix.utils.extensions$setPaddingVertical(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-padding-vertical.md
+$dokka.location:com.amnix.utils.extensions$setStatusBarColor(android.app.Activity, kotlin.Int)com.amnix.utils.extensions/android.app.-activity/set-status-bar-color.md
+$dokka.location:com.amnix.utils.extensions$setWidth(android.view.View, kotlin.Int)com.amnix.utils.extensions/android.view.-view/set-width.md
+$dokka.location:com.amnix.utils.extensions$setupCamera(android.view.SurfaceView, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Float, kotlin.Boolean, kotlin.Boolean, kotlin.Function1((com.amnix.utils.extras.AmniXCameraWrapper, kotlin.Unit)))com.amnix.utils.extensions/android.view.-surface-view/setup-camera.md
+$dokka.location:com.amnix.utils.extensions$setupCamera(android.view.TextureView, kotlin.Boolean, kotlin.Int, kotlin.Int, kotlin.Float, kotlin.Boolean, kotlin.Boolean, kotlin.Function1((com.amnix.utils.extras.AmniXCameraWrapper, kotlin.Unit)))com.amnix.utils.extensions/android.view.-texture-view/setup-camera.md
+$dokka.location:com.amnix.utils.extensions$sha1(kotlin.String)com.amnix.utils.extensions/kotlin.-string/sha1.md
+$dokka.location:com.amnix.utils.extensions$showConfirmationDialog(android.content.Context, kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)), kotlin.String, kotlin.String, kotlin.Boolean)com.amnix.utils.extensions/android.content.-context/show-confirmation-dialog.md
+$dokka.location:com.amnix.utils.extensions$showDatePicker(android.content.Context, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function3((kotlin.Int, , , kotlin.Unit)))com.amnix.utils.extensions/android.content.-context/show-date-picker.md
+$dokka.location:com.amnix.utils.extensions$showKeyboard(android.view.View)com.amnix.utils.extensions/android.view.-view/show-keyboard.md
+$dokka.location:com.amnix.utils.extensions$showMultiPicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function2((kotlin.Int, kotlin.Boolean, kotlin.Unit)), kotlin.BooleanArray)com.amnix.utils.extensions/android.content.-context/show-multi-picker.md
+$dokka.location:com.amnix.utils.extensions$showSinglePicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.Int, kotlin.Unit)), kotlin.Int)com.amnix.utils.extensions/android.content.-context/show-single-picker.md
+$dokka.location:com.amnix.utils.extensions$showTimePicker(android.content.Context, java.util.Date, kotlin.Boolean, kotlin.Function2((kotlin.Int, , kotlin.Unit)))com.amnix.utils.extensions/android.content.-context/show-time-picker.md
+$dokka.location:com.amnix.utils.extensions$showToast(android.content.Context, kotlin.String, kotlin.Int)com.amnix.utils.extensions/android.content.-context/show-toast.md
+$dokka.location:com.amnix.utils.extensions$showToastHard(android.content.Context, kotlin.String)com.amnix.utils.extensions/android.content.-context/show-toast-hard.md
+$dokka.location:com.amnix.utils.extensions$size(android.graphics.Bitmap)com.amnix.utils.extensions/android.graphics.-bitmap/size.md
+$dokka.location:com.amnix.utils.extensions$spFromPx(kotlin.Number)com.amnix.utils.extensions/kotlin.-number/sp-from-px.md
+$dokka.location:com.amnix.utils.extensions$startActivity(android.content.Context, java.lang.Class((android.app.Activity)), android.os.Bundle)com.amnix.utils.extensions/android.content.-context/start-activity.md
+$dokka.location:com.amnix.utils.extensions$startActivityForResults(android.app.Activity, java.lang.Class((android.app.Activity)), kotlin.Int, android.os.Bundle)com.amnix.utils.extensions/android.app.-activity/start-activity-for-results.md
+$dokka.location:com.amnix.utils.extensions$startApp(android.content.Context, kotlin.String)com.amnix.utils.extensions/android.content.-context/start-app.md
+$dokka.location:com.amnix.utils.extensions$startService(android.content.Context, java.lang.Class((android.app.Service)), android.os.Bundle)com.amnix.utils.extensions/android.content.-context/start-service.md
+$dokka.location:com.amnix.utils.extensions$toBase64(android.graphics.Bitmap, android.graphics.Bitmap.CompressFormat)com.amnix.utils.extensions/android.graphics.-bitmap/to-base64.md
+$dokka.location:com.amnix.utils.extensions$toBoolean(kotlin.Number)com.amnix.utils.extensions/kotlin.-number/to-boolean.md
+$dokka.location:com.amnix.utils.extensions$toByteArray(android.graphics.Bitmap, android.graphics.Bitmap.CompressFormat)com.amnix.utils.extensions/android.graphics.-bitmap/to-byte-array.md
+$dokka.location:com.amnix.utils.extensions$toByteArray(java.io.File)com.amnix.utils.extensions/java.io.-file/to-byte-array.md
+$dokka.location:com.amnix.utils.extensions$toCamelCase(kotlin.String)com.amnix.utils.extensions/kotlin.-string/to-camel-case.md
+$dokka.location:com.amnix.utils.extensions$toFile(kotlin.String)com.amnix.utils.extensions/kotlin.-string/to-file.md
+$dokka.location:com.amnix.utils.extensions$toGrayScale(android.graphics.Bitmap, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/to-gray-scale.md
+$dokka.location:com.amnix.utils.extensions$toInt(kotlin.Boolean)com.amnix.utils.extensions/kotlin.-boolean/to-int.md
+$dokka.location:com.amnix.utils.extensions$toRound(android.graphics.Bitmap, kotlin.Float, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/to-round.md
+$dokka.location:com.amnix.utils.extensions$toRoundCorner(android.graphics.Bitmap, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)com.amnix.utils.extensions/android.graphics.-bitmap/to-round-corner.md
+$dokka.location:com.amnix.utils.extensions$toTitleCase(kotlin.String)com.amnix.utils.extensions/kotlin.-string/to-title-case.md
+$dokka.location:com.amnix.utils.extensions$vibrate(android.content.Context, kotlin.Long)com.amnix.utils.extensions/android.content.-context/vibrate.md
+com.amnix.utils
+com.amnix.utils.enums
+com.amnix.utils.extensions
+com.amnix.utils.extras
+com.amnix.utils.logs

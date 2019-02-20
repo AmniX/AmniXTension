@@ -1,0 +1,8 @@
+[amnixutils](../../index.md) / [com.amnix.utils.enums](../index.md) / [ContentColumns](index.md) / [WIDTH](./-w-i-d-t-h.md)
+
+# WIDTH
+
+`WIDTH`
+
+the width Column
+
