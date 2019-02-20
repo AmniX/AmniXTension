@@ -2,7 +2,7 @@
 
 # AmniXUtils
 
-`object AmniXUtils` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/AmniXUtils.kt#L6)
+`object AmniXUtils` [(source)](https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java/com/amnix/utils/AmniXtension.kt#L6)
 
 The Class to configure the Configurable variables for further Process.
 

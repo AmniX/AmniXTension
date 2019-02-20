@@ -1,0 +1,41 @@
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.dokka'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+    }
+}
+
+publish {
+    def groupProjectID = 'com.amnix.xtension'
+    def artifactProjectID = 'AmniXtension'
+    def publishVersionID = '1.0.0-beta01'
+
+    userOrg = 'amnix'
+    repoName = 'AmniXtension'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'An Useful android Kotlin Extension library.'
+    website = 'https://github.com/AmniX/AmniXTension'
+}
+
+dependencies {
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+}
+
+dokka {
+    outputFormat = 'gfm'
+    outputDirectory = "docs"
+    linkMapping {
+        dir = "$rootDir/amnixutils/src/main/java"
+        url = "https://github.com/AmniX/amnixUtils/tree/master/amnixutils/src/main/java"
+        suffix = "#L"
+    }
+}

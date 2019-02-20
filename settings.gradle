@@ -1,1 +1,1 @@
-include ':app', ':amnixutils'
+include ':app', ':AmniXtension'
