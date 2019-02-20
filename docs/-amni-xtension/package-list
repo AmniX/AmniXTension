@@ -7,7 +7,6 @@ $dokka.location:com.amnix.xtension.extensions$compressByQuality(android.graphics
 $dokka.location:com.amnix.xtension.extensions$compressBySampleSize(android.graphics.Bitmap, kotlin.Int, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-sample-size.md
 $dokka.location:com.amnix.xtension.extensions$contains(android.view.ViewGroup, android.view.View)com.amnix.xtension.extensions/android.view.-view-group/contains.md
 $dokka.location:com.amnix.xtension.extensions$copy(java.io.File, java.io.File)com.amnix.xtension.extensions/java.io.-file/copy.md
-$dokka.location:com.amnix.xtension.extensions$copyDirectory(java.io.File, java.io.File)com.amnix.xtension.extensions/java.io.-file/copy-directory.md
 $dokka.location:com.amnix.xtension.extensions$crop(android.graphics.Bitmap, android.graphics.Rect)com.amnix.xtension.extensions/android.graphics.-bitmap/crop.md
 $dokka.location:com.amnix.xtension.extensions$deCodeToBinary(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/de-code-to-binary.md
 $dokka.location:com.amnix.xtension.extensions$decodeToBase64(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/decode-to-base64.md
@@ -83,7 +82,6 @@ $dokka.location:com.amnix.xtension.extensions$loop(kotlin.Number, kotlin.Functio
 $dokka.location:com.amnix.xtension.extensions$md5(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/md5.md
 $dokka.location:com.amnix.xtension.extensions$minusAssign(android.view.ViewGroup, android.view.View)com.amnix.xtension.extensions/android.view.-view-group/minus-assign.md
 $dokka.location:com.amnix.xtension.extensions$move(java.io.File, java.io.File)com.amnix.xtension.extensions/java.io.-file/move.md
-$dokka.location:com.amnix.xtension.extensions$moveDirectory(java.io.File, java.io.File)com.amnix.xtension.extensions/java.io.-file/move-directory.md
 $dokka.location:com.amnix.xtension.extensions$onViewInflated(android.app.Activity, kotlin.Function0((kotlin.Unit)))com.amnix.xtension.extensions/android.app.-activity/on-view-inflated.md
 $dokka.location:com.amnix.xtension.extensions$open(java.io.File)com.amnix.xtension.extensions/java.io.-file/open.md
 $dokka.location:com.amnix.xtension.extensions$plusAssign(android.view.ViewGroup, android.view.View)com.amnix.xtension.extensions/android.view.-view-group/plus-assign.md
@@ -108,6 +106,8 @@ $dokka.location:com.amnix.xtension.extensions$setNavigationBarColor(android.app.
 $dokka.location:com.amnix.xtension.extensions$setNavigationBarDividerColor(android.app.Activity, kotlin.Int)com.amnix.xtension.extensions/android.app.-activity/set-navigation-bar-divider-color.md
 $dokka.location:com.amnix.xtension.extensions$setOnPageScrollStateChangedListener(androidx.viewpager.widget.ViewPager, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.xtension.extensions/androidx.viewpager.widget.-view-pager/set-on-page-scroll-state-changed-listener.md
 $dokka.location:com.amnix.xtension.extensions$setOnPageSelectedListener(androidx.viewpager.widget.ViewPager, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.xtension.extensions/androidx.viewpager.widget.-view-pager/set-on-page-selected-listener.md
+$dokka.location:com.amnix.xtension.extensions$setOnSeekBarChangeListener(android.widget.SeekBar, kotlin.Function3((android.widget.SeekBar, kotlin.Int, kotlin.Boolean, kotlin.Unit)), kotlin.Function1((android.widget.SeekBar, kotlin.Unit)), kotlin.Function1((android.widget.SeekBar, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-seek-bar/set-on-seek-bar-change-listener.md
+$dokka.location:com.amnix.xtension.extensions$setOnSingleClickListener(android.view.View, kotlin.Long, kotlin.Function1((android.view.View, kotlin.Unit)))com.amnix.xtension.extensions/android.view.-view/set-on-single-click-listener.md
 $dokka.location:com.amnix.xtension.extensions$setOnTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-edit-text/set-on-text-changed-listener.md
 $dokka.location:com.amnix.xtension.extensions$setPaddingBottom(android.view.View, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/set-padding-bottom.md
 $dokka.location:com.amnix.xtension.extensions$setPaddingEnd(android.view.View, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/set-padding-end.md

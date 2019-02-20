@@ -22,6 +22,7 @@
 | [com.amnix.xtension.logs.L](../com.amnix.xtension.logs/-l/index.md) | A Custom Log Class for the developer Ease |
 | [kotlin.Number](../com.amnix.xtension.extensions/kotlin.-number/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.PlaceHolders](../com.amnix.xtension.extras/-place-holders/index.md) | Class for Several PlaceHolders |
+| [android.widget.SeekBar](../com.amnix.xtension.extensions/android.widget.-seek-bar/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [android.content.SharedPreferences](../com.amnix.xtension.extensions/android.content.-shared-preferences/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [kotlin.String](../com.amnix.xtension.extensions/kotlin.-string/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [android.view.SurfaceView](../com.amnix.xtension.extensions/android.view.-surface-view/index.md) (extensions in package com.amnix.xtension.extensions) |  |
