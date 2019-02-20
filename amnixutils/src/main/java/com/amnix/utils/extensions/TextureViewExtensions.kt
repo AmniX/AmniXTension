@@ -7,7 +7,7 @@ import com.amnix.utils.extras.AmniXCameraWrapper
 import com.amnix.utils.internals.CameraHelper
 
 /**
- * Easily Setup the Camera on #TextureView
+ * Easily Setup the Camera on TextureView
  * Make Sure that You have the Permission to Access CAMERA
  *
  * @property front If You want the Front Camera Or Not. Defaults is true

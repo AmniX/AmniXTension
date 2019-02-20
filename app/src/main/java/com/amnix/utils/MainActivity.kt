@@ -5,7 +5,9 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import com.amnix.utils.demo.R
+import com.amnix.utils.extensions.setupCamera
 import com.amnix.utils.extensions.showTimePicker
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
 
@@ -15,6 +17,9 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
         showTimePicker (is24Hour = true){ hour, minute ->
             Log.d("Aman","hour$hour minute$minute")
+        }
+        textureView.setupCamera {
+
         }
     }
 }

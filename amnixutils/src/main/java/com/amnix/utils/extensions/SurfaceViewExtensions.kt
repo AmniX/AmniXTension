@@ -9,15 +9,16 @@ import com.amnix.utils.extras.AmniXCameraWrapper
 import com.amnix.utils.internals.CameraHelper
 
 /**
- * Setup Camera With the Ease.
+ * Easily Setup the Camera on SurfaceView
+ * Make Sure that You have the Permission to Access CAMERA
  *
- * @param front If You want the Front Camera Or Not
- * @preViewWidth width Of PreView
- * @preViewHeight height of the Preview
- * @desireFps the FPS You want to request
- * @autoFocus the AUtoFocus You want or Not
- * @autoFlash the AutoFlash You want or Not
- * @onReady Block to Execute on Ready.
+ * @property front If You want the Front Camera Or Not. Defaults is true
+ * @property preViewWidth width Of PreViewSize for Parameters. Default is 480
+ * @property previewHeight height Of PreViewSize for Parameters. Defaults is 640
+ * @property desireFps FPS You desire to request [Every Desire will not be fulfill]. Defaults is 30
+ * @property autoFocus set the AutoFocus Value. Default is true
+ * @property autoFlash set the AutoFlash if you want or Not. Default is true
+ * @property onReady An Unit block to be executed when camera is Ready to Roll. *Required param
  */
 @RequiresPermission(Manifest.permission.CAMERA)
 fun SurfaceView.setupCamera(
