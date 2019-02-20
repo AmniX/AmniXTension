@@ -1,12 +1,12 @@
 package com.amnix.utils.extensions
 
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 
 /**
  * Use setOnPageSelectedListener instead of Using the Full OnPageChangeListener
  */
-fun ViewPager.setOnPageSelectedListener(listener: (Int) -> (Unit)) {
-    addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+fun androidx.viewpager.widget.ViewPager.setOnPageSelectedListener(listener: (Int) -> (Unit)) {
+    addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
         override fun onPageScrollStateChanged(p0: Int) {
         }
 
@@ -21,8 +21,8 @@ fun ViewPager.setOnPageSelectedListener(listener: (Int) -> (Unit)) {
 /**
  * Use setOnPageScrollStateChangedListener instead of Using the Full OnPageChangeListener
  */
-fun ViewPager.setOnPageScrollStateChangedListener(listener: (Int) -> (Unit)) {
-    addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+fun androidx.viewpager.widget.ViewPager.setOnPageScrollStateChangedListener(listener: (Int) -> (Unit)) {
+    addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
         override fun onPageScrollStateChanged(p0: Int) {
             listener(p0)
         }

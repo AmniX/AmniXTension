@@ -2,9 +2,9 @@ package com.amnix.utils.extensions
 
 import android.Manifest
 import android.hardware.Camera
-import android.support.annotation.RequiresPermission
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import androidx.annotation.RequiresPermission
 import com.amnix.utils.extras.AmniXCameraWrapper
 import com.amnix.utils.internals.CameraHelper
 

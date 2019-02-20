@@ -7,7 +7,7 @@ import android.graphics.Point
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
-import android.support.annotation.ColorInt
+import androidx.annotation.ColorInt
 import android.view.Display
 import android.view.View
 import android.view.ViewTreeObserver

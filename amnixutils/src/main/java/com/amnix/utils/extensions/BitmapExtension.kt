@@ -3,9 +3,9 @@ package com.amnix.utils.extensions
 import android.Manifest
 import android.graphics.*
 import android.graphics.Paint.ANTI_ALIAS_FLAG
-import android.support.annotation.ColorInt
-import android.support.annotation.RequiresPermission
 import android.util.Base64
+import androidx.annotation.ColorInt
+import androidx.annotation.RequiresPermission
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -51,6 +51,16 @@ fun Bitmap.saveAsync(
 }
 
 /**
+ * get Pixel from Bitmap Easily
+ */
+operator fun Bitmap.get(x: Int, y: Int) = getPixel(x, y)
+
+/**
+ * get Pixel to Bitmap Easily
+ */
+operator fun Bitmap.set(x: Int, y: Int, pixel: Int) = setPixel(x, y, pixel)
+
+/**
  * Crop image easily.
  * @param r is the Rect to crop from the Bitmap
  *
@@ -78,7 +88,7 @@ fun Bitmap.toBase64(compressFormat: Bitmap.CompressFormat = Bitmap.CompressForma
 /**
  * resize Bitmap With a ease. Just call [resize] with the [w] and [h] and you will get new Resized Bitmap
  */
-fun Bitmap.resize(w: Number, h: Number, recycle:Boolean = true): Bitmap {
+fun Bitmap.resize(w: Number, h: Number, recycle: Boolean = true): Bitmap {
     val width = width
     val height = height
     val scaleWidth = w.toFloat() / width

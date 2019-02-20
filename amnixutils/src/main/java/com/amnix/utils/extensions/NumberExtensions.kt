@@ -35,4 +35,4 @@ fun Number.loop(runnable: (Int) -> Unit) = com.amnix.utils.extensions.loop(this.
 /**
  * if Number != 0 then return true else false so 0 == false else true
  */
-fun Number.toBoolean() : Boolean = toInt() != 0
+fun Number.toBoolean() : Boolean = this.toInt() > 0

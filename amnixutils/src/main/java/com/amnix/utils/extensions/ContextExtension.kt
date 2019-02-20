@@ -26,8 +26,6 @@ import android.os.*
 import android.os.storage.StorageManager
 import android.provider.MediaStore
 import android.provider.Settings
-import android.support.annotation.RequiresPermission
-import android.support.v4.content.ContextCompat
 import android.telephony.TelephonyManager
 import android.view.LayoutInflater
 import android.view.WindowManager
@@ -35,6 +33,8 @@ import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
 import android.widget.Toast
+import androidx.annotation.RequiresPermission
+import androidx.core.content.ContextCompat
 import com.amnix.utils.enums.ContentColumns
 import com.amnix.utils.enums.ContentOrder
 import java.io.File
