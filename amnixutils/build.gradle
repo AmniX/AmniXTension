@@ -28,7 +28,7 @@ publish {
 
     def groupProjectID = 'com.amnix.utils'
     def artifactProjectID = 'utils'
-    def publishVersionID = '0.0.10'
+    def publishVersionID = '0.0.11'
 
     userOrg = 'amnix'
     repoName = 'AmniXUtils'
