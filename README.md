@@ -9,11 +9,17 @@ A Kotlin extensions + Utils library with Bunch of Help inbuild.
 
 <div align="center">
 
+![Made With Kotlin](https://img.shields.io/badge/Made%20With-Kotlin-blue.svg?style=for-the-badge&logo=kotlin)
+![Build With Love](https://img.shields.io/badge/Build%20With-%E2%9D%A4-red.svg?style=for-the-badge)
+</div>
+
+<div align="center">
+
 [ ![Download](https://api.bintray.com/packages/amnix/AmniXUtils/AmniXtension/images/download.svg) ](https://bintray.com/amnix/AmniXUtils/AmniXtension/_latestVersion)
 [![Dependencies](https://camo.githubusercontent.com/6266857d1c53194119edf1d9aafae7a4b301fa16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646570656e64656e636965732d7570253230746f253230646174652d627269676874677265656e2e737667)]()
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AmniX/AmniXtension.svg)
 ![GitHub issues](https://img.shields.io/github/issues-raw/AmniX/AmniXtension.svg)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/AmniX)
 [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://www.paypal.me/amnixtonk)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
