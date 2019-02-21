@@ -5,7 +5,7 @@
     <application
             android:allowBackup="true"
             android:supportsRtl="true">
-        <activity android:name="com.amnix.xtension.MainActivity">
+        <activity android:name="com.amnix.xtension.MainActivity" android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

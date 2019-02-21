@@ -25,7 +25,7 @@ AmniXTension is On Jcenter, Simply implementat the library and simplify Your Lif
 # Demo
 Wanna See Some Demo? Few are mention, Many to explore. 
 
-Things Are Collapsed. 
+Things Are Collapsed. You need to Expand them ;)
 
 **Extensions:-**
 
@@ -103,6 +103,40 @@ textureView.setupCamera{
 
 </p>
 </details>
+
+<details><summary>Activity Extensions</summary>
+<p>
+
+```kotlin
+
+requestPermission(Manifest.permission.CAMERA){
+  //No need to check if the Permission Grated Already Or Not, We Will do it for you. Just Place the code in [onResult] Block, We will Execute it SomeHow.
+    if(it){
+        // Yay, We have Permission to start the Camera
+    }else{
+        // Alas, We Don't have Permission to Start The Camera, Ask User to disable the feature
+    }
+}
+
+getStatusBarHeight()
+getNavigationBarSize()
+
+setStatusBarColor()
+setNavigationBarColor()
+setNavigationBarDividerColor()
+
+onViewInflated{
+    // Code On View Inflated 
+    // Mimics the ViewTreeObserver/globalLayoutListener
+}
+
+getRootView()
+
+```
+
+</p>
+</details>
+
 
 <details><summary>Bitmap Extensions</summary>
 <p>

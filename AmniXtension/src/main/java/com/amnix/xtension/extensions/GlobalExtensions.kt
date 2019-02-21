@@ -132,6 +132,10 @@ fun loopWhile(boolean: Boolean, loop: () -> Unit) {
     while (boolean) loop()
 }
 
+fun runWithDelay(delay:Long,block:()->Unit){
+    Handler(Looper.getMainLooper()).postDelayed({block()},delay)
+}
+
 /**
  * invokes [runnable] if value is Not Null. Quite handy.
  */

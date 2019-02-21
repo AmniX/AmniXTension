@@ -7,11 +7,16 @@ import android.graphics.Point
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
-import androidx.annotation.ColorInt
 import android.view.Display
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.WindowManager
+import androidx.annotation.ColorInt
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 import java.lang.reflect.InvocationTargetException
 
 /**
@@ -97,6 +102,32 @@ fun Activity.getRootView(): View? {
     return rootVIew
 }
 
+/**
+ * Request Permission WithOut Waiting For Any OnPermissionResult Callback.
+ *
+ * Get The Result in a Callback Easily.
+ * No need to check if the Permission Grated Already Or Not, We Will do it for you. Just Place the code in [onResult] Block, We will Execute it SomeHow.
+ * Its Based on LifeCycleObserver So Supported FragmentActivity+
+ *
+ * @property permission is the Permission you want to Request For
+ * @property onResult is the Block Which Will be Executed On Permission Granted.
+ *
+ *
+ * * Only Supports One Permission at a time. Contributors will be welcomed
+ */
+fun FragmentActivity.requestPermission(permission:String, onResult:(isGranted:Boolean)->Unit){
+    if(checkSelfPermissions(permission)){
+        onResult(true)
+        return
+    }
+    val observer = PermissionObserver()
+    observer.onResumeCallback = {
+        lifecycle.removeObserver(observer)
+        onResult(checkSelfPermissions(permission))
+    }
+    lifecycle.addObserver(observer)
+    ActivityCompat.requestPermissions(this, arrayOf(permission),420)
+}
 //Private Methods are below
 private fun getAppUsableScreenSize(context: Context): Point {
     val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -124,4 +155,20 @@ private fun getRealScreenSize(context: Context): Point {
 
     }
     return size
+}
+
+private class PermissionObserver() : LifecycleObserver{
+    var onResumeCallback:(()->Unit)? = null
+    var readyToCheck = false
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    fun onPause(){
+        readyToCheck = true
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    fun onResume(){
+        if(readyToCheck)
+            onResumeCallback?.invoke()
+        readyToCheck = false
+    }
 }

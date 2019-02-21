@@ -1,31 +1,21 @@
 package com.amnix.xtension
 
+import android.Manifest
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
 import android.util.Log
-import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
 import com.amnix.xtension.demo.R
-import com.amnix.xtension.extensions.setOnSeekBarChangeListener
-import com.amnix.xtension.extensions.setupCamera
-import com.amnix.xtension.extensions.showTimePicker
-import kotlinx.android.synthetic.main.activity_main.*
+import com.amnix.xtension.extensions.requestPermission
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        showTimePicker (is24Hour = true){ hour, minute ->
-            Log.d("Aman","hour$hour minute$minute")
+        requestPermission(Manifest.permission.CAMERA){
+            Log.d("Aman", "Permission Result : $it")
         }
-        textureView.setupCamera {
-
-        }
-
-       SeekBar(this).setOnSeekBarChangeListener(onProgressChanged = {seekBar, progress, fromUser ->
-
-       })
     }
 }

@@ -1,5 +1,7 @@
 package com.amnix.xtension
 
+
+
 /**
  * The Class to configure the Configurable variables for further Process.
  */

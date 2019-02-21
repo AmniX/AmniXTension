@@ -10,6 +10,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
 import android.hardware.SensorManager
 import android.hardware.display.DisplayManager
 import android.hardware.input.InputManager
@@ -233,6 +234,165 @@ fun Context.getAllVideos(
     return data.toList()
 }
 
+/**
+ * get Application Name,
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppName(pName: String = packageName): String {
+    return packageManager.getApplicationLabel(packageManager.getApplicationInfo(pName, 0)).toString()
+}
+
+/**
+ * get Application Icon,
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppIcon(pName: String = packageName): Drawable {
+    return packageManager.getApplicationInfo(pName, 0).loadIcon(packageManager)
+}
+
+/**
+ * get Application Size in Bytes
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppSize(pName: String = packageName): Long {
+    return packageManager.getApplicationInfo(pName, 0).sourceDir.toFile().length()
+}
+
+/**
+ * get Application Apk File
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppApk(pName: String = packageName): File {
+    return packageManager.getApplicationInfo(pName, 0).sourceDir.toFile()
+}
+
+
+/**
+ * get Application Version Name
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppVersionName(pName: String = packageName): String {
+    return packageManager.getPackageInfo(pName, 0).versionName
+}
+
+/**
+ * get Application Version Code
+ *
+ * @property pName the Package Name of the Target Application, Default is Current.
+ *
+ * Provide Package or will provide the current App Detail
+ */
+@Throws(PackageManager.NameNotFoundException::class)
+fun Context.getAppVersionCode(pName: String = packageName): Int {
+    return packageManager.getPackageInfo(pName, 0).versionCode
+}
+
+/**
+ * Checks If the Service Is Runing or Not.
+ *
+ * @property clazz is the Service Class you want to check for.
+ */
+fun Context.isServiceRunning(clazz: Class<out Service>): Boolean {
+    return getActivityManager().getRunningServices(Integer.MAX_VALUE).filter {
+        it.service.className == clazz.name
+    }.isNotEmpty()
+}
+
+/**
+ * Send Sms Easily, Opens Default SMS App.
+ *
+ * @property to the Contact Number
+ * @property body the SMS Body
+ */
+fun Context.sendSMS(to: String = "", body: String) {
+    startActivity(Intent(Intent.ACTION_SENDTO, Uri.parse("smsto$to")).putExtra("sms_body", body))
+}
+
+/**
+ * Dials a Number
+ *
+ * @property number the Number you want to dial
+ */
+fun Context.dialNumber(number: String) {
+    startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:$number")))
+}
+
+/**
+ * Open Default Email Client with the [mailID] preSetted
+ */
+fun Context.sendEmail(mailID: String) {
+    startActivity(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:$mailID")))
+}
+
+/**
+ * Checks if App is in Background
+ */
+fun Context.isBackground(pName: String = packageName): Boolean {
+    getActivityManager().runningAppProcesses.forEach {
+        if (it.processName == pName)
+            return it.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_BACKGROUND
+    }
+    return false
+}
+
+/**
+ * Creates App ShortCut to the launcher App Drawer
+ *
+ * @property shortCutName The Name of the SHortCut
+ * @property icon the Resource Drawable for the Shortcut
+ * @property cls the Activity Class Which Will be Opened from the Shortcut
+ */
+fun Context.createDeskShortCut(shortCutName: String, icon: Int, cls: Class<out Activity>) {
+    val shortcutIntent = Intent("com.android.launcher.action.INSTALL_SHORTCUT")
+    shortcutIntent.putExtra("duplicate", false)
+    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortCutName)
+    val ico = Intent.ShortcutIconResource.fromContext(applicationContext, icon)
+    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, ico)
+    val intent = Intent(this, cls)
+    intent.action = "android.intent.action.MAIN"
+    intent.addCategory("android.intent.category.LAUNCHER")
+    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, intent)
+    sendBroadcast(shortcutIntent)
+}
+
+/**
+ * Creates App ShortCut to the launcher Screen
+ *
+ * @property shortCutName The Name of the SHortCut
+ * @property iconId the Resource Drawable for the Shortcut
+ * @property presentIntent the Intent will be fire on Clicking the ShortCut.
+ */
+fun Context.createShortcut(shortCutName: String, iconId: Int, presentIntent: Intent) {
+    val shortcutIntent = Intent("com.android.launcher.action.INSTALL_SHORTCUT")
+    shortcutIntent.putExtra("duplicate", false)
+    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortCutName)
+    shortcutIntent.putExtra(
+        Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+        Intent.ShortcutIconResource.fromContext(this, iconId)
+    )
+    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, presentIntent)
+    sendBroadcast(shortcutIntent)
+}
 
 /**
  * Want All the Audios from the User Phone?
