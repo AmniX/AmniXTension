@@ -7,6 +7,7 @@ A Kotlin extensions + Utils library with Bunch of Help inbuild.
 <img src="https://img.shields.io/bintray/v/amnix/AmniXUtils/AmniXtension.svg?color=%23134660&label=Latest%20Version%20&style=for-the-badge" alt="Current Version">
 </div>
 
+<div align="center">
 
 [ ![Download](https://api.bintray.com/packages/amnix/AmniXUtils/AmniXtension/images/download.svg) ](https://bintray.com/amnix/AmniXUtils/AmniXtension/_latestVersion)
 [![Dependencies](https://camo.githubusercontent.com/6266857d1c53194119edf1d9aafae7a4b301fa16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646570656e64656e636965732d7570253230746f253230646174652d627269676874677265656e2e737667)]()
@@ -17,17 +18,27 @@ A Kotlin extensions + Utils library with Bunch of Help inbuild.
 [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat)](https://www.paypal.me/amnixtonk)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
+</div>
+
+<div align="center">
+
 ![GitHub forks](https://img.shields.io/github/forks/AmniX/AmniXtension.svg?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/AmniX/AmniXtension.svg?style=social)
 ![GitHub stars](https://img.shields.io/github/watchers/AmniX/AmniXtension.svg?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/AmniX.svg?style=social)
 
+</div>
+
+<div align="center">
 
 [Documentation](docs/-amni-xtension/index.md) |
 [FileTree](docs/fileTree.md) | [FAQ's](#) | [RoadMap](#) |
 [Demo](https://github.com/AmniX/AmniXTension#demo) |
 [Suggestion](https://github.com/AmniX/AmniXTension/issues/new) |
 [Bugs](https://github.com/AmniX/AmniXTension/issues)
+
+</div>
+
 
 **AmniXTension** = AmniX's Tension Which Means No Tension to Developers, AmniXTension is Here.
 
