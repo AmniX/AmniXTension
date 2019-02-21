@@ -2,7 +2,7 @@
 
 # isLoggingEnabled
 
-`var isLoggingEnabled: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/AmniXtension.kt#L10)
+`var isLoggingEnabled: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/AmniXtension.kt#L25)
 
 set LoggingStatus Enable Or Disable
 

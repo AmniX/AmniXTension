@@ -2,7 +2,7 @@
 
 # getNsdManager
 
-`fun Context.getNsdManager(): NsdManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L475)
+`fun Context.getNsdManager(): NsdManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L648)
 
 get MSD Manager
 

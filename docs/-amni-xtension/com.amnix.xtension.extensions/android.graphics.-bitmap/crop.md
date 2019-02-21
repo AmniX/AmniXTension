@@ -2,7 +2,7 @@
 
 # crop
 
-`fun Bitmap.crop(r: Rect): Bitmap?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/BitmapExtension.kt#L69)
+`fun Bitmap.crop(r: Rect): Bitmap?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/BitmapExtension.kt#L82)
 
 Crop image easily.
 

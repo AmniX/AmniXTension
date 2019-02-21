@@ -2,7 +2,7 @@
 
 # getConnectivityManager
 
-`fun Context.getConnectivityManager(): ConnectivityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L345)
+`fun Context.getConnectivityManager(): ConnectivityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L518)
 
 get Connectivity Manager
 

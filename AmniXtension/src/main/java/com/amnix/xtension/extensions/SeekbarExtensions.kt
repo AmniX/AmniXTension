@@ -15,6 +15,9 @@ package com.amnix.xtension.extensions
 
 import android.widget.SeekBar
 
+/**
+ * Simplified SeekBar OnSeekBarChange Listener
+ */
 fun SeekBar.setOnSeekBarChangeListener(onProgressChanged:((seekBar: SeekBar?, progress: Int, fromUser: Boolean)->Unit)? = null,
                                        onStartTrackingTouch:((seekBar: SeekBar?)->Unit)? = null,
                                        onStopTrackingTouch:((seekBar: SeekBar?)->Unit)? = null){

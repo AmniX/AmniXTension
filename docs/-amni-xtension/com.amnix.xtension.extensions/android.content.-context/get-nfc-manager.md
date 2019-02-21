@@ -2,7 +2,7 @@
 
 # getNfcManager
 
-`fun Context.getNfcManager(): NfcManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L445)
+`fun Context.getNfcManager(): NfcManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L618)
 
 get NFC manager
 

@@ -145,6 +145,9 @@ fun loopWhile(boolean: Boolean, loop: () -> Unit) {
     while (boolean) loop()
 }
 
+/**
+ * Runs the Block With a Delay.
+ */
 fun runWithDelay(delay:Long,block:()->Unit){
     Handler(Looper.getMainLooper()).postDelayed({block()},delay)
 }

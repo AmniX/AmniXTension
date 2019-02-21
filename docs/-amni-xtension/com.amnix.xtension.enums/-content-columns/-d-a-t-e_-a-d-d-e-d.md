@@ -2,7 +2,7 @@
 
 # DATE_ADDED
 
-`DATE_ADDED` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L22)
+`DATE_ADDED` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L35)
 
 the date Added Column
 

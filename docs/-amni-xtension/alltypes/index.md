@@ -18,6 +18,7 @@
 | [com.amnix.xtension.extras.DeviceUtils](../com.amnix.xtension.extras/-device-utils/index.md) | Helper Class to Provide the Device Informations |
 | [android.widget.EditText](../com.amnix.xtension.extensions/android.widget.-edit-text/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [java.io.File](../com.amnix.xtension.extensions/java.io.-file/index.md) (extensions in package com.amnix.xtension.extensions) |  |
+| [androidx.fragment.app.FragmentActivity](../com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.InMemoryCache](../com.amnix.xtension.extras/-in-memory-cache/index.md) | Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want. |
 | [com.amnix.xtension.logs.L](../com.amnix.xtension.logs/-l/index.md) | A Custom Log Class for the developer Ease |
 | [kotlin.Number](../com.amnix.xtension.extensions/kotlin.-number/index.md) (extensions in package com.amnix.xtension.extensions) |  |

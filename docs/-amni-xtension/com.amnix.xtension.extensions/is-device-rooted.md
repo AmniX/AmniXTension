@@ -2,7 +2,7 @@
 
 # isDeviceRooted
 
-`fun isDeviceRooted(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/GlobalExtensions.kt#L91)
+`fun isDeviceRooted(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/GlobalExtensions.kt#L104)
 
 Check if Device is Rooted.
 

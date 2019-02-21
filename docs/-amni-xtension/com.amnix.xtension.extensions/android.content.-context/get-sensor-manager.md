@@ -2,7 +2,7 @@
 
 # getSensorManager
 
-`fun Context.getSensorManager(): SensorManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L380)
+`fun Context.getSensorManager(): SensorManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L553)
 
 get Sensor Manager
 

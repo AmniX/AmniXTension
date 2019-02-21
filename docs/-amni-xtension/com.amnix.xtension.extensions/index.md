@@ -16,6 +16,7 @@
 | [android.view.ViewGroup](android.view.-view-group/index.md) |  |
 | [android.widget.EditText](android.widget.-edit-text/index.md) |  |
 | [android.widget.SeekBar](android.widget.-seek-bar/index.md) |  |
+| [androidx.fragment.app.FragmentActivity](androidx.fragment.app.-fragment-activity/index.md) |  |
 | [androidx.viewpager.widget.ViewPager](androidx.viewpager.widget.-view-pager/index.md) |  |
 | [java.io.File](java.io.-file/index.md) |  |
 | [kotlin.Boolean](kotlin.-boolean/index.md) |  |
@@ -44,5 +45,6 @@
 | [loopWhile](loop-while.md) | `fun loopWhile(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, loop: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>While Loop Wrapped with Kotlin Global Extension |
 | [putInMemory](put-in-memory.md) | `fun putInMemory(key: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, any: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`InMemoryCache`](../com.amnix.xtension.extras/-in-memory-cache/index.md)<br>put Something In Memory to use it later |
 | [runOnUIThread](run-on-u-i-thread.md) | `fun runOnUIThread(runnable: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Run the UI Code on UI Thread From AnyWhere, No need the Activity Refrence |
+| [runWithDelay](run-with-delay.md) | `fun runWithDelay(delay: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`, block: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Runs the Block With a Delay. |
 | [tryAndCatch](try-and-catch.md) | `fun tryAndCatch(runnable: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`, onCatch: (e: `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)` = null, onFinally: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)` = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`?`<br>Try Catch within a single line |
 | [tryOrIgnore](try-or-ignore.md) | `fun tryOrIgnore(runnable: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>try the code in [runnable](try-or-ignore.md#com.amnix.xtension.extensions$tryOrIgnore(kotlin.Function0((kotlin.Unit)))/runnable), If it runs then its perfect if its not, It won't crash your app. |

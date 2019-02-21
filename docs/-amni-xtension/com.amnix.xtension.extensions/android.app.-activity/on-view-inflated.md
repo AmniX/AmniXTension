@@ -2,7 +2,7 @@
 
 # onViewInflated
 
-`fun Activity.onViewInflated(onInflated: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L81)
+`fun Activity.onViewInflated(onInflated: () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L99)
 
 add an Callback to ViewTreeObserver which let the developer know when contentView is inflated to the Activity Content
 

@@ -2,7 +2,7 @@
 
 # currentTimeMillis
 
-`inline val currentTimeMillis: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/GlobalExtensions.kt#L150)
+`inline val currentTimeMillis: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/GlobalExtensions.kt#L170)
 
 get CurrentTimeInMillis from System.currentTimeMillis
 

@@ -2,7 +2,7 @@
 
 # DESCENDING
 
-`DESCENDING` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentOrder.kt#L10)
+`DESCENDING` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentOrder.kt#L23)
 
 sort by DESC Order
 

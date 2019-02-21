@@ -2,7 +2,7 @@
 
 # TITLE
 
-`TITLE` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L18)
+`TITLE` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L31)
 
 the title Column
 

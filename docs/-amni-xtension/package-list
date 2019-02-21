@@ -7,12 +7,15 @@ $dokka.location:com.amnix.xtension.extensions$compressByQuality(android.graphics
 $dokka.location:com.amnix.xtension.extensions$compressBySampleSize(android.graphics.Bitmap, kotlin.Int, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-sample-size.md
 $dokka.location:com.amnix.xtension.extensions$contains(android.view.ViewGroup, android.view.View)com.amnix.xtension.extensions/android.view.-view-group/contains.md
 $dokka.location:com.amnix.xtension.extensions$copy(java.io.File, java.io.File)com.amnix.xtension.extensions/java.io.-file/copy.md
+$dokka.location:com.amnix.xtension.extensions$createDeskShortCut(android.content.Context, kotlin.String, kotlin.Int, java.lang.Class((android.app.Activity)))com.amnix.xtension.extensions/android.content.-context/create-desk-short-cut.md
+$dokka.location:com.amnix.xtension.extensions$createShortcut(android.content.Context, kotlin.String, kotlin.Int, android.content.Intent)com.amnix.xtension.extensions/android.content.-context/create-shortcut.md
 $dokka.location:com.amnix.xtension.extensions$crop(android.graphics.Bitmap, android.graphics.Rect)com.amnix.xtension.extensions/android.graphics.-bitmap/crop.md
 $dokka.location:com.amnix.xtension.extensions$deCodeToBinary(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/de-code-to-binary.md
 $dokka.location:com.amnix.xtension.extensions$decodeToBase64(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/decode-to-base64.md
 $dokka.location:com.amnix.xtension.extensions$decodeToUrl(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/decode-to-url.md
 $dokka.location:com.amnix.xtension.extensions$decryptAES(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/decrypt-a-e-s.md
 $dokka.location:com.amnix.xtension.extensions$deleteAll(java.io.File)com.amnix.xtension.extensions/java.io.-file/delete-all.md
+$dokka.location:com.amnix.xtension.extensions$dialNumber(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/dial-number.md
 $dokka.location:com.amnix.xtension.extensions$dpFromPx(kotlin.Number)com.amnix.xtension.extensions/kotlin.-number/dp-from-px.md
 $dokka.location:com.amnix.xtension.extensions$edit(android.content.SharedPreferences, kotlin.Function1((android.content.SharedPreferences.Editor, kotlin.Unit)))com.amnix.xtension.extensions/android.content.-shared-preferences/edit.md
 $dokka.location:com.amnix.xtension.extensions$encodeToBase64(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/encode-to-base64.md
@@ -31,6 +34,12 @@ $dokka.location:com.amnix.xtension.extensions$getAllAudios(android.content.Conte
 $dokka.location:com.amnix.xtension.extensions$getAllImages(android.content.Context, com.amnix.xtension.enums.ContentColumns, com.amnix.xtension.enums.ContentOrder)com.amnix.xtension.extensions/android.content.-context/get-all-images.md
 $dokka.location:com.amnix.xtension.extensions$getAllVideos(android.content.Context, com.amnix.xtension.enums.ContentColumns, com.amnix.xtension.enums.ContentOrder)com.amnix.xtension.extensions/android.content.-context/get-all-videos.md
 $dokka.location:com.amnix.xtension.extensions$getAndroidID(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-android-i-d.md
+$dokka.location:com.amnix.xtension.extensions$getAppApk(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-apk.md
+$dokka.location:com.amnix.xtension.extensions$getAppIcon(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-icon.md
+$dokka.location:com.amnix.xtension.extensions$getAppName(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-name.md
+$dokka.location:com.amnix.xtension.extensions$getAppSize(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-size.md
+$dokka.location:com.amnix.xtension.extensions$getAppVersionCode(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-version-code.md
+$dokka.location:com.amnix.xtension.extensions$getAppVersionName(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/get-app-version-name.md
 $dokka.location:com.amnix.xtension.extensions$getAudioManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-audio-manager.md
 $dokka.location:com.amnix.xtension.extensions$getBluetoothManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-bluetooth-manager.md
 $dokka.location:com.amnix.xtension.extensions$getClipboardManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-clipboard-manager.md
@@ -68,6 +77,7 @@ $dokka.location:com.amnix.xtension.extensions$getWifiP2pManager(android.content.
 $dokka.location:com.amnix.xtension.extensions$getWindowManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-window-manager.md
 $dokka.location:com.amnix.xtension.extensions$hideKeyboard(android.view.View)com.amnix.xtension.extensions/android.view.-view/hide-keyboard.md
 $dokka.location:com.amnix.xtension.extensions$isAppInstalled(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/is-app-installed.md
+$dokka.location:com.amnix.xtension.extensions$isBackground(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/is-background.md
 $dokka.location:com.amnix.xtension.extensions$isEmail(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/is-email.md
 $dokka.location:com.amnix.xtension.extensions$isGPSEnable(android.content.Context)com.amnix.xtension.extensions/android.content.-context/is-g-p-s-enable.md
 $dokka.location:com.amnix.xtension.extensions$isGone(android.view.View)com.amnix.xtension.extensions/android.view.-view/is-gone.md
@@ -77,6 +87,7 @@ $dokka.location:com.amnix.xtension.extensions$isInvisible(android.view.View)com
 $dokka.location:com.amnix.xtension.extensions$isNetworkAvailable(android.content.Context)com.amnix.xtension.extensions/android.content.-context/is-network-available.md
 $dokka.location:com.amnix.xtension.extensions$isNumeric(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/is-numeric.md
 $dokka.location:com.amnix.xtension.extensions$isPhone(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/is-phone.md
+$dokka.location:com.amnix.xtension.extensions$isServiceRunning(android.content.Context, java.lang.Class((android.app.Service)))com.amnix.xtension.extensions/android.content.-context/is-service-running.md
 $dokka.location:com.amnix.xtension.extensions$isVisible(android.view.View)com.amnix.xtension.extensions/android.view.-view/is-visible.md
 $dokka.location:com.amnix.xtension.extensions$loop(kotlin.Number, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.xtension.extensions/kotlin.-number/loop.md
 $dokka.location:com.amnix.xtension.extensions$md5(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/md5.md
@@ -89,6 +100,7 @@ $dokka.location:com.amnix.xtension.extensions$pxFromDp(kotlin.Number)com.amnix.
 $dokka.location:com.amnix.xtension.extensions$pxFromSp(kotlin.Number)com.amnix.xtension.extensions/kotlin.-number/px-from-sp.md
 $dokka.location:com.amnix.xtension.extensions$readToString(java.io.File)com.amnix.xtension.extensions/java.io.-file/read-to-string.md
 $dokka.location:com.amnix.xtension.extensions$requestMediaScanner(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/request-media-scanner.md
+$dokka.location:com.amnix.xtension.extensions$requestPermission(androidx.fragment.app.FragmentActivity, kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)))com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/request-permission.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.graphics.Bitmap, kotlin.Number, kotlin.Number, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/resize.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.view.View, kotlin.Int, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/resize.md
 $dokka.location:com.amnix.xtension.extensions$rotateTo(android.graphics.Bitmap, kotlin.Float, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/rotate-to.md
@@ -98,6 +110,8 @@ $dokka.location:com.amnix.xtension.extensions$saveToFile(kotlin.String, java.io.
 $dokka.location:com.amnix.xtension.extensions$screenHeight#android.content.Contextcom.amnix.xtension.extensions/android.content.-context/screen-height.md
 $dokka.location:com.amnix.xtension.extensions$screenWidth#android.content.Contextcom.amnix.xtension.extensions/android.content.-context/screen-width.md
 $dokka.location:com.amnix.xtension.extensions$screenshot(android.view.View)com.amnix.xtension.extensions/android.view.-view/screenshot.md
+$dokka.location:com.amnix.xtension.extensions$sendEmail(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/send-email.md
+$dokka.location:com.amnix.xtension.extensions$sendSMS(android.content.Context, kotlin.String, kotlin.String)com.amnix.xtension.extensions/android.content.-context/send-s-m-s.md
 $dokka.location:com.amnix.xtension.extensions$set(android.graphics.Bitmap, kotlin.Int, kotlin.Int, kotlin.Int)com.amnix.xtension.extensions/android.graphics.-bitmap/set.md
 $dokka.location:com.amnix.xtension.extensions$setAfterTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-edit-text/set-after-text-changed-listener.md
 $dokka.location:com.amnix.xtension.extensions$setBeforeTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-edit-text/set-before-text-changed-listener.md

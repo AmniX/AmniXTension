@@ -2,7 +2,7 @@
 
 # getWifiP2pManager
 
-`fun Context.getWifiP2pManager(): WifiP2pManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L460)
+`fun Context.getWifiP2pManager(): WifiP2pManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L633)
 
 get WiFI P2P Manager
 

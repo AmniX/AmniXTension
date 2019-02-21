@@ -2,7 +2,7 @@
 
 # WIDTH
 
-`WIDTH` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L30)
+`WIDTH` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L43)
 
 the width Column
 
