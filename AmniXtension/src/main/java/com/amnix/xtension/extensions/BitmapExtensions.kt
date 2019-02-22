@@ -58,10 +58,13 @@ fun Bitmap.saveAsync(
     to: String,
     format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
     quality: Int = 100,
-    recycle: Boolean = true
-) = async {
+    recycle: Boolean = true,
+    onComplete:(isSaved:String)->Unit
+) = asyncAwait( {
     this.save(to, format, quality, recycle)
-}
+},{
+    onComplete(to)
+})
 
 /**
  * get Pixel from Bitmap Easily

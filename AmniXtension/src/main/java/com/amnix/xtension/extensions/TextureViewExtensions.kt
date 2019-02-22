@@ -53,8 +53,7 @@ fun TextureView.setupCamera(
         }
 
         override fun onSurfaceTextureDestroyed(surface: SurfaceTexture?): Boolean {
-            camera?.stopPreview()
-            camera?.release()
+
             return true
         }
 

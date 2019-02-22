@@ -105,7 +105,7 @@ $dokka.location:com.amnix.xtension.extensions$resize(android.graphics.Bitmap, ko
 $dokka.location:com.amnix.xtension.extensions$resize(android.view.View, kotlin.Int, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/resize.md
 $dokka.location:com.amnix.xtension.extensions$rotateTo(android.graphics.Bitmap, kotlin.Float, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/rotate-to.md
 $dokka.location:com.amnix.xtension.extensions$save(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/save.md
-$dokka.location:com.amnix.xtension.extensions$saveAsync(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/save-async.md
+$dokka.location:com.amnix.xtension.extensions$saveAsync(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.graphics.-bitmap/save-async.md
 $dokka.location:com.amnix.xtension.extensions$saveToFile(kotlin.String, java.io.File)com.amnix.xtension.extensions/kotlin.-string/save-to-file.md
 $dokka.location:com.amnix.xtension.extensions$screenHeight#android.content.Contextcom.amnix.xtension.extensions/android.content.-context/screen-height.md
 $dokka.location:com.amnix.xtension.extensions$screenWidth#android.content.Contextcom.amnix.xtension.extensions/android.content.-context/screen-width.md
@@ -167,3 +167,4 @@ com.amnix.xtension.enums
 com.amnix.xtension.extensions
 com.amnix.xtension.extras
 com.amnix.xtension.logs
+com.amnix.xtension.widgets

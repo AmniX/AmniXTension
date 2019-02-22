@@ -27,7 +27,7 @@ android {
 publish {
     def groupProjectID = 'com.amnix.xtension'
     def artifactProjectID = 'AmniXtension'
-    def publishVersionID = '1.0.0-beta02'
+    def publishVersionID = '1.0.0-beta03'
 
     userOrg = 'amnix'
     repoName = 'AmniXUtils'

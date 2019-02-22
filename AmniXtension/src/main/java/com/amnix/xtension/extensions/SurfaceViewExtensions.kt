@@ -52,8 +52,7 @@ fun SurfaceView.setupCamera(
         }
 
         override fun surfaceDestroyed(holder: SurfaceHolder?) {
-            camera?.stopPreview()
-            camera?.release()
+
         }
 
         override fun surfaceCreated(holder: SurfaceHolder?) {

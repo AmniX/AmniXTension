@@ -6,7 +6,7 @@ AmniXtension/src/main/java/com/amnix/xtension/
 │   └── ContentOrder.kt
 ├── extensions
 │   ├── ActivityExtensions.kt
-│   ├── BitmapExtension.kt
+│   ├── BitmapExtensions.kt
 │   ├── BooleanExtensions.kt
 │   ├── ContextExtension.kt
 │   ├── EditTextExtensions.kt
@@ -30,9 +30,13 @@ AmniXtension/src/main/java/com/amnix/xtension/
 │   └── ZipUtils.java
 ├── internals
 │   └── CameraHelper.kt
-└── logs
-    ├── CodeLocation.kt
-    └── L.kt
+├── logs
+│   ├── CodeLocation.kt
+│   └── L.kt
+└── widgets
+    ├── AspectRatioFrameLayout.kt
+    ├── ColorProgressBar.kt
+    └── TouchImageView.java
 
-5 directories, 28 files
+6 directories, 31 files
 ```
