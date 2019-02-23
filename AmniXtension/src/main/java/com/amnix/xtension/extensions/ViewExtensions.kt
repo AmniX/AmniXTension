@@ -38,10 +38,10 @@ fun View.screenshot(): Bitmap {
  *
  * @property tolerance the Millis to Skip the User Click
  */
-fun View.setOnSingleClickListener(tolerance : Long = 500, onClick:(v:View)->Unit){
+fun View.setOnSingleClickListener(tolerance: Long = 500, onClick: (v: View) -> Unit) {
     var lastClicked = 0L
     setOnClickListener {
-        if(currentTimeMillis - lastClicked > tolerance){
+        if (currentTimeMillis - lastClicked > tolerance) {
             onClick(it)
             lastClicked = currentTimeMillis
         }
@@ -75,6 +75,13 @@ fun View.showKeyboard() {
     val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     this.requestFocus()
     imm.showSoftInput(this, 0)
+}
+
+/**
+ * will show the view If Condition is true else make if INVISIBLE or GONE Based on the [makeInvisible] flag
+ */
+fun View.showIf(boolean: Boolean, makeInvisible: Boolean = false) {
+    visibility = if (boolean) View.VISIBLE else if (makeInvisible) View.INVISIBLE else View.GONE
 }
 
 /**
@@ -181,7 +188,7 @@ fun View.isInvisible() = visibility == View.INVISIBLE
  * get Activity On Which View is inflated to
  */
 fun View.getActivity(): Activity? {
-    if(context is Activity)
+    if (context is Activity)
         return context as Activity
     return null
 }

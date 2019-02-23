@@ -32,6 +32,19 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
         return null
     }
 }.execute()!!
+
+/**
+ * Want to run some code on another thread?
+ *
+ * run it with the ease of async and leave it to be executed on a Worker Thread.
+ * Make sure you don't do some context related stuff in async, It may cause an memory leak
+ */
+fun <T>async(param:T,runnable: T.() -> Unit) = object : AsyncTask<Void, Void, Void>() {
+    override fun doInBackground(vararg params: Void?): Void? {
+        runnable(param)
+        return null
+    }
+}.execute()!!
 /**
  * Want to run some code on another thread?
  *
@@ -55,19 +68,46 @@ fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit)
         }
 
     }.execute()!!
+/**
+ * Want to run some code on another thread?
+ *
+ * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
+ * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
+ */
+fun <T,P> asyncAwait(param:P,asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) =
+    object : AsyncTask<Void, Void, T>() {
+        override fun doInBackground(vararg params: Void?): T? {
+            return try {
+                asyncRunnable(param)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                null
+            }
+        }
+
+        override fun onPostExecute(result: T?) {
+            super.onPostExecute(result)
+            awaitRunnable(result)
+        }
+
+    }.execute()!!
 
 /**
  * try the code in [runnable], If it runs then its perfect if its not, It won't crash your app.
  */
 fun tryOrIgnore(runnable: () -> Unit) = try {
     runnable()
-} catch (ignore: Exception) {
-}
+} catch (e: Exception) {e.printStackTrace() }
 
 /**
  * put Something In Memory to use it later
  */
 fun putInMemory(key: String, any: Any?) = InMemoryCache.put(key, any)
+
+/**
+ *
+ */
+fun <T>Any.castAs(to:T) = this as T
 
 /**
  * get Saved Data from memory, null if it os not exists
