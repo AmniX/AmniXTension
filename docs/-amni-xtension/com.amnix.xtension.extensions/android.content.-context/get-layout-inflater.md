@@ -2,7 +2,7 @@
 
 # getLayoutInflater
 
-`fun Context.getLayoutInflater(): LayoutInflater` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L528)
+`fun Context.getLayoutInflater(): LayoutInflater` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L529)
 
 get Layout Inflater Service
 

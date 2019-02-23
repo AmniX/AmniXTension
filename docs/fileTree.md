@@ -31,12 +31,14 @@ AmniXtension/src/main/java/com/amnix/xtension/
 ├── internals
 │   └── CameraHelper.kt
 ├── logs
+│   ├── AmniXLog.kt
 │   ├── CodeLocation.kt
 │   └── L.kt
 └── widgets
     ├── AspectRatioFrameLayout.kt
     ├── ColorProgressBar.kt
+    ├── ShadowView.kt
     └── TouchImageView.java
 
-6 directories, 31 files
+6 directories, 33 files
 ```

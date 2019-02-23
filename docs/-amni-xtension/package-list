@@ -1,6 +1,7 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
 $dokka.location:com.amnix.xtension.extensions$append(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/append.md
+$dokka.location:com.amnix.xtension.extensions$castAs(kotlin.Any, com.amnix.xtension.extensions.castAs.T)com.amnix.xtension.extensions/kotlin.-any/cast-as.md
 $dokka.location:com.amnix.xtension.extensions$checkSelfPermissions(android.content.Context, kotlin.Array((kotlin.String)))com.amnix.xtension.extensions/android.content.-context/check-self-permissions.md
 $dokka.location:com.amnix.xtension.extensions$childs(android.view.ViewGroup)com.amnix.xtension.extensions/android.view.-view-group/childs.md
 $dokka.location:com.amnix.xtension.extensions$compressByQuality(android.graphics.Bitmap, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-quality.md
@@ -138,6 +139,7 @@ $dokka.location:com.amnix.xtension.extensions$setupCamera(android.view.TextureVi
 $dokka.location:com.amnix.xtension.extensions$sha1(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/sha1.md
 $dokka.location:com.amnix.xtension.extensions$showConfirmationDialog(android.content.Context, kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)), kotlin.String, kotlin.String, kotlin.Boolean)com.amnix.xtension.extensions/android.content.-context/show-confirmation-dialog.md
 $dokka.location:com.amnix.xtension.extensions$showDatePicker(android.content.Context, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Function3((kotlin.Int, , , kotlin.Unit)))com.amnix.xtension.extensions/android.content.-context/show-date-picker.md
+$dokka.location:com.amnix.xtension.extensions$showIf(android.view.View, kotlin.Boolean, kotlin.Boolean)com.amnix.xtension.extensions/android.view.-view/show-if.md
 $dokka.location:com.amnix.xtension.extensions$showKeyboard(android.view.View)com.amnix.xtension.extensions/android.view.-view/show-keyboard.md
 $dokka.location:com.amnix.xtension.extensions$showMultiPicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function2((kotlin.Int, kotlin.Boolean, kotlin.Unit)), kotlin.BooleanArray)com.amnix.xtension.extensions/android.content.-context/show-multi-picker.md
 $dokka.location:com.amnix.xtension.extensions$showSinglePicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.Int, kotlin.Unit)), kotlin.Int)com.amnix.xtension.extensions/android.content.-context/show-single-picker.md

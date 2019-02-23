@@ -2,7 +2,7 @@
 
 # getActivity
 
-`fun View.getActivity(): Activity?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ViewExtensions.kt#L183)
+`fun View.getActivity(): Activity?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ViewExtensions.kt#L190)
 
 get Activity On Which View is inflated to
 

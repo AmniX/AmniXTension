@@ -2,7 +2,7 @@
 
 # getDownloadManager
 
-`fun Context.getDownloadManager(): DownloadManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L608)
+`fun Context.getDownloadManager(): DownloadManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L609)
 
 get Download Manager
 

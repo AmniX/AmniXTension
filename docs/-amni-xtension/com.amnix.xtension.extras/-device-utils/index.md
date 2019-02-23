@@ -36,3 +36,9 @@ Helper Class to Provide the Device Informations
 | [isXiaomi](is-xiaomi.md) | `val isXiaomi: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Xiaomi Device |
 | [isZte](is-zte.md) | `val isZte: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Zte Device |
 | [romInfo](rom-info.md) | `val romInfo: `[`RomInfo`](-rom-info/index.md)`?`<br>Provides the custom or Stock Rom Information |
+
+### Extension Functions
+
+| Name | Summary |
+|---|---|
+| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(to: `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T) |

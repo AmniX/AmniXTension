@@ -2,7 +2,7 @@
 
 # getAlarmManager
 
-`fun Context.getAlarmManager(): AlarmManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L503)
+`fun Context.getAlarmManager(): AlarmManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L504)
 
 get Alaram Manager
 

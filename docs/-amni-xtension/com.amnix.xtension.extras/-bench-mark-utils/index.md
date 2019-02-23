@@ -30,3 +30,9 @@ Above comments are the demonstration on how this class can be useful
 |---|---|
 | [dump](dump.md) | `fun dump(logTag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, msg: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>`fun dump(msg: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>dumps the log into logcat |
 | [reset](reset.md) | `fun reset(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>resets The startTime |
+
+### Extension Functions
+
+| Name | Summary |
+|---|---|
+| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(to: `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T) |

@@ -7,6 +7,7 @@
 | [android.app.Activity](../com.amnix.xtension.extensions/android.app.-activity/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.AmniXCameraWrapper](../com.amnix.xtension.extras/-amni-x-camera-wrapper/index.md) | Class to wrap Camera and Provide Ease Modifications |
 | [com.amnix.xtension.AmniXtension](../com.amnix.xtension/-amni-xtension/index.md) | The Class to configure the Configurable variables for further Process. |
+| [kotlin.Any](../com.amnix.xtension.extensions/kotlin.-any/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.widgets.AspectRatioFrameLayout](../com.amnix.xtension.widgets/-aspect-ratio-frame-layout/index.md) | Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio |
 | [com.amnix.xtension.extras.BenchMarkUtils](../com.amnix.xtension.extras/-bench-mark-utils/index.md) | This Class is Responsible to BenchMark Any Lines of Code and Its Execution Time in Logcat. |
 | [android.graphics.Bitmap](../com.amnix.xtension.extensions/android.graphics.-bitmap/index.md) (extensions in package com.amnix.xtension.extensions) |  |
@@ -26,6 +27,7 @@
 | [kotlin.Number](../com.amnix.xtension.extensions/kotlin.-number/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.PlaceHolders](../com.amnix.xtension.extras/-place-holders/index.md) | Class for Several PlaceHolders |
 | [android.widget.SeekBar](../com.amnix.xtension.extensions/android.widget.-seek-bar/index.md) (extensions in package com.amnix.xtension.extensions) |  |
+| [com.amnix.xtension.widgets.ShadowView](../com.amnix.xtension.widgets/-shadow-view/index.md) |  |
 | [android.content.SharedPreferences](../com.amnix.xtension.extensions/android.content.-shared-preferences/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [kotlin.String](../com.amnix.xtension.extensions/kotlin.-string/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [android.view.SurfaceView](../com.amnix.xtension.extensions/android.view.-surface-view/index.md) (extensions in package com.amnix.xtension.extensions) |  |

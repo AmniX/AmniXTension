@@ -2,7 +2,7 @@
 
 # getActivityManager
 
-`fun Context.getActivityManager(): ActivityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L498)
+`fun Context.getActivityManager(): ActivityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L499)
 
 get Activity Manager
 

@@ -2,7 +2,7 @@
 
 # getAccessibilityManager
 
-`fun Context.getAccessibilityManager(): AccessibilityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L583)
+`fun Context.getAccessibilityManager(): AccessibilityManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L584)
 
 get Accessiblity Manager
 

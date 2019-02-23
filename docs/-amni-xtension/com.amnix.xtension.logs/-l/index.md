@@ -2,7 +2,7 @@
 
 # L
 
-`object L` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/logs/L.kt#L26)
+`object L` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/logs/L.kt#L23)
 
 A Custom Log Class for the developer Ease
 
@@ -17,3 +17,9 @@ A Custom Log Class for the developer Ease
 | [v](v.md) | `fun v(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.v but with many params |
 | [w](w.md) | `fun w(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.w but with many params |
 | [wtf](wtf.md) | `fun wtf(vararg throwables: `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.wtf but with many params |
+
+### Extension Functions
+
+| Name | Summary |
+|---|---|
+| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(to: `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T) |

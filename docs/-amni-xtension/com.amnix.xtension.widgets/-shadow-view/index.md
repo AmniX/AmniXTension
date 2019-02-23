@@ -1,22 +1,14 @@
-[AmniXtension](../../index.md) / [com.amnix.xtension.widgets](../index.md) / [ColorProgressBar](./index.md)
+[AmniXtension](../../index.md) / [com.amnix.xtension.widgets](../index.md) / [ShadowView](./index.md)
 
-# ColorProgressBar
+# ShadowView
 
-`class ColorProgressBar : ProgressBar` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/ColorProgressBar.kt#L28)
-
-Class to Render ProgressBar with some Specific Color with the ease
+`class ShadowView : View` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/ShadowView.kt#L12)
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ColorProgressBar(context: Context)`<br>Context Constructor`ColorProgressBar(context: Context, attrs: AttributeSet)`<br>Context,AttributeSet Constructor`ColorProgressBar(context: Context, attrs: AttributeSet, defStyleAttr: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Context,AttributeSet,Int Constructor |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [setColor](set-color.md) | `fun setColor(color: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ColorProgressBar`](./index.md)<br>Set Color Dynamically |
+| [&lt;init&gt;](-init-.md) | `ShadowView(context: Context)`<br>`ShadowView(context: Context, attrs: AttributeSet)`<br>`ShadowView(context: Context, attrs: AttributeSet, defStyleAttr: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)` |
 
 ### Extension Functions
 

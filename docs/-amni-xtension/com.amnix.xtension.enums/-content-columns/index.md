@@ -17,3 +17,9 @@ Enum to choose between multiple column type
 | [DATE_MODIFIED](-d-a-t-e_-m-o-d-i-f-i-e-d.md) | the date Modified Column |
 | [WIDTH](-w-i-d-t-h.md) | the width Column |
 | [HEIGHT](-h-e-i-g-h-t.md) | the Height Column |
+
+### Extension Functions
+
+| Name | Summary |
+|---|---|
+| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(to: `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T) |

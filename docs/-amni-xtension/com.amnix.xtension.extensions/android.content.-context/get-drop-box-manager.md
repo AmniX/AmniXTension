@@ -2,7 +2,7 @@
 
 # getDropBoxManager
 
-`fun Context.getDropBoxManager(): DropBoxManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L598)
+`fun Context.getDropBoxManager(): DropBoxManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L599)
 
 get DropBox Manager
 

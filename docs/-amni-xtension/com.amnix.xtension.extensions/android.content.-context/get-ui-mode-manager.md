@@ -2,7 +2,7 @@
 
 # getUiModeManager
 
-`fun Context.getUiModeManager(): UiModeManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L603)
+`fun Context.getUiModeManager(): UiModeManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L604)
 
 get UiMode Manager
 
