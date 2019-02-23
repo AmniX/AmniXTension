@@ -23,4 +23,8 @@ object AmniXtension{
      * set LoggingStatus Enable Or Disable
      */
     var isLoggingEnabled = true
+    /**
+     * Set LoggingTag Globally
+     */
+    var globalLogTag = ""
 }

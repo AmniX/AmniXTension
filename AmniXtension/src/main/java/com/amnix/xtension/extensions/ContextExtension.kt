@@ -375,6 +375,7 @@ fun Context.isBackground(pName: String = packageName): Boolean {
  * @property icon the Resource Drawable for the Shortcut
  * @property cls the Activity Class Which Will be Opened from the Shortcut
  */
+@Suppress("DEPRECATION")
 fun Context.createDeskShortCut(shortCutName: String, icon: Int, cls: Class<out Activity>) {
     val shortcutIntent = Intent("com.android.launcher.action.INSTALL_SHORTCUT")
     shortcutIntent.putExtra("duplicate", false)
