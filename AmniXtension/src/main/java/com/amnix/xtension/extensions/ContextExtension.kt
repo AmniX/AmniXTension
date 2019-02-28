@@ -23,6 +23,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.hardware.SensorManager
 import android.hardware.display.DisplayManager
@@ -47,13 +48,18 @@ import android.view.WindowManager
 import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
+import android.widget.RemoteViews
 import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresPermission
+import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.amnix.xtension.enums.ContentColumns
 import com.amnix.xtension.enums.ContentOrder
 import java.io.File
 import java.util.*
+import kotlin.random.Random
 
 /**
  * get Screen Width Easily
@@ -387,6 +393,55 @@ fun Context.createDeskShortCut(shortCutName: String, icon: Int, cls: Class<out A
     intent.addCategory("android.intent.category.LAUNCHER")
     shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, intent)
     sendBroadcast(shortcutIntent)
+}
+
+fun Context.showNotification(
+    contentTitle: String,
+    id: Int = Random.nextInt(),
+    contentText: String? = null,
+    @DrawableRes icon: Int = android.R.drawable.stat_notify_more,
+    channelID: String = "default",
+    channelName: String = "Default Notification",
+    contentInfo: String? = null,
+    pendingIntent: PendingIntent? = null,
+    content: RemoteViews? = null,
+    bigContent: RemoteViews? = null,
+    autoCancel: Boolean = false,
+    @ColorInt ledColor: Int = Color.WHITE,
+    isColorized: Boolean = false,
+    subText: String? = null,
+    priority: Int = NotificationCompat.PRIORITY_DEFAULT,
+    style: NotificationCompat.Style? = null
+) {
+
+    val notification = NotificationCompat.Builder(this, channelID)
+        .setContentTitle(contentTitle)
+        .setSmallIcon(icon)
+        .setContentText(contentText)
+        .setContentInfo(contentInfo)
+        .setContentIntent(pendingIntent).setContent(content).setCustomBigContentView(bigContent)
+        .setAutoCancel(autoCancel)
+        .setColor(ledColor)
+        .setChannelId(channelID)
+        .setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL)
+        .setCategory(NotificationCompat.CATEGORY_EVENT)
+        .setColorized(isColorized)
+        .setSubText(subText)
+        .setPriority(priority)
+        .setStyle(style)
+        .build()
+    val notificationManager = getNotificationManager()
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val channel = NotificationChannel(
+            channelID,
+            channelName,
+            NotificationManager.IMPORTANCE_DEFAULT
+        )
+        notificationManager.createNotificationChannel(channel)
+    }
+
+    notificationManager.notify(id, notification)
 }
 
 /**

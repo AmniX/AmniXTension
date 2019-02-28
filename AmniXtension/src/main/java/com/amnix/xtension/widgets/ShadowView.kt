@@ -1,9 +1,7 @@
 package com.amnix.xtension.widgets
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
@@ -11,7 +9,7 @@ import com.amnix.xtension.R
 
 class ShadowView : View {
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         parseAttr(context, attrs)
