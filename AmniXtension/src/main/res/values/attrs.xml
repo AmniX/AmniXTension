@@ -36,4 +36,8 @@
         <attr name="startColor" format="color"/>
         <attr name="endColor" format="color"/>
     </declare-styleable>
+    <declare-styleable name="CircularButton">
+        <attr name="shadowColor" format="color" />
+        <attr name="buttonColor" format="color" />
+    </declare-styleable>
 </resources>
