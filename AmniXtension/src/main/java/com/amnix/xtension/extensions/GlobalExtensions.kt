@@ -39,12 +39,13 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
  * run it with the ease of async and leave it to be executed on a Worker Thread.
  * Make sure you don't do some context related stuff in async, It may cause an memory leak
  */
-fun <T>async(param:T,runnable: T.() -> Unit) = object : AsyncTask<Void, Void, Void>() {
+fun <T> async(param: T, runnable: T.() -> Unit) = object : AsyncTask<Void, Void, Void>() {
     override fun doInBackground(vararg params: Void?): Void? {
         runnable(param)
         return null
     }
 }.execute()!!
+
 /**
  * Want to run some code on another thread?
  *
@@ -68,13 +69,14 @@ fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit)
         }
 
     }.execute()!!
+
 /**
  * Want to run some code on another thread?
  *
  * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
  * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
  */
-fun <T,P> asyncAwait(param:P,asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) =
+fun <T, P> asyncAwait(param: P, asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) =
     object : AsyncTask<Void, Void, T>() {
         override fun doInBackground(vararg params: Void?): T? {
             return try {
@@ -97,7 +99,9 @@ fun <T,P> asyncAwait(param:P,asyncRunnable: P.() -> T?, awaitRunnable: (result: 
  */
 fun tryOrIgnore(runnable: () -> Unit) = try {
     runnable()
-} catch (e: Exception) {e.printStackTrace() }
+} catch (e: Exception) {
+    e.printStackTrace()
+}
 
 /**
  * put Something In Memory to use it later
@@ -105,9 +109,14 @@ fun tryOrIgnore(runnable: () -> Unit) = try {
 fun putInMemory(key: String, any: Any?) = InMemoryCache.put(key, any)
 
 /**
- *
+ * helper Function to Cast things
  */
-fun <T>Any.castAs(to:T) = this as T
+fun <T> Any.castTo(clazz: Class<T>): T? = clazz.cast(this)
+
+/**
+ * helper Function to Cast things
+ */
+fun <T> Any.castAs(clazz: Class<T>): T? = clazz.cast(this)
 
 /**
  * get Saved Data from memory, null if it os not exists
@@ -188,8 +197,8 @@ fun loopWhile(boolean: Boolean, loop: () -> Unit) {
 /**
  * Runs the Block With a Delay.
  */
-fun runWithDelay(delay:Long,block:()->Unit){
-    Handler(Looper.getMainLooper()).postDelayed({block()},delay)
+fun runWithDelay(delay: Long, block: () -> Unit) {
+    Handler(Looper.getMainLooper()).postDelayed({ block() }, delay)
 }
 
 /**
@@ -202,7 +211,7 @@ fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
 /**
  * Run the UI Code on UI Thread From AnyWhere, No need the Activity Refrence
  */
-fun runOnUIThread(runnable:()->Unit) = Handler(Looper.getMainLooper()).post(runnable)
+fun runOnUIThread(runnable: () -> Unit) = Handler(Looper.getMainLooper()).post(runnable)
 
 /**
  * get CurrentTimeInMillis from System.currentTimeMillis

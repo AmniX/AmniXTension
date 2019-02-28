@@ -30,6 +30,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
+import com.amnix.xtension.extras.AmniXSnack
 import java.lang.reflect.InvocationTargetException
 
 /**
@@ -77,6 +78,7 @@ fun Activity.setStatusBarColor(@ColorInt color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         window.statusBarColor = color
 }
+
 /**
  * Set Navigation Bar Color if Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
  */
@@ -84,6 +86,7 @@ fun Activity.setNavigationBarColor(@ColorInt color: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         window.navigationBarColor = color
 }
+
 /**
  * Set Navigation Bar Divider Color if Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
  */
@@ -106,6 +109,36 @@ fun Activity.onViewInflated(onInflated: () -> Unit) {
 }
 
 /**
+ * show Custom SnackBar Easily,
+ *
+ * @property message The Message is going to show on SnackBar
+ * @property action the Pair of String and a #Unit which will replace the dismiss Action from SnackBar and provide callBack
+ * @property bgColor the argb Form Color for the snackBar
+ * @property textColor the argb Form Color for the SnackBar TextView
+ * @property duration the Duration to show SnackBar till. if There is a Custom Action then Duration is Infinite.
+ */
+
+fun Activity.showSnackBar(
+    message: String,
+    action: Pair<String, (v: View?) -> Unit>? = null,
+    @ColorInt bgColor: Int? = null,
+    @ColorInt textColor: Int? = null,
+    duration: Long = 1000
+) {
+    AmniXSnack(this).apply {
+        setMessage(message)
+        if (action != null)
+            setAction(action.first, action.second)
+        else
+            setDuration(duration)
+        if (bgColor != null)
+            setBackColor(bgColor)
+        if (textColor != null)
+            setTextColor(textColor)
+    }.show()
+}
+
+/**
  * get #rootVIew of the Activity
  */
 fun Activity.getRootView(): View? {
@@ -113,6 +146,13 @@ fun Activity.getRootView(): View? {
     if (rootVIew == null)
         rootVIew = window.decorView.findViewById(android.R.id.content)
     return rootVIew
+}
+
+/**
+ * get #contentView of the Activity
+ */
+fun Activity.getContentView(): View? {
+    return getRootView()
 }
 
 /**
@@ -128,8 +168,8 @@ fun Activity.getRootView(): View? {
  *
  * * Only Supports One Permission at a time. Contributors will be welcomed
  */
-fun FragmentActivity.requestPermission(permission:String, onResult:(isGranted:Boolean)->Unit){
-    if(checkSelfPermissions(permission)){
+fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted: Boolean) -> Unit) {
+    if (checkSelfPermissions(permission)) {
         onResult(true)
         return
     }
@@ -139,8 +179,9 @@ fun FragmentActivity.requestPermission(permission:String, onResult:(isGranted:Bo
         onResult(checkSelfPermissions(permission))
     }
     lifecycle.addObserver(observer)
-    ActivityCompat.requestPermissions(this, arrayOf(permission),420)
+    ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
 }
+
 //Private Methods are below
 private fun getAppUsableScreenSize(context: Context): Point {
     val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -170,17 +211,17 @@ private fun getRealScreenSize(context: Context): Point {
     return size
 }
 
-private class PermissionObserver() : LifecycleObserver{
-    var onResumeCallback:(()->Unit)? = null
+private class PermissionObserver() : LifecycleObserver {
+    var onResumeCallback: (() -> Unit)? = null
     var readyToCheck = false
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    fun onPause(){
+    fun onPause() {
         readyToCheck = true
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    fun onResume(){
-        if(readyToCheck)
+    fun onResume() {
+        if (readyToCheck)
             onResumeCallback?.invoke()
         readyToCheck = false
     }

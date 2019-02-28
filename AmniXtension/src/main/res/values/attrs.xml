@@ -40,4 +40,10 @@
         <attr name="shadowColor" format="color" />
         <attr name="buttonColor" format="color" />
     </declare-styleable>
+    <color name="snack_default">#34495e</color>
+    <color name="snack_info">#3498db</color>
+    <color name="snack_success">#2ecc71</color>
+    <color name="snack_error">#e74c3c</color>
+    <color name="snack_warning">#f39c12</color>
+    <color name="snack_dark">#3d3d3d</color>
 </resources>
