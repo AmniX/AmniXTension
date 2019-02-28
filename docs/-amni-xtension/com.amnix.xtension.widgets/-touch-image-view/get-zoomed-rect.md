@@ -2,7 +2,7 @@
 
 # getZoomedRect
 
-`open fun getZoomedRect(): RectF` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L279)
+`open fun getZoomedRect(): RectF` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L295)
 
 Return a Rect representing the zoomed image.
 

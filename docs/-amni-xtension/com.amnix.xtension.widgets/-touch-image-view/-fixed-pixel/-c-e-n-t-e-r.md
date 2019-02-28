@@ -2,4 +2,4 @@
 
 # CENTER
 
-`CENTER` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L66)
+`CENTER` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L73)

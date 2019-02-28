@@ -2,7 +2,7 @@
 
 # getTelephonyManager
 
-`fun Context.getTelephonyManager(): TelephonyManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L559)
+`fun Context.getTelephonyManager(): TelephonyManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L635)
 
 get Telephony Manager
 

@@ -23,16 +23,24 @@ import com.amnix.xtension.R
  * Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio
  */
 class AspectRatioFrameLayout : FrameLayout {
-    var xRatio = DEFAULT_XRATIO
-    var yRatio = DEFAULT_YRATIO
+    private var xRatio = DEFAULT_XRATIO
+    private var yRatio = DEFAULT_YRATIO
+
+    /**
+     * context Constructor
+     */
     constructor(context: Context) : super(context) {
         init(context, null, 0)
     }
-
+    /**
+     * context,attr Constructor
+     */
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs, 0)
     }
-
+    /**
+     * context,attr,defStyle Constructor
+     */
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
         init(context, attrs, defStyle)
     }
@@ -47,6 +55,11 @@ class AspectRatioFrameLayout : FrameLayout {
         }
     }
 
+    /**
+     * Method Which Runs on Measure time
+     *
+     * We OverRidden it Because of setting the width height based on the aspect ratio
+     */
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 

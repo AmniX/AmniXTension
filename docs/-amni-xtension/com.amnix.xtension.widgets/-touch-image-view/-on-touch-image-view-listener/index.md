@@ -2,7 +2,7 @@
 
 # OnTouchImageViewListener
 
-`interface OnTouchImageViewListener` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L1028)
+`interface OnTouchImageViewListener` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L1044)
 
 ### Functions
 

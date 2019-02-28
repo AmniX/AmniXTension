@@ -1,7 +1,8 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
 $dokka.location:com.amnix.xtension.extensions$append(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/append.md
-$dokka.location:com.amnix.xtension.extensions$castAs(kotlin.Any, com.amnix.xtension.extensions.castAs.T)com.amnix.xtension.extensions/kotlin.-any/cast-as.md
+$dokka.location:com.amnix.xtension.extensions$castAs(kotlin.Any, java.lang.Class((com.amnix.xtension.extensions.castAs.T)))com.amnix.xtension.extensions/kotlin.-any/cast-as.md
+$dokka.location:com.amnix.xtension.extensions$castTo(kotlin.Any, java.lang.Class((com.amnix.xtension.extensions.castTo.T)))com.amnix.xtension.extensions/kotlin.-any/cast-to.md
 $dokka.location:com.amnix.xtension.extensions$checkSelfPermissions(android.content.Context, kotlin.Array((kotlin.String)))com.amnix.xtension.extensions/android.content.-context/check-self-permissions.md
 $dokka.location:com.amnix.xtension.extensions$childs(android.view.ViewGroup)com.amnix.xtension.extensions/android.view.-view-group/childs.md
 $dokka.location:com.amnix.xtension.extensions$compressByQuality(android.graphics.Bitmap, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-quality.md
@@ -45,6 +46,7 @@ $dokka.location:com.amnix.xtension.extensions$getAudioManager(android.content.Co
 $dokka.location:com.amnix.xtension.extensions$getBluetoothManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-bluetooth-manager.md
 $dokka.location:com.amnix.xtension.extensions$getClipboardManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-clipboard-manager.md
 $dokka.location:com.amnix.xtension.extensions$getConnectivityManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-connectivity-manager.md
+$dokka.location:com.amnix.xtension.extensions$getContentView(android.app.Activity)com.amnix.xtension.extensions/android.app.-activity/get-content-view.md
 $dokka.location:com.amnix.xtension.extensions$getDeviceID(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-device-i-d.md
 $dokka.location:com.amnix.xtension.extensions$getDevicePolicyManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-device-policy-manager.md
 $dokka.location:com.amnix.xtension.extensions$getDisplayManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-display-manager.md
@@ -142,7 +144,9 @@ $dokka.location:com.amnix.xtension.extensions$showDatePicker(android.content.Con
 $dokka.location:com.amnix.xtension.extensions$showIf(android.view.View, kotlin.Boolean, kotlin.Boolean)com.amnix.xtension.extensions/android.view.-view/show-if.md
 $dokka.location:com.amnix.xtension.extensions$showKeyboard(android.view.View)com.amnix.xtension.extensions/android.view.-view/show-keyboard.md
 $dokka.location:com.amnix.xtension.extensions$showMultiPicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function2((kotlin.Int, kotlin.Boolean, kotlin.Unit)), kotlin.BooleanArray)com.amnix.xtension.extensions/android.content.-context/show-multi-picker.md
+$dokka.location:com.amnix.xtension.extensions$showNotification(android.content.Context, kotlin.String, kotlin.Int, kotlin.String, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, android.app.PendingIntent, android.widget.RemoteViews, android.widget.RemoteViews, kotlin.Boolean, kotlin.Int, kotlin.Boolean, kotlin.String, kotlin.Int, androidx.core.app.NotificationCompat.Style)com.amnix.xtension.extensions/android.content.-context/show-notification.md
 $dokka.location:com.amnix.xtension.extensions$showSinglePicker(android.content.Context, kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.Int, kotlin.Unit)), kotlin.Int)com.amnix.xtension.extensions/android.content.-context/show-single-picker.md
+$dokka.location:com.amnix.xtension.extensions$showSnackBar(android.app.Activity, kotlin.String, kotlin.Pair((kotlin.String, kotlin.Function1((android.view.View, kotlin.Unit)))), kotlin.Int, kotlin.Int, kotlin.Long)com.amnix.xtension.extensions/android.app.-activity/show-snack-bar.md
 $dokka.location:com.amnix.xtension.extensions$showTimePicker(android.content.Context, java.util.Date, kotlin.Boolean, kotlin.Function2((kotlin.Int, , kotlin.Unit)))com.amnix.xtension.extensions/android.content.-context/show-time-picker.md
 $dokka.location:com.amnix.xtension.extensions$showToast(android.content.Context, kotlin.String, kotlin.Int)com.amnix.xtension.extensions/android.content.-context/show-toast.md
 $dokka.location:com.amnix.xtension.extensions$showToastHard(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/show-toast-hard.md
@@ -163,6 +167,7 @@ $dokka.location:com.amnix.xtension.extensions$toInt(kotlin.Boolean)com.amnix.xt
 $dokka.location:com.amnix.xtension.extensions$toRound(android.graphics.Bitmap, kotlin.Float, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/to-round.md
 $dokka.location:com.amnix.xtension.extensions$toRoundCorner(android.graphics.Bitmap, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/to-round-corner.md
 $dokka.location:com.amnix.xtension.extensions$toTitleCase(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/to-title-case.md
+$dokka.location:com.amnix.xtension.extensions$toggle(kotlin.Boolean)com.amnix.xtension.extensions/kotlin.-boolean/toggle.md
 $dokka.location:com.amnix.xtension.extensions$vibrate(android.content.Context, kotlin.Long)com.amnix.xtension.extensions/android.content.-context/vibrate.md
 com.amnix.xtension
 com.amnix.xtension.enums

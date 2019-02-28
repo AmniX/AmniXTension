@@ -2,7 +2,7 @@
 
 # getNotificationManager
 
-`fun Context.getNotificationManager(): NotificationManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L539)
+`fun Context.getNotificationManager(): NotificationManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L615)
 
 get Notification Manager
 

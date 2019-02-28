@@ -8,7 +8,7 @@
 
 | Name | Summary |
 |---|---|
-| [FixedPixel](-fixed-pixel/index.md) | `class FixedPixel` |
+| [FixedPixel](-fixed-pixel/index.md) | `class FixedPixel`<br>the enum behind the Fixed Pixel Functionality |
 | [OnTouchImageViewListener](-on-touch-image-view-listener/index.md) | `interface OnTouchImageViewListener` |
 
 ### Constructors

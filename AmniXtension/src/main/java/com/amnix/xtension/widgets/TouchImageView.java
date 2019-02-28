@@ -63,7 +63,23 @@ public class TouchImageView extends AppCompatImageView {
     private Matrix matrix, prevMatrix;
     private boolean zoomEnabled;
 
-    public enum FixedPixel {CENTER, TOP_LEFT, BOTTOM_RIGHT}
+    /**
+     * the enum behind the Fixed Pixel Functionality
+     */
+    public enum FixedPixel {
+        /**
+         * the Center FixedPixel
+         */
+        CENTER,
+        /**
+         * the TopLeft Fixed Pixel
+         */
+        TOP_LEFT,
+        /**
+         * the bottomLeft fixed Pixel
+         */
+        BOTTOM_RIGHT
+    }
 
     private FixedPixel orientationChangeFixedPixel = FixedPixel.CENTER;
     private FixedPixel viewSizeChangeFixedPixel = FixedPixel.CENTER;

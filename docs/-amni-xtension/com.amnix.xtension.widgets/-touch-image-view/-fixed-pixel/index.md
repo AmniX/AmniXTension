@@ -2,7 +2,9 @@
 
 # FixedPixel
 
-`class FixedPixel` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L66)
+`class FixedPixel` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L69)
+
+the enum behind the Fixed Pixel Functionality
 
 ### Enum Values
 

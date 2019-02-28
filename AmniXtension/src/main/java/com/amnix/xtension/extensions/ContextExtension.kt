@@ -395,6 +395,27 @@ fun Context.createDeskShortCut(shortCutName: String, icon: Int, cls: Class<out A
     sendBroadcast(shortcutIntent)
 }
 
+/**
+ * Show Notification Easily, With Just a Single Method
+ *
+ * @property contentTitle The title of the Notification
+ * @property id the Id Of the Notification
+ * @property contentText the ContentText Of the Notification
+ * @property icon The Small Icon of the Notification
+ * @property channelID the ID of the Channel
+ * @property channelName the Name of the Channel
+ * @property contentInfo the ContentInfo For the Notification
+ * @property pendingIntent the pending Intent for the Notification
+ * @property content the ContentView for the Notification
+ * @property bigContent the BigContentView for the Notification
+ * @property autoCancel set to True if want to autoCancel the Notification
+ * @property ledColor sets the led argb Color
+ * @property isColorized true if you want this Notification as a Colorized Notification
+ * @property subText the SubText For the Notification
+ * @property priority the priority sets param for Notification
+ * @property style the Notification Style
+ *
+ */
 fun Context.showNotification(
     contentTitle: String,
     id: Int = Random.nextInt(),

@@ -2,7 +2,7 @@
 
 # getUsbManager
 
-`fun Context.getUsbManager(): UsbManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L624)
+`fun Context.getUsbManager(): UsbManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L700)
 
 get USB Manager
 

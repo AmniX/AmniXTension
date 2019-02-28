@@ -2,4 +2,4 @@
 
 # getScaleType
 
-`open fun getScaleType(): ScaleType` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L245)
+`open fun getScaleType(): ScaleType` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L261)

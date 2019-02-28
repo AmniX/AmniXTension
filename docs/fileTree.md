@@ -23,6 +23,7 @@ AmniXtension/src/main/java/com/amnix/xtension/
 │   └── ViewPagerExtensions.kt
 ├── extras
 │   ├── AmniXCameraWrapper.kt
+│   ├── AmniXSnack.kt
 │   ├── BenchMarkUtils.kt
 │   ├── DeviceUtils.kt
 │   ├── InMemoryCache.kt
@@ -40,5 +41,5 @@ AmniXtension/src/main/java/com/amnix/xtension/
     ├── ShadowView.kt
     └── TouchImageView.java
 
-6 directories, 33 files
+6 directories, 34 files
 ```

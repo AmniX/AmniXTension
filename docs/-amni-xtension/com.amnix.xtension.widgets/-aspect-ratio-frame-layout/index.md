@@ -10,26 +10,20 @@ Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `AspectRatioFrameLayout(context: Context)`<br>`AspectRatioFrameLayout(context: Context, attrs: AttributeSet)`<br>`AspectRatioFrameLayout(context: Context, attrs: AttributeSet, defStyle: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)` |
-
-### Properties
-
-| Name | Summary |
-|---|---|
-| [xRatio](x-ratio.md) | `var xRatio: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-| [yRatio](y-ratio.md) | `var yRatio: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [&lt;init&gt;](-init-.md) | `AspectRatioFrameLayout(context: Context)`<br>context Constructor`AspectRatioFrameLayout(context: Context, attrs: AttributeSet)`<br>context,attr Constructor`AspectRatioFrameLayout(context: Context, attrs: AttributeSet, defStyle: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>context,attr,defStyle Constructor |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [onMeasure](on-measure.md) | `fun onMeasure(widthMeasureSpec: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, heightMeasureSpec: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [onMeasure](on-measure.md) | `fun onMeasure(widthMeasureSpec: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, heightMeasureSpec: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Method Which Runs on Measure time |
 
 ### Extension Functions
 
 | Name | Summary |
 |---|---|
-| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(to: `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T) |
+| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`?`<br>helper Function to Cast things |
+| [castTo](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`?`<br>helper Function to Cast things |
 | [childs](../../com.amnix.xtension.extensions/android.view.-view-group/childs.md) | `fun ViewGroup.childs(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<View>`<br>get All the Children's as Iterator |
 | [contains](../../com.amnix.xtension.extensions/android.view.-view-group/contains.md) | `fun ViewGroup.contains(child: View): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>check if ViewGroup have the given View as Its Child |
 | [fadeIn](../../com.amnix.xtension.extensions/android.view.-view/fade-in.md) | `fun View.fadeIn(duration: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 400): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start The FadeIn Animation on This View |

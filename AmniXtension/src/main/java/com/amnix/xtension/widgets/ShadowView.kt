@@ -7,14 +7,23 @@ import android.util.AttributeSet
 import android.view.View
 import com.amnix.xtension.R
 
+/**
+ * A simple Class to set the Drop Shadow Above or Below any View
+ */
 class ShadowView : View {
-
+    /**
+     * context Constructor
+     */
     constructor(context: Context) : super(context)
-
+    /**
+     * context,attr Constructor
+     */
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         parseAttr(context, attrs)
     }
-
+    /**
+     * context,attr,defStyle Constructor
+     */
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         parseAttr(context, attrs)
     }
