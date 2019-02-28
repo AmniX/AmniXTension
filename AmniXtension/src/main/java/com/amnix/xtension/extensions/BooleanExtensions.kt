@@ -17,3 +17,8 @@ package com.amnix.xtension.extensions
  * Converts Boolean to Int, if true then 1 else 0
  */
 fun Boolean.toInt():Int = if(this) 1 else 0
+
+/**
+ * Toggle the Boolean Value, if it's true then it will become false else vice versa.
+ */
+fun Boolean.toggle() = !this

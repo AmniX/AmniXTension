@@ -104,6 +104,20 @@ fun tryOrIgnore(runnable: () -> Unit) = try {
 }
 
 /**
+ * ifIs provides a block to match the value with Given Value and execute the block
+ */
+fun <T> T.ifIs(valueToCompare: T?, block: T.() -> Unit) {
+    if (this == valueToCompare) block(this)
+}
+
+/**
+ * ifIs provides a block to match the value with Given Value and execute the block
+ */
+fun <T> T.ifIsNot(valueToCompare: T?, block: (T) -> Unit) {
+    if (this != valueToCompare) block(this)
+}
+
+/**
  * put Something In Memory to use it later
  */
 fun putInMemory(key: String, any: Any?) = InMemoryCache.put(key, any)
@@ -209,7 +223,7 @@ fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
 }
 
 /**
- * Run the UI Code on UI Thread From AnyWhere, No need the Activity Refrence
+ * Run the UI Code on UI Thread From AnyWhere, No need the Activity Reference
  */
 fun runOnUIThread(runnable: () -> Unit) = Handler(Looper.getMainLooper()).post(runnable)
 
