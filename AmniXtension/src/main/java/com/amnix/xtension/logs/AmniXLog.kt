@@ -15,6 +15,7 @@ package com.amnix.xtension.logs
 
 import android.util.Log
 import com.amnix.xtension.AmniXtension
+import com.amnix.xtension.extensions.loop
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -33,6 +34,7 @@ internal object AmniXLog {
     private const val VERTICAL_DOUBLE_LINE = '║'
     private const val HORIZONTAL_DOUBLE_LINE = "═══════════════════════════════════════════════════════════"
     private const val SINGLE_LINE = "───────────────────────────────────────────────────────────"
+    private const val MAX_LINE_LENGTH = 64 * 2
 
     private val TOP_BORDER = TOP_LEFT_CORNER + HORIZONTAL_DOUBLE_LINE + HORIZONTAL_DOUBLE_LINE + TOP_RIGHT_CORNER
     private val BOTTOM_BORDER =
@@ -75,7 +77,9 @@ internal object AmniXLog {
                 else -> trimJson
             }
         } catch (e: JSONException) {
-            e.printStackTrace().toString()
+            L.wtf(e)
+            "An Error While Printing This Json. Please Check Above CrashLog"
+
         }
 
     }
@@ -87,20 +91,45 @@ internal object AmniXLog {
         val index = findIndex(elements)
         val element = elements[index]
         val tag = handleTag(element, "")
-        var message = msg
-        if (msg.contains("\n")) {
-            message = msg.replace("\n".toRegex(), "\n$VERTICAL_DOUBLE_LINE ")
-        }
-
-        Log.println(priority, tag, handleFormat(element, message))
+        Log.println(priority, tag, handleFormat(element, msg))
     }
 
     private fun handleFormat(element: StackTraceElement, msg: String): String {
+        var TOP_BORDER = TOP_BORDER
+        var MIDDLE_BORDER = MIDDLE_BORDER
+        var BOTTOM_BORDER = BOTTOM_BORDER
+        var maxLength = -1
+        val msgLines = msg.split(System.getProperty("line.separator")!!)
+        msgLines.forEach {
+            if (Math.min(it.length, MAX_LINE_LENGTH) > maxLength)
+                maxLength = Math.min(it.length, MAX_LINE_LENGTH)
+        }
+        if (maxLength > TOP_BORDER.length) {
+            TOP_BORDER = TOP_LEFT_CORNER.toString()
+            MIDDLE_BORDER = MIDDLE_CORNER_START.toString()
+            BOTTOM_BORDER = BOTTOM_LEFT_CORNER.toString()
+            maxLength.plus(1).loop {
+                TOP_BORDER += "═"
+                MIDDLE_BORDER += "─"
+                BOTTOM_BORDER += "═"
+            }
+            TOP_BORDER += TOP_RIGHT_CORNER
+            MIDDLE_BORDER += MIDDLE_CORNER_END
+            BOTTOM_BORDER += BOTTOM_RIGHT_CORNER
+
+        }
         var threadNameLine = ("║ " + "Thread: " + Thread.currentThread().name)
-        repeat((TOP_BORDER.length ) - threadNameLine.length + 1) {
+        repeat(TOP_BORDER.length - threadNameLine.length - 1) {
             threadNameLine += " "
         }
         threadNameLine += VERTICAL_DOUBLE_LINE.toString()
+
+        var sourceLine =
+            "║ Source: " + element.className + "." + element.methodName + " (" + element.fileName + ":" + element.lineNumber + ")"
+        repeat(TOP_BORDER.length - sourceLine.length - 1) {
+            sourceLine += " "
+        }
+        sourceLine += VERTICAL_DOUBLE_LINE.toString()
         return StringBuilder().apply {
             append(" ")
             appendln()
@@ -110,19 +139,23 @@ internal object AmniXLog {
             appendln()
             append(MIDDLE_BORDER)
             appendln()
-            append("║ ")
-            append("Source: ").append(element.className)
-                .append(".")
-                .append(element.methodName).append(" (")
-                .append(element.fileName)
-                .append(":")
-                .append(element.lineNumber)
-                .append(")")
+            append(sourceLine)
             appendln()
             append(MIDDLE_BORDER)
             appendln()
-            append("$VERTICAL_DOUBLE_LINE ")
-            append(msg)
+            msgLines.forEachIndexed { index, it ->
+                var msg = it.trim()
+                if (msg.length > MAX_LINE_LENGTH)
+                    msg = msg.substring(0, MAX_LINE_LENGTH - 3) + "..."
+                repeat(TOP_BORDER.length - msg.length - 3) {
+                    msg += " "
+                }
+                msg += VERTICAL_DOUBLE_LINE.toString()
+                append("$VERTICAL_DOUBLE_LINE ")
+                append(msg)
+                if (index != msgLines.size - 1)
+                    appendln()
+            }
             appendln()
             append(BOTTOM_BORDER)
             appendln()
