@@ -69,7 +69,8 @@ Things Are Collapsed. You need to Expand them ;)
 **Global Extensions Means You can Use them Anywhere**
 
 ```kotlin
-async{
+
+ import org.omg.CORBA.ORBasync{
     // Some Code Which Will Run in a Worker Thread
     // Caution : Make sure you don't do some context related stuff in async, It may cause an memory leak
 }
@@ -78,14 +79,29 @@ asyncAwait({
     // Some Code Which Will Run in a Worker Thread
     // Caution : Make sure you don't do some context related stuff in async, It may cause an memory leak
     result // Keep the Result in Last Line, You Will Receive it in Await Block Magically. 
-},{
+},{result->
     // Some Code Will be Executed After Async Block
-    // You Will Receive Result Passed From Asycn Block Last line
+    // You Will Receive Result Passed From Async Block Last line
+})
+
+          OR
+
+asyncAwait<Bitmap>({bitmap->
+    // Some Code Which Will Run in a Worker Thread
+    // Caution : Make sure you don't do some context related stuff in async, It may cause an memory leak
+    result // Keep the Result in Last Line, You Will Receive it in Await Block Magically. 
+},{result->
+    // Some Code Will be Executed After Async Block
+    // You Will Receive Result Passed From Async Block Last line
 })
 
 tryOrIgnore{
     // Code Here Which Can be throw Exception but App Won't Crash At All
 }
+
+object.castTo(Object::class) // Cast Object inline and Supports Code Chaining.
+             OR
+object.castAs(Object::class) // Cast Object inline and Supports Code Chaining.
 
 tryAndCatch({
     // Try Code
@@ -99,6 +115,24 @@ if(guardRun{
     //Run Code in Guarded Way
 }){
     //Code There If Above Code Executed Without Any Exception
+}
+
+object.ifIs(otherObject){
+    // Run Code if above Object is equal to other Object.
+    It does Simply Replace below code
+    
+    if(object == otherObject){
+        //Your Code
+    }
+}
+
+object.ifIsNot(otherObject){
+    // Run Code if above Object is equal to other Object.
+    It does Simply Replace below code
+    
+    if(object != otherObject){
+        //Your Code
+    }
 }
 
 closeSafely(inputStream, outputStream) // Clode Streams Safely and prevent any memory leak
@@ -155,6 +189,8 @@ requestPermission(Manifest.permission.CAMERA){
 getStatusBarHeight()
 getNavigationBarSize()
 
+showSnackBar() // Show SnackBar WithOut Design Support Library. Its look better then Actual Snackbar ;)
+
 setStatusBarColor()
 setNavigationBarColor()
 setNavigationBarDividerColor()
@@ -204,7 +240,7 @@ val compressedQuality = bitmap.compressByQuality(80)
 ```kotlin
 val screenWidth = context.screenWidth
 val screenHeight = context.screenHeight
-
+context.showNotification("Hello Notification",...,...,... other params) //Handles Everything For You
 context.showToast()
 context.showToastHard()
 context.showConfirmationDialog()
@@ -235,6 +271,14 @@ context.startApp()
 context.getAllImages()
 context.getAllVideos()
 context.getAllAudios()
+
+context.getAppName() // Current or Given Package
+context.getAppIcon() // Current or Given Package
+context.getAppSize() // Current or Given Package
+context.getAppApk() // Current or Given Package
+context.getAppVersionName() // Current or Given Package
+context.getAppVersionCode() // Current or Given Package
+context.isServiceRunning() //Check If Service is Running Or Not
 
 context.getActivityManager()
 context.getAlarmManager()
@@ -403,6 +447,63 @@ And Might Be Here Too...
 
 val time = bench.dump() // Dumps The Time to Logcat and Returns The Same Too
 //Now Check the Logcat With Tha Class name Tag and You will see the Results
+
+```
+
+</p>
+</details>
+
+<details><summary>Color Progress bar</summary>
+<p>
+
+A ProgressBar But Supported Color Change from xml Only.
+
+```xml
+<com.amnix.xtension.widgets.ColorProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:color="#FF0000"/>
+        
+        <!--RED Progress Bar-->
+
+```
+
+</p>
+</details>
+
+<details><summary>Shadow View</summary>
+<p>
+
+A View to Apply Linear Shadow to any View, Its Like and Gradient
+Replacement From the xml itself
+
+```xml
+<com.amnix.xtension.widgets.ShadowView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:angle="bottomToTop"
+        app:endColor="#00000000"
+        app:startColor="#FF0000" />
+        
+        <!--Linear Shadow From Bottom to Top -->
+
+```
+
+</p>
+</details>
+
+<details><summary>Touch ImageView</summary>
+<p>
+
+An ImageView With Inbuild Support of ImageView Ping and Double Tap to
+Zoom
+
+```xml
+ <com.amnix.xtension.widgets.TouchImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        
+        <!--Touch ImageView -->
 
 ```
 

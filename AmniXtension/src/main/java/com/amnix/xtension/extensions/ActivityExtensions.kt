@@ -211,7 +211,7 @@ private fun getRealScreenSize(context: Context): Point {
     return size
 }
 
-private class PermissionObserver() : LifecycleObserver {
+private class PermissionObserver : LifecycleObserver {
     var onResumeCallback: (() -> Unit)? = null
     var readyToCheck = false
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
