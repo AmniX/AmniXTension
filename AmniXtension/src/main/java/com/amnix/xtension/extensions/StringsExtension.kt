@@ -23,6 +23,8 @@ import java.security.MessageDigest
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
+
+
 /**
  * Append String to Current
  */
@@ -101,6 +103,16 @@ fun String.toCamelCase(): String {
     return camelCaseString
 }
 
+fun String.splitSubString(maxLength: Int): Array<String> {
+    val ret = ArrayList<String>((length + maxLength - 1) / maxLength)
+    var start = 0
+    while (start < length) {
+        ret.add(substring(start, Math.min(length, start + maxLength)))
+        start += maxLength
+    }
+    return ret.toTypedArray()
+}
+
 /**
  * Converts the String to Title Case
  */
@@ -123,6 +135,7 @@ fun String.encryptAES(key: String): String {
     }
     return String(Base64.encode(crypted, Base64.DEFAULT))
 }
+
 /**
  * Decrypt String to AES with the specific Key
  */
@@ -170,6 +183,7 @@ fun String.saveToFile(file: File) = FileOutputStream(file).bufferedWriter().use 
     it.flush()
     it.close()
 }
+
 // Private Method Below....
 private fun encrypt(string: String?, type: String): String {
     val bytes = MessageDigest.getInstance(type).digest(string!!.toByteArray())
