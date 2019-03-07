@@ -19,80 +19,92 @@ import com.amnix.xtension.AmniXtension
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import java.util.*
 
 /**
- * A Custom Log Class for the developer Ease
+ * A Custom Log Class for the developer Ease.
+ *
+ * Its Prints The Logs in Pretty Way So Developers Can Easily Differentiate between multiple Logs
+ *
+ * ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ * │ Thread: <thread name>, Source: <your.package.name>.<Class Name>.<Method Name> (<Class Name>:<Line Number>)
+ * ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ * │ A Message Which Were Logged with L.d("<here>")
+ * └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ *
+ * Available Methods :
+ *
+ * L.d()
+ * L.e()
+ * L.i()
+ * L.v()
+ * L.w()
+ * L.json()
  */
 object L {
     private const val TOP_LINE =
-        "╔══════════════════════════════════════════════════════════════════════════════════════>"
+        "┌────────────────────────────────────────────────────────────────────────────────────────"
     private const val MIDDLE_LINE =
-        "╟────────────────────────────────────────────────────────────────────────────────────────>"
+        "├────────────────────────────────────────────────────────────────────────────────────────"
     private const val BOTTOM_LINE =
-        "╚════════════════════════════════════════════════════════════════════════════════════════>"
-    private const val VERTICAL_DOUBLE_LINE = "║"
+        "└────────────────────────────────────────────────────────────────────────────────────────"
+    private const val VERTICAL_DOUBLE_LINE = "│"
     private const val CALL_INDEX = 4
     /**
-     * Similar of Log.d but with many params
+     * Similar of Log.d
      */
-    fun d(vararg objects: Any?) {
+    fun d(obj: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (obj in objects) {
-                log(Log.DEBUG, if (obj == null) "null" else "" + obj)
-            }
+            log(Log.DEBUG, tag, obj)
     }
 
     /**
      * Log the Json into the Logcat as a DEBUG Log
      */
-    fun json(json: Any?) {
+    fun json(json: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            if (AmniXtension.isLoggingEnabled)
-                log(Log.DEBUG, formatJson(if (json == null) "null" else "" + json))
+            log(Log.DEBUG, tag, formatJson(if (json == null) "null" else "" + json))
 
     }
 
     /**
-     * Similar of Log.e but with many params
+     * Similar of Log.e
      */
-    fun e(vararg objects: Any?) {
+    fun e(obj: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (obj in objects) log(Log.ERROR, if (obj == null) "null" else "" + obj)
+            log(Log.ERROR, tag, obj)
     }
 
     /**
-     * Similar of Log.i but with many params
+     * Similar of Log.i
      */
-    fun i(vararg objects: Any?) {
+    fun i(obj: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (obj in objects)
-                log(Log.INFO, if (obj == null) "null" else "" + obj)
+            log(Log.INFO, tag, obj)
     }
 
     /**
-     * Similar of Log.v but with many params
+     * Similar of Log.v
      */
-    fun v(vararg objects: Any?) {
+    fun v(obj: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (obj in objects)
-                log(Log.VERBOSE, if (obj == null) "null" else "" + obj)
+            log(Log.VERBOSE, tag, obj)
     }
 
     /**
-     * Similar of Log.w but with many params
+     * Similar of Log.w
      */
-    fun w(vararg objects: Any?) {
+    fun w(obj: Any?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (obj in objects)
-                log(Log.WARN, if (obj == null) "null" else "" + obj)
+            log(Log.WARN, tag, obj)
     }
 
     /**
-     * Similar of Log.wtf but with many params
+     * Similar of Log.wtf
      */
-    fun wtf(vararg throwables: Throwable?) {
+    fun wtf(throwable: Throwable?, tag: String? = null) {
         if (AmniXtension.isLoggingEnabled)
-            for (throwable in throwables) e(Log.getStackTraceString(throwable))
+            e(Log.getStackTraceString(throwable), tag)
     }
 
 
@@ -100,8 +112,8 @@ object L {
         return try {
             val trimJson = json.trim()
             when {
-                trimJson.startsWith("{") -> JSONObject(trimJson).toString(4)
-                trimJson.startsWith("[") -> JSONArray(trimJson).toString(4)
+                trimJson.startsWith("{") -> JSONObject(trimJson).toString(2)
+                trimJson.startsWith("[") -> JSONArray(trimJson).toString(2)
                 else -> trimJson
             }
         } catch (e: JSONException) {
@@ -112,20 +124,24 @@ object L {
 
     }
 
-    private fun log(priority: Int, msg: String) {
+    private fun log(priority: Int, tag: String?, msg: Any?) {
         if (!AmniXtension.isLoggingEnabled) return
         val elements = Thread.currentThread().stackTrace
         val element = elements[findIndex(elements)]
-        Log.println(priority, handleTag(element, ""), handleFormat(element, msg))
+        Log.println(priority, handleTag(element, tag), handleFormat(element, msg))
     }
 
-    private fun handleFormat(element: StackTraceElement, msg: String): String {
+    private fun handleFormat(element: StackTraceElement, msgObj: Any?): String {
+        val msg = if (msgObj is Array<*>)
+            Arrays.toString(msgObj)
+        else
+            msgObj.toString()
         return StringBuilder().apply {
             append(" ")
             appendln()
             append(TOP_LINE)
             appendln()
-            append("║ " + "Thread: " + Thread.currentThread().name + ", Source: " + element.className + "." + element.methodName + " (" + element.fileName + ":" + element.lineNumber + ")")
+            append(VERTICAL_DOUBLE_LINE + " " + "Thread: " + Thread.currentThread().name + ", Source: " + element.className + "." + element.methodName + " (" + element.fileName + ":" + element.lineNumber + ")")
             appendln()
             append(MIDDLE_LINE)
             appendln()
@@ -136,8 +152,8 @@ object L {
         }.toString()
     }
 
-    private fun handleTag(element: StackTraceElement, customTag: String): String = when {
-        customTag.isNotBlank() -> customTag
+    private fun handleTag(element: StackTraceElement, customTag: String?): String = when {
+        customTag.isNullOrBlank().not() -> customTag!!
         AmniXtension.globalLogTag.isNotBlank() -> AmniXtension.globalLogTag
         else -> element.className.substringAfterLast(".")
     }

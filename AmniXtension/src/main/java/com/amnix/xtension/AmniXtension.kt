@@ -26,5 +26,5 @@ object AmniXtension{
     /**
      * Set LoggingTag Globally
      */
-    var globalLogTag = ""
+    var globalLogTag = "AmniXLogs"
 }

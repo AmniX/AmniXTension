@@ -540,17 +540,21 @@ Class Name Automatically.
 ```kotlin
 AmniXtension.isLoggingEnabled = true // Sets The Logging Enable Or Disable
 
-L.d("Hello", 400, object, model, anything)
-L.e("Hello", 400, object, model, anything)
-L.i("Hello", 400, object, model, anything)
-L.w("Hello", 400, object, model, anything)
-L.v("Hello", 400, object, model, anything)
-L.json(jsonObject) // Log Josn With Beautification
-
-L.wtf(exception)
-
+L.d(listOf("One", "Two", "Three"))
+L.d(mapOf(1 to "One", 2 to "Two", 3 to "Three"))
+L.d(arrayOf("One", "Two", "Three"))
+L.d(setOf("One", "Two", "Three"))
+L.d(UUID.randomUUID().toString().append(UUID.randomUUID().toString()))
+L.e(UUID.randomUUID().toString())
+L.d("A Long String Is Here to Print to Log And Can Be Printed Easily")
+L.json("{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": { \"GlossEntry\": { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": { \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\"] }, \"GlossSee\": \"markup\" } } } } }")
 ```
 
+Above Lines Will Print the Logs Like Below Image.
+
+<div>
+<img src="art/logs_art.png" alt="AmniXTension" />
+</div>
 </p>
 </details>
 

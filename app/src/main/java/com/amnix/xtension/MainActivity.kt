@@ -14,9 +14,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        L.d(listOf("One", "Two", "Three"))
+        L.d(mapOf(1 to "One", 2 to "Two", 3 to "Three"))
+        L.d(arrayOf("One", "Two", "Three"))
+        L.d(setOf("One", "Two", "Three"))
         L.d(UUID.randomUUID().toString().append(UUID.randomUUID().toString()))
         L.e(UUID.randomUUID().toString())
-        L.d("A Very Long String Is Here, Dolore qui esse aliquip pariatur adipisicing dolore qui ea laborum ut in labore ex esse. Non labore esse minim ut minim ullamco nulla sint excepteur incididunt adipisicing exercitation veniam.")
-        L.json("{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\" { \"title\": \"S\", \"GlossList\": { \"GlossEntry\": { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": { \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\"] }, \"GlossSee\": \"markup\" } } } } }")
+        L.d("A Long String Is Here to Print to Log And Can Be Printed Easily")
+        L.json("{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": { \"GlossEntry\": { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": { \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\"] }, \"GlossSee\": \"markup\" } } } } }")
     }
 }
