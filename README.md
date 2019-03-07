@@ -550,13 +550,83 @@ L.d("A Long String Is Here to Print to Log And Can Be Printed Easily")
 L.json("{ \"glossary\": { \"title\": \"example glossary\", \"GlossDiv\": { \"title\": \"S\", \"GlossList\": { \"GlossEntry\": { \"ID\": \"SGML\", \"SortAs\": \"SGML\", \"GlossTerm\": \"Standard Generalized Markup Language\", \"Acronym\": \"SGML\", \"Abbrev\": \"ISO 8879:1986\", \"GlossDef\": { \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\", \"GlossSeeAlso\": [\"GML\", \"XML\"] }, \"GlossSee\": \"markup\" } } } } }")
 ```
 
-Above Lines Will Print the Logs Like Below Image.
+Above Lines Will Print the Logs Like Below-
 
-<div>
-<img src="art/logs_art.png" alt="AmniXTension" />
-</div>
-</p>
-</details>
+```
+2019-03-07 12:34:02.171 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:17)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ [One, Two, Three]
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.178 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:18)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ {1=One, 2=Two, 3=Three}
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.179 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:19)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ [One, Two, Three]
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.270 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:20)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ [One, Two, Three]
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.277 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:21)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ 333bd5d4-ae3c-488f-afb8-bddfb4e6661cecd401a7-835c-45bb-9827-a6fa5bd4d723
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.278 8162-8162/? E/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:22)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ 19449369-e192-44aa-8460-a7d3d8776fff
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.279 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:23)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ A Long String Is Here to Print to Log And Can Be Printed Easily
+    └────────────────────────────────────────────────────────────────────────────────────────
+2019-03-07 12:34:02.291 8162-8162/? D/AmniXLogs:
+    ┌────────────────────────────────────────────────────────────────────────────────────────
+    │ Thread: main, Source: com.amnix.xtension.MainActivity.onCreate (MainActivity.kt:24)
+    ├────────────────────────────────────────────────────────────────────────────────────────
+    │ {
+    │  "glossary": {
+    │    "title": "example glossary",
+    │    "GlossDiv": {
+    │      "title": "S",
+    │      "GlossList": {
+    │        "GlossEntry": {
+    │          "ID": "SGML",
+    │          "SortAs": "SGML",
+    │          "GlossTerm": "Standard Generalized Markup Language",
+    │          "Acronym": "SGML",
+    │          "Abbrev": "ISO 8879:1986",
+    │          "GlossDef": {
+    │            "para": "A meta-markup language, used to create markup languages such as DocBook.",
+    │            "GlossSeeAlso": [
+    │              "GML",
+    │              "XML"
+    │            ]
+    │          },
+    │          "GlossSee": "markup"
+    │        }
+    │      }
+    │    }
+    │  }
+    │}
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+```
 
 ## License
 Copyright 2019, AmniX
