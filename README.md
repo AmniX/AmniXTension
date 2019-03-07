@@ -627,6 +627,8 @@ Above Lines Will Print the Logs Like Below-
     └────────────────────────────────────────────────────────────────────────────────────────
 
 ```
+</p>
+</details>
 
 ## License
 Copyright 2019, AmniX
