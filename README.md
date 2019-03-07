@@ -531,7 +531,7 @@ More Methods To Explore.
 </p>
 </details>
 
-<details><summary>Logging</summary>
+<details><summary>Pretty Logging</summary>
 <p>
 
 Logging is Simple Now, Auto TAGS, Will Embed The Tag From Its Invoked
