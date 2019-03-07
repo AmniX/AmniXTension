@@ -69,8 +69,7 @@ Things Are Collapsed. You need to Expand them ;)
 **Global Extensions Means You can Use them Anywhere**
 
 ```kotlin
-
- import org.omg.CORBA.ORBasync{
+async{
     // Some Code Which Will Run in a Worker Thread
     // Caution : Make sure you don't do some context related stuff in async, It may cause an memory leak
 }
