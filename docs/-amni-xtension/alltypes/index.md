@@ -23,7 +23,7 @@
 | [java.io.File](../com.amnix.xtension.extensions/java.io.-file/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [androidx.fragment.app.FragmentActivity](../com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.InMemoryCache](../com.amnix.xtension.extras/-in-memory-cache/index.md) | Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want. |
-| [com.amnix.xtension.logs.L](../com.amnix.xtension.logs/-l/index.md) | A Custom Log Class for the developer Ease |
+| [com.amnix.xtension.logs.L](../com.amnix.xtension.logs/-l/index.md) | A Custom Log Class for the developer Ease. |
 | [kotlin.Number](../com.amnix.xtension.extensions/kotlin.-number/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.PlaceHolders](../com.amnix.xtension.extras/-place-holders/index.md) | Class for Several PlaceHolders |
 | [android.widget.SeekBar](../com.amnix.xtension.extensions/android.widget.-seek-bar/index.md) (extensions in package com.amnix.xtension.extensions) |  |

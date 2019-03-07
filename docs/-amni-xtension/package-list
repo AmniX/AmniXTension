@@ -152,6 +152,7 @@ $dokka.location:com.amnix.xtension.extensions$showToast(android.content.Context,
 $dokka.location:com.amnix.xtension.extensions$showToastHard(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/show-toast-hard.md
 $dokka.location:com.amnix.xtension.extensions$size(android.graphics.Bitmap)com.amnix.xtension.extensions/android.graphics.-bitmap/size.md
 $dokka.location:com.amnix.xtension.extensions$spFromPx(kotlin.Number)com.amnix.xtension.extensions/kotlin.-number/sp-from-px.md
+$dokka.location:com.amnix.xtension.extensions$splitSubStrings(kotlin.String, kotlin.Int)com.amnix.xtension.extensions/kotlin.-string/split-sub-strings.md
 $dokka.location:com.amnix.xtension.extensions$startActivity(android.content.Context, java.lang.Class((android.app.Activity)), android.os.Bundle)com.amnix.xtension.extensions/android.content.-context/start-activity.md
 $dokka.location:com.amnix.xtension.extensions$startActivityForResults(android.app.Activity, java.lang.Class((android.app.Activity)), kotlin.Int, android.os.Bundle)com.amnix.xtension.extensions/android.app.-activity/start-activity-for-results.md
 $dokka.location:com.amnix.xtension.extensions$startApp(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/start-app.md

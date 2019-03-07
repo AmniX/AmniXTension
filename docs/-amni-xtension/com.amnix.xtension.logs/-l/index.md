@@ -2,21 +2,38 @@
 
 # L
 
-`object L` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/logs/L.kt#L23)
+`object L` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/logs/L.kt#L44)
 
-A Custom Log Class for the developer Ease
+A Custom Log Class for the developer Ease.
+
+Its Prints The Logs in Pretty Way So Developers Can Easily Differentiate between multiple Logs
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ Thread: , Source: &lt;your.package.name&gt;.. (:)
+├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ A Message Which Were Logged with L.d("")
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Available Methods :
+
+L.d()
+L.e()
+L.i()
+L.v()
+L.w()
+L.json()
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [d](d.md) | `fun d(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.d but with many params |
-| [e](e.md) | `fun e(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.e but with many params |
-| [i](i.md) | `fun i(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.i but with many params |
-| [json](json.md) | `fun json(json: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Log the Json into the Logcat as a DEBUG Log |
-| [v](v.md) | `fun v(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.v but with many params |
-| [w](w.md) | `fun w(vararg objects: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.w but with many params |
-| [wtf](wtf.md) | `fun wtf(vararg throwables: `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.wtf but with many params |
+| [d](d.md) | `fun d(obj: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.d |
+| [e](e.md) | `fun e(obj: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.e |
+| [i](i.md) | `fun i(obj: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.i |
+| [json](json.md) | `fun json(json: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Log the Json into the Logcat as a DEBUG Log |
+| [v](v.md) | `fun v(obj: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.v |
+| [w](w.md) | `fun w(obj: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.w |
+| [wtf](wtf.md) | `fun wtf(throwable: `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`?, tag: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`? = null): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Similar of Log.wtf |
 
 ### Extension Functions
 
