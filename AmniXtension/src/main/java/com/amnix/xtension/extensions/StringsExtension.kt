@@ -103,8 +103,11 @@ fun String.toCamelCase(): String {
     return camelCaseString
 }
 
-fun String.splitSubString(maxLength: Int): Array<String> {
-    val ret = ArrayList<String>((length + maxLength - 1) / maxLength)
+/**
+ * Split String into Multiple SubStrings Based on the Value of [maxLength]
+ */
+fun String.splitSubStrings(maxLength: Int): Array<String> {
+    val ret = ArrayList<String>()
     var start = 0
     while (start < length) {
         ret.add(substring(start, Math.min(length, start + maxLength)))
