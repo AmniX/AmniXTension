@@ -14,6 +14,7 @@
 | [kotlin.Boolean](../com.amnix.xtension.extensions/kotlin.-boolean/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.BuildConfig](../com.amnix.xtension/-build-config/index.md) |  |
 | [com.amnix.xtension.BuildConfig](../com.amnix.xtension/-build-config/index.md) |  |
+| [com.amnix.xtension.widgets.CircularImageView](../com.amnix.xtension.widgets/-circular-image-view/index.md) | Circle Image View. |
 | [com.amnix.xtension.widgets.ColorProgressBar](../com.amnix.xtension.widgets/-color-progress-bar/index.md) | Class to Render ProgressBar with some Specific Color with the ease |
 | [com.amnix.xtension.enums.ContentColumns](../com.amnix.xtension.enums/-content-columns/index.md) | Enum to choose between multiple column type |
 | [com.amnix.xtension.enums.ContentOrder](../com.amnix.xtension.enums/-content-order/index.md) | Enum to choose between Ascending or Descending order |

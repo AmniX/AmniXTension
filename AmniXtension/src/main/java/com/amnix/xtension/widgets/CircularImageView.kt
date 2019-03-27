@@ -111,6 +111,9 @@ class CircularImageView @JvmOverloads constructor(
         invalidate()
     }
 
+    /**
+     * set BackGround Color With Circle Region
+     */
     override fun setBackgroundColor(backgroundColor: Int) {
         if (paintBackground != null)
             paintBackground!!.color = backgroundColor
@@ -151,6 +154,9 @@ class CircularImageView @JvmOverloads constructor(
         invalidate()
     }
 
+    /**
+     * set Color Filter
+     */
     override fun setColorFilter(colorFilter: ColorFilter) {
         if (this.mColorFilter === colorFilter)
             return
@@ -159,11 +165,17 @@ class CircularImageView @JvmOverloads constructor(
         invalidate()
     }
 
+    /**
+     * get Scale Type
+     */
     override fun getScaleType(): ImageView.ScaleType {
         val currentScaleType = super.getScaleType()
         return if (currentScaleType == null || currentScaleType != CENTER_INSIDE) CENTER_CROP else currentScaleType
     }
 
+    /**
+     * set Scale Type
+     */
     override fun setScaleType(scaleType: ImageView.ScaleType) {
         if (scaleType != CENTER_CROP && scaleType != CENTER_INSIDE) {
             throw IllegalArgumentException(
@@ -231,6 +243,9 @@ class CircularImageView @JvmOverloads constructor(
         updateShader()
     }
 
+    /**
+     * on Size Change of Image
+     */
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         canvasSize = Math.min(w, h)
@@ -336,7 +351,9 @@ class CircularImageView @JvmOverloads constructor(
     }
     //endregion
 
-    //region Measure Method
+    /**
+     * on Measure Region
+     */
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val width = measureWidth(widthMeasureSpec)
         val height = measureHeight(heightMeasureSpec)
@@ -361,33 +378,52 @@ class CircularImageView @JvmOverloads constructor(
         return result
     }
 
+    @SuppressLint("SwitchIntDef")
     private fun measureHeight(measureSpecHeight: Int): Int {
         val result: Int
         val specMode = View.MeasureSpec.getMode(measureSpecHeight)
         val specSize = View.MeasureSpec.getSize(measureSpecHeight)
 
-        if (specMode == View.MeasureSpec.EXACTLY) {
-            // We were told how big to be
-            result = specSize
-        } else if (specMode == View.MeasureSpec.AT_MOST) {
-            // The child can be as large as it wants up to the specified size.
-            result = specSize
-        } else {
-            // Measure the text (beware: ascent is a negative number)
-            result = canvasSize
+        result = when (specMode) {
+            View.MeasureSpec.EXACTLY -> // We were told how big to be
+                specSize
+            View.MeasureSpec.AT_MOST -> // The child can be as large as it wants up to the specified size.
+                specSize
+            else -> // Measure the text (beware: ascent is a negative number)
+                canvasSize
         }
 
         return result + 2
     }
     //endregion
-
+    /**
+     * The Gravity Enums
+     */
     enum class ShadowGravity {
+        /**
+         * Center Gravity
+         */
         CENTER,
+        /**
+         * Top Gravity
+         */
         TOP,
+        /**
+         * Bottom Gravity
+         */
         BOTTOM,
+        /**
+         * Start Gravity
+         */
         START,
+        /**
+         * ENd Gravity
+         */
         END;
 
+        /**
+         * the Value Of Enum as Int
+         */
         val value: Int
             get() {
                 return when (this) {
@@ -400,7 +436,9 @@ class CircularImageView @JvmOverloads constructor(
             }
 
         companion object {
-
+            /**
+             * get Enum fron Int Value
+             */
             fun fromValue(value: Int): ShadowGravity {
                 when (value) {
                     1 -> return CENTER
@@ -418,7 +456,7 @@ class CircularImageView @JvmOverloads constructor(
     companion object {
 
         // Default Values
-        private val DEFAULT_BORDER_WIDTH = 4f
-        private val DEFAULT_SHADOW_RADIUS = 8.0f
+        private const val DEFAULT_BORDER_WIDTH = 4f
+        private const val DEFAULT_SHADOW_RADIUS = 8.0f
     }
 }//region Constructor & Init Method
