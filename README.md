@@ -509,6 +509,26 @@ Zoom
 </p>
 </details>
 
+<details><summary>Circular ImageView</summary>
+<p>
+```xml
+<com.amnix.xtension.widgets.CircularImageView
+        android:layout_width="240dp"
+        android:id="@+id/circularImageView"
+        android:layout_height="240dp"
+        app:background_color="#ffffff"
+        app:border="true"
+        app:border_color="#ffffff"
+        app:border_width="4dp"
+        app:shadow="true"
+        app:shadow_color="#AAAAAA"
+        app:shadow_gravity="center"
+        app:shadow_radius="8" />
+
+```
+</p>
+</details>
+
 <details><summary>InMemoryCache</summary>
 <p>
 
