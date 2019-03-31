@@ -85,13 +85,21 @@ fun View.showIf(boolean: Boolean, makeInvisible: Boolean = false) {
 }
 
 /**
+ * will hide the view If Condition is true else make if INVISIBLE or GONE Based on the [makeInvisible] flag
+ */
+fun View.hideIf(boolean: Boolean, makeInvisible: Boolean = false) {
+    showIf(boolean.not(), makeInvisible)
+}
+
+/**
  * hide Keyboard
  */
 fun View.hideKeyboard(): Boolean {
     try {
         val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         return inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
-    } catch (ignored: RuntimeException) { }
+    } catch (ignored: RuntimeException) {
+    }
     return false
 }
 

@@ -163,6 +163,17 @@ fun Context.checkSelfPermissions(vararg permissions: String): Boolean {
 }
 
 /**
+ * check for the Permission Easily. call [checkSelfPermissions] with the permissions and we will tell you if you are permitted or not.
+ */
+fun Context.checkSelfPermissions(permissions: List<String>): Boolean {
+    permissions.forEach {
+        if (ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED)
+            return false
+    }
+    return true
+}
+
+/**
  * Wanna check if you can resolve the intent? Call [isIntentResolvable] with your intent and check it with the ease.
  */
 fun Context.isIntentResolvable(intent: Intent) =

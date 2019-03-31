@@ -18,8 +18,10 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Point
 import android.graphics.Rect
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.view.Display
 import android.view.View
 import android.view.ViewTreeObserver
@@ -32,6 +34,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.amnix.xtension.extras.AmniXSnack
 import java.lang.reflect.InvocationTargetException
+
 
 /**
  * startsActivityForResult With a Class Name and Extra Data Followed by RequestCode
@@ -179,7 +182,38 @@ fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted:
         onResult(checkSelfPermissions(permission))
     }
     lifecycle.addObserver(observer)
-    ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
+    if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
+        ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
+    else
+        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
+}
+
+/**
+ * Request Permissions WithOut Waiting For Any OnPermissionResult Callback.
+ *
+ * Get The Result in a Callback Easily.
+ * No need to check if the Permission Grated Already Or Not, We Will do it for you. Just Place the code in [onResult] Block, We will Execute it SomeHow.
+ * Its Based on LifeCycleObserver So Supported FragmentActivity+
+ *
+ * @property permissions is the Permission you want to Request For
+ * @property onResult is the Block Which Will be Executed On Permission Granted.
+ *
+ */
+fun FragmentActivity.requestPermission(permissions: Array<String>, onResult: (isGranted: Boolean) -> Unit) {
+    if (checkSelfPermissions(permissions.toList())) {
+        onResult(true)
+        return
+    }
+    val observer = PermissionObserver()
+    observer.onResumeCallback = {
+        lifecycle.removeObserver(observer)
+        onResult(checkSelfPermissions(permissions.toList()))
+    }
+    lifecycle.addObserver(observer)
+    if (shouldShowRequestPermissionRationaleBunch(this, permissions))
+        ActivityCompat.requestPermissions(this, permissions, 420)
+    else
+        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
 }
 
 //Private Methods are below
@@ -189,6 +223,14 @@ private fun getAppUsableScreenSize(context: Context): Point {
     val size = Point()
     display.getSize(size)
     return size
+}
+
+private fun shouldShowRequestPermissionRationaleBunch(activity: FragmentActivity, permissions: Array<String>): Boolean {
+    permissions.forEach {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, it).not())
+            return false
+    }
+    return true
 }
 
 private fun getRealScreenSize(context: Context): Point {
