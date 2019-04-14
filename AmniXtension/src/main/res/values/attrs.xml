@@ -62,4 +62,8 @@
             <flag name="end" value="5" />
         </attr>
     </declare-styleable>
+    <declare-styleable name="AlertDialog">
+        <attr name="progressLayout" format="reference" />
+        <attr name="horizontalProgressLayout" format="reference" />
+    </declare-styleable>
 </resources>
