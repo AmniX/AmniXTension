@@ -92,14 +92,25 @@ fun View.hideIf(boolean: Boolean, makeInvisible: Boolean = false) {
 }
 
 /**
+ * will enable the view If Condition is true else enables It
+ */
+
+fun View.enableIf(boolean: Boolean) = { isEnabled = boolean }
+
+/**
+ * will disable the view If Condition is true else enables It
+ */
+
+fun View.disableIf(boolean: Boolean) = { isEnabled = boolean.not() }
+
+/**
  * hide Keyboard
  */
 fun View.hideKeyboard(): Boolean {
     try {
         val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         return inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
-    } catch (ignored: RuntimeException) {
-    }
+    } catch (ignored: RuntimeException) { }
     return false
 }
 
