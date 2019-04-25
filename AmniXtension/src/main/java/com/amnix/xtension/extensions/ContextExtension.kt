@@ -154,7 +154,7 @@ fun Context.vibrate(millis: Long) = getVibrator().vibrate(millis)
 /**
  * check for the Permission Easily. call [checkSelfPermissions] with the permissions and we will tell you if you are permitted or not.
  */
-fun Context.checkSelfPermissions(vararg permissions: String): Boolean {
+fun Context.checkSelfPermissions(permissions: Array<String>): Boolean {
     permissions.forEach {
         if (ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED)
             return false
