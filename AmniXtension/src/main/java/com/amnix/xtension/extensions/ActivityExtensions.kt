@@ -13,9 +13,11 @@
 
 package com.amnix.xtension.extensions
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Point
 import android.graphics.Rect
 import android.net.Uri
@@ -28,6 +30,7 @@ import android.view.ViewTreeObserver
 import android.view.WindowManager
 import androidx.annotation.ColorInt
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
@@ -172,14 +175,14 @@ fun Activity.getContentView(): View? {
  * * Only Supports One Permission at a time. Contributors will be welcomed
  */
 fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted: Boolean) -> Unit) {
-    if (checkSelfPermissions(permission)) {
+    if (checkSelfPermissions(arrayOf(permission))) {
         onResult(true)
         return
     }
     val observer = PermissionObserver()
     observer.onResumeCallback = {
         lifecycle.removeObserver(observer)
-        onResult(checkSelfPermissions(permission))
+        onResult(checkSelfPermissions(arrayOf(permission)))
     }
     lifecycle.addObserver(observer)
     if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
@@ -214,6 +217,20 @@ fun FragmentActivity.requestPermission(permissions: Array<String>, onResult: (is
         ActivityCompat.requestPermissions(this, permissions, 420)
     else
         startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
+}
+
+fun FragmentActivity.requestPermissions(permissions: Array<String>, onResult: (isGranted: Boolean) -> Unit) {
+    if (checkSelfPermissions(permissions)) {
+        onResult(true)
+        return
+    }
+    val observer = PermissionObserver()
+    observer.onResumeCallback = {
+        lifecycle.removeObserver(observer)
+        onResult(checkSelfPermissions(permissions))
+    }
+    lifecycle.addObserver(observer)
+    ActivityCompat.requestPermissions(this, permissions, 420)
 }
 
 //Private Methods are below
