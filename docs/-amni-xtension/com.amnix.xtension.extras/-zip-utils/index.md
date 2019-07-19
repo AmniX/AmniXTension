@@ -2,7 +2,7 @@
 
 # ZipUtils
 
-`class ZipUtils` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/ZipUtils.java#L27)
+`class ZipUtils`
 
 ### Functions
 

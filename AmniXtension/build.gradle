@@ -19,7 +19,7 @@ apply plugin: 'org.jetbrains.dokka'
 android {
     compileSdkVersion 28
     defaultConfig {
-        minSdkVersion 18
+        minSdkVersion 16
         targetSdkVersion 28
     }
 }
@@ -27,7 +27,7 @@ android {
 publish {
     def groupProjectID = 'com.amnix.xtension'
     def artifactProjectID = 'AmniXtension'
-    def publishVersionID = '1.0.0-beta07'
+    def publishVersionID = '1.0.0-beta09'
 
     userOrg = 'amnix'
     repoName = 'AmniXUtils'
@@ -40,13 +40,13 @@ publish {
 
 dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
-    implementation 'androidx.core:core-ktx:1.1.0-alpha05'
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'androidx.core:core-ktx:1.2.0-alpha02'
 }
 
 dokka {
     outputFormat = 'gfm'
-    outputDirectory = "docs"
+    outputDirectory = "$rootDir/docs"
     linkMapping {
         dir = "$rootDir/AmniXtension/src/main/java"
         url = "https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java"

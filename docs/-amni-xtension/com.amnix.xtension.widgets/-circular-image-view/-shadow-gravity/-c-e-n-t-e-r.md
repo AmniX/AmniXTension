@@ -2,7 +2,7 @@
 
 # CENTER
 
-`CENTER` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/CircularImageView.kt#L406)
+`CENTER`
 
 Center Gravity
 

@@ -2,7 +2,7 @@
 
 # toBase64
 
-`fun Bitmap.toBase64(compressFormat: CompressFormat = Bitmap.CompressFormat.PNG): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/BitmapExtensions.kt#L91)
+`fun Bitmap.toBase64(compressFormat: CompressFormat = Bitmap.CompressFormat.PNG): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 Converts Bitmap to Base64 Easily.
 

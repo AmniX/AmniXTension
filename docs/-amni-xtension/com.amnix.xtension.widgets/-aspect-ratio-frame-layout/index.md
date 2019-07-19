@@ -2,7 +2,7 @@
 
 # AspectRatioFrameLayout
 
-`class AspectRatioFrameLayout : FrameLayout` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/AspectRatioFrameLayout.kt#L25)
+`class AspectRatioFrameLayout : FrameLayout`
 
 Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio
 
@@ -26,9 +26,12 @@ Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio
 | [castTo](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`?`<br>helper Function to Cast things |
 | [childs](../../com.amnix.xtension.extensions/android.view.-view-group/childs.md) | `fun ViewGroup.childs(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<View>`<br>get All the Children's as Iterator |
 | [contains](../../com.amnix.xtension.extensions/android.view.-view-group/contains.md) | `fun ViewGroup.contains(child: View): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>check if ViewGroup have the given View as Its Child |
+| [disableIf](../../com.amnix.xtension.extensions/android.view.-view/disable-if.md) | `fun View.disableIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will disable the view If Condition is true else enables It |
+| [enableIf](../../com.amnix.xtension.extensions/android.view.-view/enable-if.md) | `fun View.enableIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will enable the view If Condition is true else enables It |
 | [fadeIn](../../com.amnix.xtension.extensions/android.view.-view/fade-in.md) | `fun View.fadeIn(duration: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 400): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start The FadeIn Animation on This View |
 | [fadeOut](../../com.amnix.xtension.extensions/android.view.-view/fade-out.md) | `fun View.fadeOut(duration: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 400): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start the FadeOut Animation on This View |
 | [getActivity](../../com.amnix.xtension.extensions/android.view.-view/get-activity.md) | `fun View.getActivity(): Activity?`<br>get Activity On Which View is inflated to |
+| [hideIf](../../com.amnix.xtension.extensions/android.view.-view/hide-if.md) | `fun View.hideIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, makeInvisible: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will hide the view If Condition is true else make if INVISIBLE or GONE Based on the [makeInvisible](../../com.amnix.xtension.extensions/android.view.-view/hide-if.md#com.amnix.xtension.extensions$hideIf(android.view.View, kotlin.Boolean, kotlin.Boolean)/makeInvisible) flag |
 | [hideKeyboard](../../com.amnix.xtension.extensions/android.view.-view/hide-keyboard.md) | `fun View.hideKeyboard(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>hide Keyboard |
 | [isGone](../../com.amnix.xtension.extensions/android.view.-view/is-gone.md) | `fun View.isGone(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Check if View Visiblity == GONE |
 | [isInvisible](../../com.amnix.xtension.extensions/android.view.-view/is-invisible.md) | `fun View.isInvisible(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Check if View is Invisible to User |

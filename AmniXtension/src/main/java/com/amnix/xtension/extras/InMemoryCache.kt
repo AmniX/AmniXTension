@@ -13,11 +13,13 @@
 
 package com.amnix.xtension.extras
 
+import java.util.*
+
 /**
  * Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want.
  */
 object InMemoryCache {
-    private val map = HashMap<String, Any?>()
+    private val map = WeakHashMap<String, Any?>()
     /**
      * put [key] & [value] where
      *
@@ -33,21 +35,15 @@ object InMemoryCache {
      * get the saved value addressed by the key
      */
     fun get(key: String): Any? = map[key]
-
     /**
      * check if have the value on the Given Key
      */
-    fun have(key: String) = map.containsKey(key)
-
-    /**
-     * check if have the value on the Given Key
-     */
-    fun contains(key: String) = have(key)
+    fun contains(key: String) = map.contains(key)
 
     /**
      * Clear all the InMemoryCache
      */
-    fun clear() = map.clear()::class.java.getDeclaredMethod("", null, null)
+    fun clear() = map.clear()
 
     /**
      * get All The InMemoryCache

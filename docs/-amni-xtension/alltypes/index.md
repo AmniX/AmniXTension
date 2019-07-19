@@ -27,6 +27,7 @@
 | [com.amnix.xtension.logs.L](../com.amnix.xtension.logs/-l/index.md) | A Custom Log Class for the developer Ease. |
 | [kotlin.Number](../com.amnix.xtension.extensions/kotlin.-number/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.extras.PlaceHolders](../com.amnix.xtension.extras/-place-holders/index.md) | Class for Several PlaceHolders |
+| [com.amnix.xtension.extras.ProgressDialog](../com.amnix.xtension.extras/-progress-dialog/index.md) | ProgressDialog Replacement of Android ProgressDialog |
 | [android.widget.SeekBar](../com.amnix.xtension.extensions/android.widget.-seek-bar/index.md) (extensions in package com.amnix.xtension.extensions) |  |
 | [com.amnix.xtension.widgets.ShadowView](../com.amnix.xtension.widgets/-shadow-view/index.md) | A simple Class to set the Drop Shadow Above or Below any View |
 | [android.content.SharedPreferences](../com.amnix.xtension.extensions/android.content.-shared-preferences/index.md) (extensions in package com.amnix.xtension.extensions) |  |

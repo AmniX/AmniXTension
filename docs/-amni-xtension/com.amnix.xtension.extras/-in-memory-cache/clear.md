@@ -2,7 +2,7 @@
 
 # clear
 
-`fun clear(): `[`Method`](http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Method.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extras/InMemoryCache.kt#L50)
+`fun clear(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Clear all the InMemoryCache
 

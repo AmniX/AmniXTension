@@ -2,7 +2,7 @@
 
 # getDevicePolicyManager
 
-`fun Context.getDevicePolicyManager(): DevicePolicyManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L670)
+`fun Context.getDevicePolicyManager(): DevicePolicyManager`
 
 get Device Policy manager
 

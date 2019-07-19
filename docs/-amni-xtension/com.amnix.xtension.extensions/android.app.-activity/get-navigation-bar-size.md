@@ -2,7 +2,7 @@
 
 # getNavigationBarSize
 
-`fun Activity.getNavigationBarSize(context: Context): Point` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L63)
+`fun Activity.getNavigationBarSize(context: Context): Point`
 
 Returns the NavigationBar Height in Pixels
 

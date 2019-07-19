@@ -2,7 +2,7 @@
 
 # DATE_MODIFIED
 
-`DATE_MODIFIED` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentColumns.kt#L39)
+`DATE_MODIFIED`
 
 the date Modified Column
 

@@ -2,4 +2,4 @@
 
 # getOrientationChangeFixedPixel
 
-`open fun getOrientationChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L265)
+`open fun getOrientationChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md)

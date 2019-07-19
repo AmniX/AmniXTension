@@ -2,7 +2,7 @@
 
 # TouchImageView
 
-`open class TouchImageView : AppCompatImageView` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L40)
+`open class TouchImageView : AppCompatImageView`
 
 ### Types
 

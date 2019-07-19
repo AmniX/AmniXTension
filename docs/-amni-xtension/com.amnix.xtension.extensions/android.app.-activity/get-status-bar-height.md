@@ -2,7 +2,7 @@
 
 # getStatusBarHeight
 
-`fun Activity.getStatusBarHeight(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L53)
+`fun Activity.getStatusBarHeight(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
 Returns the StatusBarHeight in Pixels
 

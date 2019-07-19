@@ -2,7 +2,7 @@
 
 # getScaleType
 
-`fun getScaleType(): ScaleType` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/CircularImageView.kt#L171)
+`fun getScaleType(): ScaleType`
 
 get Scale Type
 

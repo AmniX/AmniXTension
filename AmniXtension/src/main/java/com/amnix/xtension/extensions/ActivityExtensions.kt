@@ -13,11 +13,9 @@
 
 package com.amnix.xtension.extensions
 
-import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Point
 import android.graphics.Rect
 import android.net.Uri
@@ -30,12 +28,12 @@ import android.view.ViewTreeObserver
 import android.view.WindowManager
 import androidx.annotation.ColorInt
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.amnix.xtension.extras.AmniXSnack
+import com.amnix.xtension.logs.L
 import java.lang.reflect.InvocationTargetException
 
 
@@ -129,7 +127,7 @@ fun Activity.showSnackBar(
     action: Pair<String, (v: View?) -> Unit>? = null,
     @ColorInt bgColor: Int? = null,
     @ColorInt textColor: Int? = null,
-    duration: Long = 1000
+    duration: Long = 3000
 ) {
     AmniXSnack(this).apply {
         setMessage(message)
@@ -175,20 +173,7 @@ fun Activity.getContentView(): View? {
  * * Only Supports One Permission at a time. Contributors will be welcomed
  */
 fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted: Boolean) -> Unit) {
-    if (checkSelfPermissions(arrayOf(permission))) {
-        onResult(true)
-        return
-    }
-    val observer = PermissionObserver()
-    observer.onResumeCallback = {
-        lifecycle.removeObserver(observer)
-        onResult(checkSelfPermissions(arrayOf(permission)))
-    }
-    lifecycle.addObserver(observer)
-    if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
-        ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
-    else
-        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
+    this.requestPermissions(arrayOf(permission), onResult)
 }
 
 /**
@@ -198,39 +183,40 @@ fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted:
  * No need to check if the Permission Grated Already Or Not, We Will do it for you. Just Place the code in [onResult] Block, We will Execute it SomeHow.
  * Its Based on LifeCycleObserver So Supported FragmentActivity+
  *
- * @property permissions is the Permission you want to Request For
+ * @property permissions is the Permissions you want to Request For
  * @property onResult is the Block Which Will be Executed On Permission Granted.
  *
  */
-fun FragmentActivity.requestPermission(permissions: Array<String>, onResult: (isGranted: Boolean) -> Unit) {
-    if (checkSelfPermissions(permissions.toList())) {
-        onResult(true)
-        return
-    }
-    val observer = PermissionObserver()
-    observer.onResumeCallback = {
-        lifecycle.removeObserver(observer)
-        onResult(checkSelfPermissions(permissions.toList()))
-    }
-    lifecycle.addObserver(observer)
-    if (shouldShowRequestPermissionRationaleBunch(this, permissions))
-        ActivityCompat.requestPermissions(this, permissions, 420)
-    else
-        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
-}
-
 fun FragmentActivity.requestPermissions(permissions: Array<String>, onResult: (isGranted: Boolean) -> Unit) {
     if (checkSelfPermissions(permissions)) {
         onResult(true)
-        return
+    } else {
+        val observer = PermissionObserver()
+        var onPausedCalledAt = -1L
+        observer.onResumeCallback = {
+            val responseTime = System.currentTimeMillis() - onPausedCalledAt
+            L.d("response Time : " + responseTime)
+            if (onPausedCalledAt > 0 && responseTime < 250) { // If OnResume Called in Compared Value Ms Then It Can be Assume that User have Disabled the Permission Permanently
+                startActivity(
+                    Intent(
+                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.fromParts("package", packageName, null)
+                    )
+                )
+                showToast("Please Allow Required Permission to Proceed Further!")
+            } else {
+                observer.onResumeCallback = null
+                lifecycle.removeObserver(observer)
+                onResult(checkSelfPermissions(permissions))
+            }
+        }
+        observer.onPauseCallback = {
+            onPausedCalledAt = System.currentTimeMillis()
+            observer.onPauseCallback = null
+        }
+        lifecycle.addObserver(observer)
+        ActivityCompat.requestPermissions(this, permissions, 420)
     }
-    val observer = PermissionObserver()
-    observer.onResumeCallback = {
-        lifecycle.removeObserver(observer)
-        onResult(checkSelfPermissions(permissions))
-    }
-    lifecycle.addObserver(observer)
-    ActivityCompat.requestPermissions(this, permissions, 420)
 }
 
 //Private Methods are below
@@ -240,14 +226,6 @@ private fun getAppUsableScreenSize(context: Context): Point {
     val size = Point()
     display.getSize(size)
     return size
-}
-
-private fun shouldShowRequestPermissionRationaleBunch(activity: FragmentActivity, permissions: Array<String>): Boolean {
-    permissions.forEach {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, it).not())
-            return false
-    }
-    return true
 }
 
 private fun getRealScreenSize(context: Context): Point {
@@ -271,17 +249,19 @@ private fun getRealScreenSize(context: Context): Point {
 }
 
 private class PermissionObserver : LifecycleObserver {
-    var onResumeCallback: (() -> Unit)? = null
+    var onResumeCallback: ((Boolean) -> Unit)? = null
+    var onPauseCallback: ((Boolean) -> Unit)? = null
     var readyToCheck = false
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun onPause() {
         readyToCheck = true
+        onPauseCallback?.invoke(readyToCheck)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onResume() {
         if (readyToCheck)
-            onResumeCallback?.invoke()
+            onResumeCallback?.invoke(readyToCheck)
         readyToCheck = false
     }
 }

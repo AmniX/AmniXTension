@@ -2,7 +2,7 @@
 
 # ShadowGravity
 
-`enum class ShadowGravity` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/CircularImageView.kt#L402)
+`enum class ShadowGravity`
 
 The Gravity Enums
 

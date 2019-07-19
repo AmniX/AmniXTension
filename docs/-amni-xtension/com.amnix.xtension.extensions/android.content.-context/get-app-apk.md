@@ -2,7 +2,7 @@
 
 # getAppApk
 
-`fun Context.getAppApk(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L300)
+`fun Context.getAppApk(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)
 
 get Application Apk File
 

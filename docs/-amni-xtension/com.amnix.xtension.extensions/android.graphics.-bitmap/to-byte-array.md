@@ -2,7 +2,7 @@
 
 # toByteArray
 
-`fun Bitmap.toByteArray(compressFormat: CompressFormat = Bitmap.CompressFormat.PNG): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/BitmapExtensions.kt#L220)
+`fun Bitmap.toByteArray(compressFormat: CompressFormat = Bitmap.CompressFormat.PNG): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)
 
 Converts Bitmap to ByteArray Easily.
 

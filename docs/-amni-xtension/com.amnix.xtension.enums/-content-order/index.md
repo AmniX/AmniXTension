@@ -2,7 +2,7 @@
 
 # ContentOrder
 
-`enum class ContentOrder` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentOrder.kt#L19)
+`enum class ContentOrder`
 
 Enum to choose between Ascending or Descending order
 

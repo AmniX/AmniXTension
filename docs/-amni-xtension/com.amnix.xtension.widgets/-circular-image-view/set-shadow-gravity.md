@@ -2,7 +2,7 @@
 
 # setShadowGravity
 
-`fun setShadowGravity(shadowGravity: `[`ShadowGravity`](-shadow-gravity/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/CircularImageView.kt#L152)
+`fun setShadowGravity(shadowGravity: `[`ShadowGravity`](-shadow-gravity/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 set Shadow Gravity
 

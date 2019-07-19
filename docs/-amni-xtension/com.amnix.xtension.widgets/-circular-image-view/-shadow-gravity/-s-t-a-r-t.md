@@ -2,7 +2,7 @@
 
 # START
 
-`START` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/CircularImageView.kt#L418)
+`START`
 
 Start Gravity
 

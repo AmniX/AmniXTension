@@ -2,4 +2,4 @@
 
 # getViewSizeChangeFixedPixel
 
-`open fun getViewSizeChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L273)
+`open fun getViewSizeChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md)

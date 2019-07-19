@@ -4,9 +4,12 @@
 
 | Name | Summary |
 |---|---|
+| [disableIf](disable-if.md) | `fun View.disableIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will disable the view If Condition is true else enables It |
+| [enableIf](enable-if.md) | `fun View.enableIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): () -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will enable the view If Condition is true else enables It |
 | [fadeIn](fade-in.md) | `fun View.fadeIn(duration: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 400): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start The FadeIn Animation on This View |
 | [fadeOut](fade-out.md) | `fun View.fadeOut(duration: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 400): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Start the FadeOut Animation on This View |
 | [getActivity](get-activity.md) | `fun View.getActivity(): Activity?`<br>get Activity On Which View is inflated to |
+| [hideIf](hide-if.md) | `fun View.hideIf(boolean: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, makeInvisible: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>will hide the view If Condition is true else make if INVISIBLE or GONE Based on the [makeInvisible](hide-if.md#com.amnix.xtension.extensions$hideIf(android.view.View, kotlin.Boolean, kotlin.Boolean)/makeInvisible) flag |
 | [hideKeyboard](hide-keyboard.md) | `fun View.hideKeyboard(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>hide Keyboard |
 | [isGone](is-gone.md) | `fun View.isGone(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Check if View Visiblity == GONE |
 | [isInvisible](is-invisible.md) | `fun View.isInvisible(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Check if View is Invisible to User |

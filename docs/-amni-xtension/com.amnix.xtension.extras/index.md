@@ -11,4 +11,5 @@
 | [DeviceUtils](-device-utils/index.md) | `object DeviceUtils`<br>Helper Class to Provide the Device Informations |
 | [InMemoryCache](-in-memory-cache/index.md) | `object InMemoryCache`<br>Class for an InMemory Cache to keep your variables globally in heap and get them wherever you want. |
 | [PlaceHolders](-place-holders/index.md) | `object PlaceHolders`<br>Class for Several PlaceHolders |
+| [ProgressDialog](-progress-dialog/index.md) | `class ProgressDialog : AlertDialog`<br>ProgressDialog Replacement of Android ProgressDialog |
 | [ZipUtils](-zip-utils/index.md) | `class ZipUtils` |

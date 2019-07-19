@@ -2,7 +2,7 @@
 
 # setColor
 
-`fun setColor(color: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ColorProgressBar`](index.md) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/ColorProgressBar.kt#L56)
+`fun setColor(color: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ColorProgressBar`](index.md)
 
 Set Color Dynamically
 

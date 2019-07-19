@@ -2,7 +2,7 @@
 
 # getMinZoom
 
-`open fun getMinZoom(): `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L425)
+`open fun getMinZoom(): `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
 
 Get the min zoom multiplier.
 

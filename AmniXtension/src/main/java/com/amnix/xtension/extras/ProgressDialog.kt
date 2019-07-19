@@ -31,6 +31,9 @@ import androidx.appcompat.app.AlertDialog
 import com.amnix.xtension.R
 import java.text.NumberFormat
 
+/**
+ * ProgressDialog Replacement of Android ProgressDialog
+ */
 class ProgressDialog : AlertDialog {
 
     private var mProgress: ProgressBar? = null
@@ -56,16 +59,7 @@ class ProgressDialog : AlertDialog {
     private var mViewUpdateHandler: Handler? = null
 
     /**
-     * Gets the current progress.
-     *
-     * @return the current progress, a value between 0 and [.getMax]
-     */
-    /**
-     * Sets the current progress.
-     *
-     * @param value the current progress, a value between 0 and [.getMax]
-     *
-     * @see ProgressBar.setProgress
+     * Current Progress
      */
     var progress: Int
         get() = if (mProgress != null) {
@@ -79,17 +73,7 @@ class ProgressDialog : AlertDialog {
         }
 
     /**
-     * Gets the current secondary progress.
-     *
-     * @return the current secondary progress, a value between 0 and [.getMax]
-     */
-    /**
-     * Sets the secondary progress.
-     *
-     * @param secondaryProgress the current secondary progress, a value between 0 and
-     * [.getMax]
-     *
-     * @see ProgressBar.setSecondaryProgress
+     * Secondary Progress
      */
     var secondaryProgress: Int
         get() = if (mProgress != null) {
@@ -103,12 +87,7 @@ class ProgressDialog : AlertDialog {
         }
 
     /**
-     * Gets the maximum allowed progress value. The default value is 100.
-     *
-     * @return the maximum value
-     */
-    /**
-     * Sets the maximum allowed progress value.
+     * Max Progress
      */
     var max: Int
         get() = if (mProgress != null) {
@@ -120,22 +99,17 @@ class ProgressDialog : AlertDialog {
         } else {
             mMax = max
         }
-
     /**
      * Whether this ProgressDialog is in indeterminate mode.
-     *
-     * @return true if the dialog is in indeterminate mode, false otherwise
-     */
-    /**
      * Change the indeterminate mode for this ProgressDialog. In indeterminate
      * mode, the progress is ignored and the dialog shows an infinite
      * animation instead.
      *
      *
-     * **Note:** A ProgressDialog with style [.STYLE_SPINNER]
+     * **Note:** A ProgressDialog with style [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER]
      * is always indeterminate and will ignore this setting.
      *
-     * @param indeterminate true to enable indeterminate mode, false otherwise
+     * set true to enable indeterminate mode, false otherwise
      *
      * @see .setProgressStyle
      */
@@ -176,6 +150,9 @@ class ProgressDialog : AlertDialog {
         mProgressPercentFormat?.maximumFractionDigits = 0
     }
 
+    /**
+     * OnCreate Method
+     */
     @SuppressLint("HandlerLeak")
     override fun onCreate(savedInstanceState: Bundle?) {
         val inflater = LayoutInflater.from(context)
@@ -267,11 +244,17 @@ class ProgressDialog : AlertDialog {
         super.onCreate(savedInstanceState)
     }
 
+    /**
+     * onStart Method
+     */
     public override fun onStart() {
         super.onStart()
         mHasStarted = true
     }
 
+    /**
+     * onStop Method
+     */
     override fun onStop() {
         super.onStop()
         mHasStarted = false
@@ -281,7 +264,7 @@ class ProgressDialog : AlertDialog {
      * Increments the current progress value.
      *
      * @param diff the amount by which the current progress will be incremented,
-     * up to [.getMax]
+     * up to [com.amnix.xtension.extras.ProgressDialog.max]
      */
     fun incrementProgressBy(diff: Int) {
         if (mProgress != null) {
@@ -296,7 +279,7 @@ class ProgressDialog : AlertDialog {
      * Increments the current secondary progress value.
      *
      * @param diff the amount by which the current secondary progress will be incremented,
-     * up to [.getMax]
+     * up to [com.amnix.xtension.extras.ProgressDialog.max]
      */
     fun incrementSecondaryProgressBy(diff: Int) {
         if (mProgress != null) {
@@ -338,6 +321,9 @@ class ProgressDialog : AlertDialog {
         }
     }
 
+    /**
+     * Set Text Message
+     */
     override fun setMessage(message: CharSequence) {
         if (mProgress != null) {
             if (mProgressStyle == STYLE_HORIZONTAL) {
@@ -351,15 +337,15 @@ class ProgressDialog : AlertDialog {
     }
 
     /**
-     * Sets the style of this ProgressDialog, either [.STYLE_SPINNER] or
-     * [.STYLE_HORIZONTAL]. The default is [.STYLE_SPINNER].
+     * Sets the style of this ProgressDialog, either [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER] or
+     * [com.amnix.xtension.extras.ProgressDialog.STYLE_HORIZONTAL]. The default is [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER].
      *
      *
-     * **Note:** A ProgressDialog with style [.STYLE_SPINNER]
-     * is always indeterminate and will ignore the [ indeterminate][.setIndeterminate] setting.
+     * **Note:** A ProgressDialog with style [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER]
+     * is always indeterminate and will ignore the [ indeterminate][com.amnix.xtension.extras.ProgressDialog.isIndeterminate] setting.
      *
-     * @param style the style of this ProgressDialog, either [.STYLE_SPINNER] or
-     * [.STYLE_HORIZONTAL]
+     * @param style the style of this ProgressDialog, either [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER] or
+     * [com.amnix.xtension.extras.ProgressDialog.STYLE_HORIZONTAL]
      */
     fun setProgressStyle(style: Int) {
         mProgressStyle = style
@@ -442,31 +428,3 @@ class ProgressDialog : AlertDialog {
         }
     }
 }
-/**
- * Creates and shows a ProgressDialog.
- *
- * @param context the parent context
- * @param title the title text for the dialog's window
- * @param message the text to be displayed in the dialog
- * @return the ProgressDialog
- */
-/**
- * Creates and shows a ProgressDialog.
- *
- * @param context the parent context
- * @param title the title text for the dialog's window
- * @param message the text to be displayed in the dialog
- * @param indeterminate true if the dialog should be [        indeterminate][.setIndeterminate], false otherwise
- * @return the ProgressDialog
- */
-/**
- * Creates and shows a ProgressDialog.
- *
- * @param context the parent context
- * @param title the title text for the dialog's window
- * @param message the text to be displayed in the dialog
- * @param indeterminate true if the dialog should be [        indeterminate][.setIndeterminate], false otherwise
- * @param cancelable true if the dialog is [cancelable][.setCancelable],
- * false otherwise
- * @return the ProgressDialog
- */

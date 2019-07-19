@@ -2,7 +2,7 @@
 
 # getContentView
 
-`fun Activity.getContentView(): View?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L154)
+`fun Activity.getContentView(): View?`
 
 get #contentView of the Activity
 

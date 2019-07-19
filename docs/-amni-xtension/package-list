@@ -4,6 +4,7 @@ $dokka.location:com.amnix.xtension.extensions$append(kotlin.String, kotlin.Strin
 $dokka.location:com.amnix.xtension.extensions$castAs(kotlin.Any, java.lang.Class((com.amnix.xtension.extensions.castAs.T)))com.amnix.xtension.extensions/kotlin.-any/cast-as.md
 $dokka.location:com.amnix.xtension.extensions$castTo(kotlin.Any, java.lang.Class((com.amnix.xtension.extensions.castTo.T)))com.amnix.xtension.extensions/kotlin.-any/cast-to.md
 $dokka.location:com.amnix.xtension.extensions$checkSelfPermissions(android.content.Context, kotlin.Array((kotlin.String)))com.amnix.xtension.extensions/android.content.-context/check-self-permissions.md
+$dokka.location:com.amnix.xtension.extensions$checkSelfPermissions(android.content.Context, kotlin.collections.List((kotlin.String)))com.amnix.xtension.extensions/android.content.-context/check-self-permissions.md
 $dokka.location:com.amnix.xtension.extensions$childs(android.view.ViewGroup)com.amnix.xtension.extensions/android.view.-view-group/childs.md
 $dokka.location:com.amnix.xtension.extensions$compressByQuality(android.graphics.Bitmap, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-quality.md
 $dokka.location:com.amnix.xtension.extensions$compressBySampleSize(android.graphics.Bitmap, kotlin.Int, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/compress-by-sample-size.md
@@ -18,8 +19,10 @@ $dokka.location:com.amnix.xtension.extensions$decodeToUrl(kotlin.String, kotlin.
 $dokka.location:com.amnix.xtension.extensions$decryptAES(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/decrypt-a-e-s.md
 $dokka.location:com.amnix.xtension.extensions$deleteAll(java.io.File)com.amnix.xtension.extensions/java.io.-file/delete-all.md
 $dokka.location:com.amnix.xtension.extensions$dialNumber(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/dial-number.md
+$dokka.location:com.amnix.xtension.extensions$disableIf(android.view.View, kotlin.Boolean)com.amnix.xtension.extensions/android.view.-view/disable-if.md
 $dokka.location:com.amnix.xtension.extensions$dpFromPx(kotlin.Number)com.amnix.xtension.extensions/kotlin.-number/dp-from-px.md
 $dokka.location:com.amnix.xtension.extensions$edit(android.content.SharedPreferences, kotlin.Function1((android.content.SharedPreferences.Editor, kotlin.Unit)))com.amnix.xtension.extensions/android.content.-shared-preferences/edit.md
+$dokka.location:com.amnix.xtension.extensions$enableIf(android.view.View, kotlin.Boolean)com.amnix.xtension.extensions/android.view.-view/enable-if.md
 $dokka.location:com.amnix.xtension.extensions$encodeToBase64(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/encode-to-base64.md
 $dokka.location:com.amnix.xtension.extensions$encodeToBinary(kotlin.String)com.amnix.xtension.extensions/kotlin.-string/encode-to-binary.md
 $dokka.location:com.amnix.xtension.extensions$encodeToUrl(kotlin.String, kotlin.String)com.amnix.xtension.extensions/kotlin.-string/encode-to-url.md
@@ -78,6 +81,7 @@ $dokka.location:com.amnix.xtension.extensions$getVibrator(android.content.Contex
 $dokka.location:com.amnix.xtension.extensions$getWifiManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-wifi-manager.md
 $dokka.location:com.amnix.xtension.extensions$getWifiP2pManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-wifi-p2p-manager.md
 $dokka.location:com.amnix.xtension.extensions$getWindowManager(android.content.Context)com.amnix.xtension.extensions/android.content.-context/get-window-manager.md
+$dokka.location:com.amnix.xtension.extensions$hideIf(android.view.View, kotlin.Boolean, kotlin.Boolean)com.amnix.xtension.extensions/android.view.-view/hide-if.md
 $dokka.location:com.amnix.xtension.extensions$hideKeyboard(android.view.View)com.amnix.xtension.extensions/android.view.-view/hide-keyboard.md
 $dokka.location:com.amnix.xtension.extensions$isAppInstalled(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/is-app-installed.md
 $dokka.location:com.amnix.xtension.extensions$isBackground(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/is-background.md
@@ -104,6 +108,7 @@ $dokka.location:com.amnix.xtension.extensions$pxFromSp(kotlin.Number)com.amnix.
 $dokka.location:com.amnix.xtension.extensions$readToString(java.io.File)com.amnix.xtension.extensions/java.io.-file/read-to-string.md
 $dokka.location:com.amnix.xtension.extensions$requestMediaScanner(android.content.Context, kotlin.String)com.amnix.xtension.extensions/android.content.-context/request-media-scanner.md
 $dokka.location:com.amnix.xtension.extensions$requestPermission(androidx.fragment.app.FragmentActivity, kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)))com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/request-permission.md
+$dokka.location:com.amnix.xtension.extensions$requestPermissions(androidx.fragment.app.FragmentActivity, kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.Boolean, kotlin.Unit)))com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/request-permissions.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.graphics.Bitmap, kotlin.Number, kotlin.Number, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/resize.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.view.View, kotlin.Int, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/resize.md
 $dokka.location:com.amnix.xtension.extensions$rotateTo(android.graphics.Bitmap, kotlin.Float, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/rotate-to.md

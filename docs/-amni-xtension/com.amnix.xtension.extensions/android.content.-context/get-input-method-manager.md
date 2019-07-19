@@ -2,7 +2,7 @@
 
 # getInputMethodManager
 
-`fun Context.getInputMethodManager(): InputMethodManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L655)
+`fun Context.getInputMethodManager(): InputMethodManager`
 
 get InputMethod Manager
 

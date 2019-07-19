@@ -56,6 +56,10 @@ import androidx.annotation.RequiresPermission
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.pm.PackageInfoCompat
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
 import com.amnix.xtension.enums.ContentColumns
 import com.amnix.xtension.enums.ContentOrder
 import java.io.File
@@ -334,8 +338,8 @@ fun Context.getAppVersionName(pName: String = packageName): String {
  * Provide Package or will provide the current App Detail
  */
 @Throws(PackageManager.NameNotFoundException::class)
-fun Context.getAppVersionCode(pName: String = packageName): Int {
-    return packageManager.getPackageInfo(pName, 0).versionCode
+fun Context.getAppVersionCode(pName: String = packageName): Long {
+    return PackageInfoCompat.getLongVersionCode(packageManager.getPackageInfo(pName, 0))
 }
 
 /**
@@ -344,6 +348,7 @@ fun Context.getAppVersionCode(pName: String = packageName): Int {
  * @property clazz is the Service Class you want to check for.
  */
 fun Context.isServiceRunning(clazz: Class<out Service>): Boolean {
+    @Suppress("DEPRECATION")
     return getActivityManager().getRunningServices(Integer.MAX_VALUE).filter {
         it.service.className == clazz.name
     }.isNotEmpty()
@@ -380,6 +385,7 @@ fun Context.sendEmail(mailID: String) {
  */
 fun Context.isBackground(pName: String = packageName): Boolean {
     getActivityManager().runningAppProcesses.forEach {
+        @Suppress("DEPRECATION")
         if (it.processName == pName)
             return it.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_BACKGROUND
     }
@@ -485,15 +491,9 @@ fun Context.showNotification(
  * @property presentIntent the Intent will be fire on Clicking the ShortCut.
  */
 fun Context.createShortcut(shortCutName: String, iconId: Int, presentIntent: Intent) {
-    val shortcutIntent = Intent("com.android.launcher.action.INSTALL_SHORTCUT")
-    shortcutIntent.putExtra("duplicate", false)
-    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortCutName)
-    shortcutIntent.putExtra(
-        Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
-        Intent.ShortcutIconResource.fromContext(this, iconId)
-    )
-    shortcutIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, presentIntent)
-    sendBroadcast(shortcutIntent)
+    val shortcutInfo = ShortcutInfoCompat.Builder(this, UUID.randomUUID().toString()).setIntent(presentIntent).setIcon(
+        IconCompat.createWithResource(this,iconId)).setLongLabel(shortCutName).build()
+    ShortcutManagerCompat.createShortcutResultIntent(this, shortcutInfo)
 }
 
 /**
@@ -555,6 +555,7 @@ fun Context.showTimePicker(
 /**
  * get Android ID
  */
+@SuppressLint("HardwareIds")
 fun Context.getAndroidID() = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
 
 /**
@@ -569,7 +570,10 @@ fun Context.getDeviceID() = getAndroidID()
  */
 @SuppressLint("HardwareIds")
 @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
-fun Context.getIMEI() = getTelephonyManager().deviceId
+fun Context.getIMEI() = when {
+    Build.VERSION.SDK_INT >= Build.VERSION_CODES.O -> getTelephonyManager().imei
+    else -> getTelephonyManager().deviceId
+}
 
 /**
  * Starts Activity with the class and extra values

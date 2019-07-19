@@ -2,7 +2,7 @@
 
 # getAudioManager
 
-`fun Context.getAudioManager(): AudioManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L585)
+`fun Context.getAudioManager(): AudioManager`
 
 get Audio Manager
 

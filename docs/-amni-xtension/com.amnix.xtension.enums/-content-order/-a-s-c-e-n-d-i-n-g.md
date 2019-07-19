@@ -2,7 +2,7 @@
 
 # ASCENDING
 
-`ASCENDING` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/enums/ContentOrder.kt#L27)
+`ASCENDING`
 
 Sort by ASC Order
 

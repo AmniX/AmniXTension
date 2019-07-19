@@ -2,7 +2,7 @@
 
 # AUTOMATIC_MIN_ZOOM
 
-`static val AUTOMATIC_MIN_ZOOM: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/widgets/TouchImageView.java#L95)
+`static val AUTOMATIC_MIN_ZOOM: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)
 
 If setMinZoom(AUTOMATIC_MIN_ZOOM), then we'll set the min scale to include the whole image.
 

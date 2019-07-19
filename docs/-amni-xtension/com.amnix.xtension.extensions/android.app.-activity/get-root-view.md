@@ -2,7 +2,7 @@
 
 # getRootView
 
-`fun Activity.getRootView(): View?` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ActivityExtensions.kt#L144)
+`fun Activity.getRootView(): View?`
 
 get #rootVIew of the Activity
 

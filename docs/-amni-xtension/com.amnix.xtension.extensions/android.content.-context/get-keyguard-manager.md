@@ -2,7 +2,7 @@
 
 # getKeyguardManager
 
-`fun Context.getKeyguardManager(): KeyguardManager` [(source)](https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java/com/amnix/xtension/extensions/ContextExtension.kt#L600)
+`fun Context.getKeyguardManager(): KeyguardManager`
 
 get KeyGuard Manager
 
