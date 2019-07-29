@@ -17,7 +17,6 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Point
-import android.graphics.Rect
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -55,9 +54,12 @@ fun Activity.startActivityForResults(cls: Class<out Activity>, requestCode: Int,
  * Returns the StatusBarHeight in Pixels
  */
 fun Activity.getStatusBarHeight(): Int {
-    val rect = Rect()
-    window.decorView.getWindowVisibleDisplayFrame(rect)
-    return rect.top
+    var result = 0
+    val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+    if (resourceId > 0) {
+        result = resources.getDimensionPixelSize(resourceId)
+    }
+    return result
 }
 
 /**

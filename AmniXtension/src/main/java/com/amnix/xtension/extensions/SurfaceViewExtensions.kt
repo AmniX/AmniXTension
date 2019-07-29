@@ -45,7 +45,7 @@ fun SurfaceView.setupCamera(
     autoFlash: Boolean = true,
     onReady: (camera: AmniXCameraWrapper) -> Unit
 ) {
-    var camera: Camera? = null
+    var camera: Camera?
     holder.addCallback(object : SurfaceHolder.Callback {
         override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
 

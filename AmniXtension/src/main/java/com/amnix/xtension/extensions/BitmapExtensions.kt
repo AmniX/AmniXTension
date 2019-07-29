@@ -59,11 +59,11 @@ fun Bitmap.saveAsync(
     format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
     quality: Int = 100,
     recycle: Boolean = true,
-    onComplete:(isSaved:String)->Unit
+    onComplete:((isSaved:String)->Unit)? = null
 ) = asyncAwait( {
     this.save(to, format, quality, recycle)
 },{
-    onComplete(to)
+    onComplete?.invoke(to)
 })
 
 /**

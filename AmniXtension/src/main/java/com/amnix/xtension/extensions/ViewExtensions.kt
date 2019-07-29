@@ -17,9 +17,12 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.PointF
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.inputmethod.InputMethodManager
+import com.amnix.xtension.internals.OnGestureRegisterListener
+
 
 /**
  * Create a Screnshot of the view and returns it as a Bitmap
@@ -46,6 +49,55 @@ fun View.setOnSingleClickListener(tolerance: Long = 500, onClick: (v: View) -> U
             lastClicked = currentTimeMillis
         }
     }
+}
+
+/**
+ * Set on Swipe Listener
+ */
+fun View.rotate(angle: Float = 360f, resetToZero: Boolean = true, duration: Long = 400) {
+    if (resetToZero)
+        rotation = 0f
+    animate().rotation(angle).setDuration(duration).start()
+}
+
+/**
+ * Set On Swipe Gesture Detector Listener
+ */
+
+fun View.setOnSwipeListener(
+    onSwipeDown: (() -> Unit)? = null,
+    onSwipeUp: (() -> Unit)? = null,
+    onSwipeLeft: (() -> Unit)? = null,
+    onSwipeRight: (() -> Unit)? = null,
+    onTap: ((PointF) -> Unit)? = null,
+    onLongTap: ((PointF) -> Boolean)? = null
+) {
+    setOnTouchListener(object : OnGestureRegisterListener(context) {
+        override fun onSwipeRight(view: View?) {
+            onSwipeRight?.invoke()
+        }
+
+        override fun onSwipeLeft(view: View?) {
+            onSwipeLeft?.invoke()
+        }
+
+        override fun onSwipeBottom(view: View?) {
+            onSwipeDown?.invoke()
+        }
+
+        override fun onSwipeTop(view: View?) {
+            onSwipeUp?.invoke()
+        }
+
+        override fun onClick(view: View?, point: PointF) {
+            onTap?.invoke(point)
+        }
+
+        override fun onLongClick(view: View?, point: PointF): Boolean {
+            return onLongTap?.invoke(point) ?: false
+        }
+
+    })
 }
 
 /**
@@ -110,7 +162,8 @@ fun View.hideKeyboard(): Boolean {
     try {
         val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         return inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
-    } catch (ignored: RuntimeException) { }
+    } catch (ignored: RuntimeException) {
+    }
     return false
 }
 
