@@ -196,13 +196,8 @@ fun Context.startApp(pName: String) =
 /**
  * Check if an App is Installed on the user device.
  */
-fun Context.isAppInstalled(packageName: String): Boolean {
-    return try {
-        packageManager.getApplicationInfo(packageName, 0)
-        true
-    } catch (ignore: Exception) {
-        false
-    }
+fun Context.isAppInstalled(packageName: String) = guardRun {
+    packageManager.getApplicationInfo(packageName, 0)
 }
 
 /**
