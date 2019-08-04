@@ -147,7 +147,7 @@ fun View.hideIf(boolean: Boolean, makeInvisible: Boolean = false) {
  * will enable the view If Condition is true else enables It
  */
 
-fun View.enableIf(boolean: Boolean) = { isEnabled = boolean }
+fun View.enableIf(boolean: Boolean) { isEnabled = boolean }
 
 /**
  * will disable the view If Condition is true else enables It
