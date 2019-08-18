@@ -12,6 +12,5 @@ animation instead.
 **Note:** A ProgressDialog with style [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER](-s-t-y-l-e_-s-p-i-n-n-e-r.md)
 is always indeterminate and will ignore this setting.
 
-### Parameters
+set true to enable indeterminate mode, false otherwise
 
-`indeterminate` - true to enable indeterminate mode, false otherwise

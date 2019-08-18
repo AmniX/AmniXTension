@@ -111,6 +111,7 @@ $dokka.location:com.amnix.xtension.extensions$requestPermission(androidx.fragmen
 $dokka.location:com.amnix.xtension.extensions$requestPermissions(androidx.fragment.app.FragmentActivity, kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.Boolean, kotlin.Unit)))com.amnix.xtension.extensions/androidx.fragment.app.-fragment-activity/request-permissions.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.graphics.Bitmap, kotlin.Number, kotlin.Number, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/resize.md
 $dokka.location:com.amnix.xtension.extensions$resize(android.view.View, kotlin.Int, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/resize.md
+$dokka.location:com.amnix.xtension.extensions$rotate(android.view.View, kotlin.Float, kotlin.Boolean, kotlin.Long)com.amnix.xtension.extensions/android.view.-view/rotate.md
 $dokka.location:com.amnix.xtension.extensions$rotateTo(android.graphics.Bitmap, kotlin.Float, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/rotate-to.md
 $dokka.location:com.amnix.xtension.extensions$save(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)com.amnix.xtension.extensions/android.graphics.-bitmap/save.md
 $dokka.location:com.amnix.xtension.extensions$saveAsync(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.graphics.-bitmap/save-async.md
@@ -130,6 +131,7 @@ $dokka.location:com.amnix.xtension.extensions$setOnPageScrollStateChangedListene
 $dokka.location:com.amnix.xtension.extensions$setOnPageSelectedListener(androidx.viewpager.widget.ViewPager, kotlin.Function1((kotlin.Int, kotlin.Unit)))com.amnix.xtension.extensions/androidx.viewpager.widget.-view-pager/set-on-page-selected-listener.md
 $dokka.location:com.amnix.xtension.extensions$setOnSeekBarChangeListener(android.widget.SeekBar, kotlin.Function3((android.widget.SeekBar, kotlin.Int, kotlin.Boolean, kotlin.Unit)), kotlin.Function1((android.widget.SeekBar, kotlin.Unit)), kotlin.Function1((android.widget.SeekBar, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-seek-bar/set-on-seek-bar-change-listener.md
 $dokka.location:com.amnix.xtension.extensions$setOnSingleClickListener(android.view.View, kotlin.Long, kotlin.Function1((android.view.View, kotlin.Unit)))com.amnix.xtension.extensions/android.view.-view/set-on-single-click-listener.md
+$dokka.location:com.amnix.xtension.extensions$setOnSwipeListener(android.view.View, kotlin.Function0((kotlin.Unit)), kotlin.Function0((kotlin.Unit)), kotlin.Function0((kotlin.Unit)), kotlin.Function0((kotlin.Unit)), kotlin.Function1((android.graphics.PointF, kotlin.Unit)), kotlin.Function1((android.graphics.PointF, kotlin.Boolean)))com.amnix.xtension.extensions/android.view.-view/set-on-swipe-listener.md
 $dokka.location:com.amnix.xtension.extensions$setOnTextChangedListener(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))com.amnix.xtension.extensions/android.widget.-edit-text/set-on-text-changed-listener.md
 $dokka.location:com.amnix.xtension.extensions$setPaddingBottom(android.view.View, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/set-padding-bottom.md
 $dokka.location:com.amnix.xtension.extensions$setPaddingEnd(android.view.View, kotlin.Int)com.amnix.xtension.extensions/android.view.-view/set-padding-end.md
@@ -179,5 +181,6 @@ com.amnix.xtension
 com.amnix.xtension.enums
 com.amnix.xtension.extensions
 com.amnix.xtension.extras
+com.amnix.xtension.internals
 com.amnix.xtension.logs
 com.amnix.xtension.widgets
