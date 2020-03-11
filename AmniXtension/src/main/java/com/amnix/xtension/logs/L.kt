@@ -26,12 +26,6 @@ import java.util.*
  *
  * Its Prints The Logs in Pretty Way So Developers Can Easily Differentiate between multiple Logs
  *
- * ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- * │ Thread: <thread name>, Source: <your.package.name>.<Class Name>.<Method Name> (<Class Name>:<Line Number>)
- * ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- * │ A Message Which Were Logged with L.d("<here>")
- * └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- *
  * Available Methods :
  *
  * L.d()
@@ -42,14 +36,6 @@ import java.util.*
  * L.json()
  */
 object L {
-    private const val TOP_LINE =
-        "┌────────────────────────────────────────────────────────────────────────────────────────"
-    private const val MIDDLE_LINE =
-        "├────────────────────────────────────────────────────────────────────────────────────────"
-    private const val BOTTOM_LINE =
-        "└────────────────────────────────────────────────────────────────────────────────────────"
-    private const val VERTICAL_DOUBLE_LINE = "│"
-    private const val CALL_INDEX = 4
     /**
      * Similar of Log.d
      */
@@ -128,28 +114,7 @@ object L {
         if (!AmniXtension.isLoggingEnabled) return
         val elements = Thread.currentThread().stackTrace
         val element = elements[findIndex(elements)]
-        Log.println(priority, handleTag(element, tag), handleFormat(element, msg))
-    }
-
-    private fun handleFormat(element: StackTraceElement, msgObj: Any?): String {
-        val msg = if (msgObj is Array<*>)
-            Arrays.toString(msgObj)
-        else
-            msgObj.toString()
-        return StringBuilder().apply {
-            append(" ")
-            appendln()
-            append(TOP_LINE)
-            appendln()
-            append(VERTICAL_DOUBLE_LINE + " " + "Thread: " + Thread.currentThread().name + ", Source: " + element.className + "." + element.methodName + " (" + element.fileName + ":" + element.lineNumber + ")")
-            appendln()
-            append(MIDDLE_LINE)
-            appendln()
-            append(VERTICAL_DOUBLE_LINE + " " + msg.replace("\n", "\n$VERTICAL_DOUBLE_LINE"))
-            appendln()
-            append(BOTTOM_LINE)
-            appendln()
-        }.toString()
+        Log.println(priority, handleTag(element, tag), msg.toString())
     }
 
     private fun handleTag(element: StackTraceElement, customTag: String?): String = when {
@@ -159,7 +124,7 @@ object L {
     }
 
     private fun findIndex(elements: Array<StackTraceElement>): Int {
-        var index = CALL_INDEX
+        var index = 4
         while (index < elements.size) {
             val className = elements[index].className
             if (className != L::class.java.name && !elements[index].methodName.startsWith("log")) {
