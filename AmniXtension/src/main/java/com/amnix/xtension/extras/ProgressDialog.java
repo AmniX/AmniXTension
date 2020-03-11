@@ -16,10 +16,10 @@
 
 package com.amnix.xtension.extras;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -184,6 +184,7 @@ public class ProgressDialog extends AlertDialog {
     }
 
     @Override
+    @SuppressLint("HandlerLeak")
     protected void onCreate(Bundle savedInstanceState) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         TypedArray a = getContext().obtainStyledAttributes(null,
