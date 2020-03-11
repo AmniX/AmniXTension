@@ -43,16 +43,11 @@ publish {
 
 dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
 }
 
 dokka {
     outputFormat = 'gfm'
     outputDirectory = "$rootDir/docs"
-    linkMapping {
-        dir = "$rootDir/AmniXtension/src/main/java"
-        url = "https://github.com/AmniX/AmniXTension/tree/master/AmniXtension/src/main/java"
-        suffix = "#L"
-    }
 }
