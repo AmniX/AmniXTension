@@ -175,7 +175,20 @@ fun Activity.getContentView(): View? {
  * * Only Supports One Permission at a time. Contributors will be welcomed
  */
 fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted: Boolean) -> Unit) {
-    this.requestPermissions(arrayOf(permission), onResult)
+    if (checkSelfPermissions(arrayOf(permission))) {
+        onResult(true)
+        return
+    }
+    val observer = PermissionObserver()
+    observer.onResumeCallback = {
+        lifecycle.removeObserver(observer)
+        onResult(checkSelfPermissions(arrayOf(permission)))
+    }
+    lifecycle.addObserver(observer)
+    if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
+        ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
+    else
+        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
 }
 
 /**
@@ -192,33 +205,15 @@ fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted:
 fun FragmentActivity.requestPermissions(permissions: Array<String>, onResult: (isGranted: Boolean) -> Unit) {
     if (checkSelfPermissions(permissions)) {
         onResult(true)
-    } else {
-        val observer = PermissionObserver()
-        var onPausedCalledAt = -1L
-        observer.onResumeCallback = {
-            val responseTime = System.currentTimeMillis() - onPausedCalledAt
-            L.d("response Time : " + responseTime)
-            if (onPausedCalledAt > 0 && responseTime < 250) { // If OnResume Called in Compared Value Ms Then It Can be Assume that User have Disabled the Permission Permanently
-                startActivity(
-                    Intent(
-                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                        Uri.fromParts("package", packageName, null)
-                    )
-                )
-                showToast("Please Allow Required Permission to Proceed Further!")
-            } else {
-                observer.onResumeCallback = null
-                lifecycle.removeObserver(observer)
-                onResult(checkSelfPermissions(permissions))
-            }
-        }
-        observer.onPauseCallback = {
-            onPausedCalledAt = System.currentTimeMillis()
-            observer.onPauseCallback = null
-        }
-        lifecycle.addObserver(observer)
-        ActivityCompat.requestPermissions(this, permissions, 420)
+        return
     }
+    val observer = PermissionObserver()
+    observer.onResumeCallback = {
+        lifecycle.removeObserver(observer)
+        onResult(checkSelfPermissions(permissions))
+    }
+    lifecycle.addObserver(observer)
+    ActivityCompat.requestPermissions(this, permissions, 420)
 }
 
 //Private Methods are below
