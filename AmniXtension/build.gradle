@@ -39,6 +39,9 @@ publish {
     publishVersion = publishVersionID
     desc = 'An Useful android Kotlin Extension library.'
     website = 'https://github.com/AmniX/AmniXTension'
+     /**
+       * gradlew clean build bintrayUpload -PbintrayUser=amnix -PbintrayKey=<API_KEY> -PdryRun=false
+       */
 }
 
 dependencies {
