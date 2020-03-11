@@ -2,4 +2,4 @@
 
 # setOnDoubleTapListener
 
-`open fun setOnDoubleTapListener(l: OnDoubleTapListener): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setOnDoubleTapListener(l: `[`OnDoubleTapListener`](https://developer.android.com/reference/android/view/GestureDetector/OnDoubleTapListener.html)`!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

@@ -2,7 +2,7 @@
 
 # screenWidth
 
-`inline val Context.screenWidth: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+`inline val `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.screenWidth: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
 get Screen Width Easily
 

@@ -2,7 +2,7 @@
 
 # getActivityManager
 
-`fun Context.getActivityManager(): ActivityManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getActivityManager(): `[`ActivityManager`](https://developer.android.com/reference/android/app/ActivityManager.html)
 
 get Activity Manager
 

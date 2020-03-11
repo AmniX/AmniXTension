@@ -4,7 +4,7 @@
 
 | Name | Summary |
 |---|---|
-| [childs](childs.md) | `fun ViewGroup.childs(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<View>`<br>get All the Children's as Iterator |
-| [contains](contains.md) | `fun ViewGroup.contains(child: View): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>check if ViewGroup have the given View as Its Child |
-| [minusAssign](minus-assign.md) | `operator fun ViewGroup.minusAssign(child: View): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Remove View with the (-) Operator |
-| [plusAssign](plus-assign.md) | `operator fun ViewGroup.plusAssign(child: View): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Add View with the (+) Operator |
+| [childs](childs.md) | get All the Children's as Iterator`fun `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`.childs(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`View`](https://developer.android.com/reference/android/view/View.html)`>` |
+| [contains](contains.md) | check if ViewGroup have the given View as Its Child`fun `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`.contains(child: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [minusAssign](minus-assign.md) | Remove View with the (-) Operator`operator fun `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`.minusAssign(child: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [plusAssign](plus-assign.md) | Add View with the (+) Operator`operator fun `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`.plusAssign(child: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

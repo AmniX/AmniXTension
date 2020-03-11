@@ -2,7 +2,7 @@
 
 # getWifiManager
 
-`fun Context.getWifiManager(): WifiManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getWifiManager(): `[`WifiManager`](https://developer.android.com/reference/android/net/wifi/WifiManager.html)
 
 get WiFi Manager
 

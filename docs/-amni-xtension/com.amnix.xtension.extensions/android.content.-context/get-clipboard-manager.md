@@ -2,7 +2,7 @@
 
 # getClipboardManager
 
-`fun Context.getClipboardManager(): ClipboardManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getClipboardManager(): `[`ClipboardManager`](https://developer.android.com/reference/android/content/ClipboardManager.html)
 
 get ClipBoard Manager
 

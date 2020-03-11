@@ -2,4 +2,4 @@
 
 # setOrientationChangeFixedPixel
 
-`open fun setOrientationChangeFixedPixel(fixedPixel: `[`FixedPixel`](-fixed-pixel/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setOrientationChangeFixedPixel(fixedPixel: FixedPixel!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

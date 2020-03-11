@@ -2,7 +2,7 @@
 
 # toByteArray
 
-`fun `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.toByteArray(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)
+`fun `[`File`](https://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.toByteArray(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)
 
 Convert File to ByteArray
 

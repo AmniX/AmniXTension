@@ -10,17 +10,17 @@ Model Class for RomInfo Provides [name](name.md) and [version](version.md) of RO
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `RomInfo()`<br>Model Class for RomInfo Provides [name](name.md) and [version](version.md) of ROM |
+| [&lt;init&gt;](-init-.md) | Model Class for RomInfo Provides [name](name.md) and [version](version.md) of ROM`RomInfo()` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [name](name.md) | `var name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?`<br>The Name of the ROM |
-| [version](version.md) | `var version: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?`<br>The Version of the ROM |
+| [name](name.md) | The Name of the ROM`var name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [version](version.md) | The Version of the ROM`var version: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [toString](to-string.md) | `fun toString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>get the String Formatted Info of the ROM |
+| [toString](to-string.md) | get the String Formatted Info of the ROM`fun toString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

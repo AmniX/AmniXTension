@@ -2,4 +2,4 @@
 
 # getOrientationChangeFixedPixel
 
-`open fun getOrientationChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md)
+`open fun getOrientationChangeFixedPixel(): FixedPixel!`

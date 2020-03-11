@@ -2,4 +2,4 @@
 
 # setImageBitmap
 
-`open fun setImageBitmap(bm: Bitmap): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setImageBitmap(bm: `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)`!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

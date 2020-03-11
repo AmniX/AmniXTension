@@ -10,36 +10,29 @@ Helper Class to Provide the Device Informations
 
 | Name | Summary |
 |---|---|
-| [RomInfo](-rom-info/index.md) | `class RomInfo`<br>Model Class for RomInfo Provides [name](-rom-info/name.md) and [version](-rom-info/version.md) of ROM |
+| [RomInfo](-rom-info/index.md) | Model Class for RomInfo Provides [name](-rom-info/name.md) and [version](-rom-info/version.md) of ROM`class RomInfo` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [is360](is360.md) | `val is360: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a 360 Device |
-| [isAmigo](is-amigo.md) | `val isAmigo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Amigo Device |
-| [isCoolpad](is-coolpad.md) | `val isCoolpad: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Coolpad Device |
-| [isGoogle](is-google.md) | `val isGoogle: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Google Device |
-| [isHtc](is-htc.md) | `val isHtc: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a hTc Device |
-| [isHuawei](is-huawei.md) | `val isHuawei: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Huawei Device |
-| [isLeeco](is-leeco.md) | `val isLeeco: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a LeEco Device |
-| [isLenovo](is-lenovo.md) | `val isLenovo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Lenovo Device |
-| [isLg](is-lg.md) | `val isLg: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a LG Device |
-| [isMeizu](is-meizu.md) | `val isMeizu: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Meizu Device |
-| [isNubia](is-nubia.md) | `val isNubia: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Nubia Device |
-| [isOneplus](is-oneplus.md) | `val isOneplus: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Oneplus Device |
-| [isOppo](is-oppo.md) | `val isOppo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Oppo Device |
-| [isSamsung](is-samsung.md) | `val isSamsung: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Samsung Device |
-| [isSmartisan](is-smartisan.md) | `val isSmartisan: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Smartisan Device |
-| [isSony](is-sony.md) | `val isSony: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Sony Device |
-| [isVivo](is-vivo.md) | `val isVivo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Vivo Device |
-| [isXiaomi](is-xiaomi.md) | `val isXiaomi: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Xiaomi Device |
-| [isZte](is-zte.md) | `val isZte: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>If Device is a Zte Device |
-| [romInfo](rom-info.md) | `val romInfo: `[`RomInfo`](-rom-info/index.md)`?`<br>Provides the custom or Stock Rom Information |
-
-### Extension Functions
-
-| Name | Summary |
-|---|---|
-| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`?`<br>helper Function to Cast things |
-| [castTo](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`?`<br>helper Function to Cast things |
+| [is360](is360.md) | If Device is a 360 Device`val is360: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isAmigo](is-amigo.md) | If Device is a Amigo Device`val isAmigo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isCoolpad](is-coolpad.md) | If Device is a Coolpad Device`val isCoolpad: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isGoogle](is-google.md) | If Device is a Google Device`val isGoogle: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isHtc](is-htc.md) | If Device is a hTc Device`val isHtc: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isHuawei](is-huawei.md) | If Device is a Huawei Device`val isHuawei: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isLeeco](is-leeco.md) | If Device is a LeEco Device`val isLeeco: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isLenovo](is-lenovo.md) | If Device is a Lenovo Device`val isLenovo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isLg](is-lg.md) | If Device is a LG Device`val isLg: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isMeizu](is-meizu.md) | If Device is a Meizu Device`val isMeizu: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isNubia](is-nubia.md) | If Device is a Nubia Device`val isNubia: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isOneplus](is-oneplus.md) | If Device is a Oneplus Device`val isOneplus: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isOppo](is-oppo.md) | If Device is a Oppo Device`val isOppo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isSamsung](is-samsung.md) | If Device is a Samsung Device`val isSamsung: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isSmartisan](is-smartisan.md) | If Device is a Smartisan Device`val isSmartisan: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isSony](is-sony.md) | If Device is a Sony Device`val isSony: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isVivo](is-vivo.md) | If Device is a Vivo Device`val isVivo: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isXiaomi](is-xiaomi.md) | If Device is a Xiaomi Device`val isXiaomi: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isZte](is-zte.md) | If Device is a Zte Device`val isZte: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [romInfo](rom-info.md) | Provides the custom or Stock Rom Information`val romInfo: RomInfo?` |

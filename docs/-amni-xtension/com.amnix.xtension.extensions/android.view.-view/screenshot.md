@@ -2,7 +2,7 @@
 
 # screenshot
 
-`fun View.screenshot(): Bitmap`
+`fun `[`View`](https://developer.android.com/reference/android/view/View.html)`.screenshot(): `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)
 
 Create a Screnshot of the view and returns it as a Bitmap
 

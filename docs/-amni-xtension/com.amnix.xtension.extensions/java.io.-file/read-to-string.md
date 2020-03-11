@@ -2,7 +2,7 @@
 
 # readToString
 
-`fun `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.readToString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+`fun `[`File`](https://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.readToString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
 
 Read File data as String and Returns the Result
 

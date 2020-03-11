@@ -8,4 +8,4 @@ Set the max zoom multiplier to a constant. Default value: 3.
 
 ### Parameters
 
-`max` - max zoom multiplier.
+`max` - [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): max zoom multiplier.

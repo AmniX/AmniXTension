@@ -7,5 +7,5 @@
 Returns false if image is in initial, unzoomed state. False, otherwise.
 
 **Return**
-true if image is zoomed
+[Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html): true if image is zoomed
 

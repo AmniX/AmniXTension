@@ -2,7 +2,7 @@
 
 # showKeyboard
 
-`fun View.showKeyboard(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`View`](https://developer.android.com/reference/android/view/View.html)`.showKeyboard(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 show KeyBoard
 

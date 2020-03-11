@@ -2,7 +2,7 @@
 
 # setIndeterminateDrawable
 
-`fun setIndeterminateDrawable(d: Drawable): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun setIndeterminateDrawable(d: `[`Drawable`](https://developer.android.com/reference/android/graphics/drawable/Drawable.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Sets the drawable to be used to display the indeterminate progress value.
 
@@ -12,5 +12,5 @@ Sets the drawable to be used to display the indeterminate progress value.
 
 **See Also**
 
-[ProgressBar.setProgressDrawable](#)
+[ProgressBar.setProgressDrawable](https://developer.android.com/reference/android/widget/ProgressBar.html#setProgressDrawable(android.graphics.drawable.Drawable))
 

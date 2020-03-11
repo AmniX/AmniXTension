@@ -7,5 +7,5 @@
 Get the max zoom multiplier.
 
 **Return**
-max zoom multiplier.
+[Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): max zoom multiplier.
 

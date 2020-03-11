@@ -2,7 +2,7 @@
 
 # getRootView
 
-`fun Activity.getRootView(): View?`
+`fun `[`Activity`](https://developer.android.com/reference/android/app/Activity.html)`.getRootView(): `[`View`](https://developer.android.com/reference/android/view/View.html)`?`
 
 get #rootVIew of the Activity
 

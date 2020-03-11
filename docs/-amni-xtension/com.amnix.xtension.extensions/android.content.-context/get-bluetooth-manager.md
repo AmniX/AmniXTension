@@ -2,7 +2,7 @@
 
 # getBluetoothManager
 
-`fun Context.getBluetoothManager(): BluetoothManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getBluetoothManager(): `[`BluetoothManager`](https://developer.android.com/reference/android/bluetooth/BluetoothManager.html)
 
 get BlueTooth Manager
 

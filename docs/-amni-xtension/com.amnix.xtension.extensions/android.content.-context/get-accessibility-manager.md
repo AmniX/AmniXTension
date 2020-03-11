@@ -2,7 +2,7 @@
 
 # getAccessibilityManager
 
-`fun Context.getAccessibilityManager(): AccessibilityManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAccessibilityManager(): `[`AccessibilityManager`](https://developer.android.com/reference/android/view/accessibility/AccessibilityManager.html)
 
 get Accessiblity Manager
 

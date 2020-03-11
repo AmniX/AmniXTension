@@ -6,8 +6,8 @@
 
 | Name | Summary |
 |---|---|
-| [AspectRatioFrameLayout](-aspect-ratio-frame-layout/index.md) | `class AspectRatioFrameLayout : FrameLayout`<br>Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio |
-| [CircularImageView](-circular-image-view/index.md) | `class CircularImageView : AppCompatImageView`<br>Circle Image View. |
-| [ColorProgressBar](-color-progress-bar/index.md) | `class ColorProgressBar : ProgressBar`<br>Class to Render ProgressBar with some Specific Color with the ease |
-| [ShadowView](-shadow-view/index.md) | `class ShadowView : View`<br>A simple Class to set the Drop Shadow Above or Below any View |
+| [AspectRatioFrameLayout](-aspect-ratio-frame-layout/index.md) | Aspect Ratio Frame Layout, Here to Set the Width Height Based on Aspect Ratio`class AspectRatioFrameLayout : `[`FrameLayout`](https://developer.android.com/reference/android/widget/FrameLayout.html) |
+| [CircularImageView](-circular-image-view/index.md) | Circle Image View.`class CircularImageView : AppCompatImageView` |
+| [ColorProgressBar](-color-progress-bar/index.md) | Class to Render ProgressBar with some Specific Color with the ease`class ColorProgressBar : `[`ProgressBar`](https://developer.android.com/reference/android/widget/ProgressBar.html) |
+| [ShadowView](-shadow-view/index.md) | A simple Class to set the Drop Shadow Above or Below any View`class ShadowView : `[`View`](https://developer.android.com/reference/android/view/View.html) |
 | [TouchImageView](-touch-image-view/index.md) | `open class TouchImageView : AppCompatImageView` |

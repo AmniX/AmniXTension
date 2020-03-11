@@ -2,7 +2,7 @@
 
 # minusAssign
 
-`operator fun ViewGroup.minusAssign(child: View): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`operator fun `[`ViewGroup`](https://developer.android.com/reference/android/view/ViewGroup.html)`.minusAssign(child: `[`View`](https://developer.android.com/reference/android/view/View.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Remove View with the (-) Operator
 

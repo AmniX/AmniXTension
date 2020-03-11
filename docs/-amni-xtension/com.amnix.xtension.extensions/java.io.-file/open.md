@@ -2,7 +2,7 @@
 
 # open
 
-`fun `[`File`](http://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.open(): `[`InputStream`](http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)
+`fun `[`File`](https://docs.oracle.com/javase/6/docs/api/java/io/File.html)`.open(): `[`InputStream`](https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html)
 
 Open File in InputStream
 

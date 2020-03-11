@@ -2,7 +2,7 @@
 
 # rawCamera
 
-`val rawCamera: Camera?`
+`val rawCamera: `[`Camera`](https://developer.android.com/reference/android/hardware/Camera.html)`?`
 
 Returns Raw Camera Object, Do Whatever You want
 

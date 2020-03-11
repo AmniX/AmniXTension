@@ -2,7 +2,7 @@
 
 # getAllVideos
 
-`fun Context.getAllVideos(sortBy: `[`ContentColumns`](../../com.amnix.xtension.enums/-content-columns/index.md)` = ContentColumns.DATE_ADDED, order: `[`ContentOrder`](../../com.amnix.xtension.enums/-content-order/index.md)` = ContentOrder.DESCENDING): `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAllVideos(sortBy: `[`ContentColumns`](../../com.amnix.xtension.enums/-content-columns/index.md)` = ContentColumns.DATE_ADDED, order: `[`ContentOrder`](../../com.amnix.xtension.enums/-content-order/index.md)` = ContentOrder.DESCENDING): `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>`
 
 Want All the Videos from the User Phone?
 

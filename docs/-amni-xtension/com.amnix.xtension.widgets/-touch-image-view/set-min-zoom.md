@@ -8,4 +8,4 @@ Set the min zoom multiplier. Default value: 1.
 
 ### Parameters
 
-`min` - min zoom multiplier.
+`min` - [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): min zoom multiplier.

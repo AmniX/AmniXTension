@@ -2,7 +2,7 @@
 
 # getContentView
 
-`fun Activity.getContentView(): View?`
+`fun `[`Activity`](https://developer.android.com/reference/android/app/Activity.html)`.getContentView(): `[`View`](https://developer.android.com/reference/android/view/View.html)`?`
 
 get #contentView of the Activity
 

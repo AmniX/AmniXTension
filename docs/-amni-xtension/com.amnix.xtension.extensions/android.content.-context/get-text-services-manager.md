@@ -2,7 +2,7 @@
 
 # getTextServicesManager
 
-`fun Context.getTextServicesManager(): TextServicesManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getTextServicesManager(): `[`TextServicesManager`](https://developer.android.com/reference/android/view/textservice/TextServicesManager.html)
 
 get TextService Manager
 

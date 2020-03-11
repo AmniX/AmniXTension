@@ -6,4 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [L](-l/index.md) | `object L`<br>A Custom Log Class for the developer Ease. |
+| [L](-l/index.md) | A Custom Log Class for the developer Ease.`object L` |

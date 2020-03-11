@@ -20,10 +20,10 @@ The Gravity Enums
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `val value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>the Value Of Enum as Int |
+| [value](value.md) | the Value Of Enum as Int`val value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
 ### Companion Object Functions
 
 | Name | Summary |
 |---|---|
-| [fromValue](from-value.md) | `fun fromValue(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ShadowGravity`](./index.md)<br>get Enum fron Int Value |
+| [fromValue](from-value.md) | get Enum fron Int Value`fun fromValue(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): ShadowGravity` |

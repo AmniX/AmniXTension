@@ -8,6 +8,6 @@ Set the focus point of the zoomed image. The focus points are denoted as a fract
 
 ### Parameters
 
-`focusX` -
+`focusX` - [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html):
 
-`focusY` - 
+`focusY` - [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): 

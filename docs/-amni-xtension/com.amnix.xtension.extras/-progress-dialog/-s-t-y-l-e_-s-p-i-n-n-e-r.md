@@ -2,7 +2,7 @@
 
 # STYLE_SPINNER
 
-`val STYLE_SPINNER: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+`const val STYLE_SPINNER: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
 Creates a ProgressDialog with a circular, spinning progress
 bar. This is the default.

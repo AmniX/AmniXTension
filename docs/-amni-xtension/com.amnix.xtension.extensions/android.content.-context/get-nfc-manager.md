@@ -2,7 +2,7 @@
 
 # getNfcManager
 
-`fun Context.getNfcManager(): NfcManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getNfcManager(): `[`NfcManager`](https://developer.android.com/reference/android/nfc/NfcManager.html)
 
 get NFC manager
 

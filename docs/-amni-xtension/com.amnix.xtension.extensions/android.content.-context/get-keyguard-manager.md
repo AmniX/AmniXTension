@@ -2,7 +2,7 @@
 
 # getKeyguardManager
 
-`fun Context.getKeyguardManager(): KeyguardManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getKeyguardManager(): `[`KeyguardManager`](https://developer.android.com/reference/android/app/KeyguardManager.html)
 
 get KeyGuard Manager
 

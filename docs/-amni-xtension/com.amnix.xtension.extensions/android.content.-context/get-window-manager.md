@@ -2,7 +2,7 @@
 
 # getWindowManager
 
-`fun Context.getWindowManager(): WindowManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getWindowManager(): `[`WindowManager`](https://developer.android.com/reference/android/view/WindowManager.html)
 
 get Window Manager
 

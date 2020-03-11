@@ -2,7 +2,7 @@
 
 # getAppVersionCode
 
-`fun Context.getAppVersionCode(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAppVersionCode(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)
 
 get Application Version Code
 

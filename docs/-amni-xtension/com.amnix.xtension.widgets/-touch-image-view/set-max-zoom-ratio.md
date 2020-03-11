@@ -8,4 +8,4 @@ Set the max zoom multiplier as a multiple of minZoom, whatever minZoom may chang
 
 ### Parameters
 
-`max` - max zoom multiplier, as a multiple of minZoom
+`max` - [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): max zoom multiplier, as a multiple of minZoom

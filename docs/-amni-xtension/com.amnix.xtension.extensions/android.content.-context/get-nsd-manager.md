@@ -2,7 +2,7 @@
 
 # getNsdManager
 
-`fun Context.getNsdManager(): NsdManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getNsdManager(): `[`NsdManager`](https://developer.android.com/reference/android/net/nsd/NsdManager.html)
 
 get MSD Manager
 

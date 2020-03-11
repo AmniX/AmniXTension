@@ -6,5 +6,5 @@
 
 | Name | Summary |
 |---|---|
-| [ContentColumns](-content-columns/index.md) | `enum class ContentColumns`<br>Enum to choose between multiple column type |
-| [ContentOrder](-content-order/index.md) | `enum class ContentOrder`<br>Enum to choose between Ascending or Descending order |
+| [ContentColumns](-content-columns/index.md) | Enum to choose between multiple column type`enum class ContentColumns` |
+| [ContentOrder](-content-order/index.md) | Enum to choose between Ascending or Descending order`enum class ContentOrder` |

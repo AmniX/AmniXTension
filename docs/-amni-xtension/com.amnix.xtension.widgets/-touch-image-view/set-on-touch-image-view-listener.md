@@ -2,4 +2,4 @@
 
 # setOnTouchImageViewListener
 
-`open fun setOnTouchImageViewListener(l: `[`OnTouchImageViewListener`](-on-touch-image-view-listener/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setOnTouchImageViewListener(l: OnTouchImageViewListener!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

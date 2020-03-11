@@ -2,7 +2,7 @@
 
 # romInfo
 
-`val romInfo: `[`RomInfo`](-rom-info/index.md)`?`
+`val romInfo: RomInfo?`
 
 Provides the custom or Stock Rom Information
 

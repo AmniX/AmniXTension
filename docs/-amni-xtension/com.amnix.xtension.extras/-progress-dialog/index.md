@@ -4,55 +4,53 @@
 
 `class ProgressDialog : AlertDialog`
 
-ProgressDialog Replacement of Android ProgressDialog
+A dialog showing a progress indicator and an optional text message or view.
+Only a text message or a view can be used at the same time.
+
+The dialog can be made cancelable on back key press.
+
+The progress range is 0 to [max](#).
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ProgressDialog(context: Context)`<br>`ProgressDialog(context: Context, theme: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Creates a Progress dialog. |
+| [&lt;init&gt;](-init-.md) | Creates a Progress dialog.`ProgressDialog(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?)`<br>`ProgressDialog(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?, theme: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [isIndeterminate](is-indeterminate.md) | `var isIndeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Whether this ProgressDialog is in indeterminate mode. Change the indeterminate mode for this ProgressDialog. In indeterminate mode, the progress is ignored and the dialog shows an infinite animation instead. |
-| [max](max.md) | `var max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Max Progress |
-| [progress](progress.md) | `var progress: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Current Progress |
-| [secondaryProgress](secondary-progress.md) | `var secondaryProgress: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Secondary Progress |
+| [isIndeterminate](is-indeterminate.md) | Change the indeterminate mode for this ProgressDialog. In indeterminate mode, the progress is ignored and the dialog shows an infinite animation instead.`var isIndeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [max](max.md) | Sets the maximum allowed progress value.`var max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [progress](progress.md) | Sets the current progress.`var progress: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [secondaryProgress](secondary-progress.md) | Sets the secondary progress.`var secondaryProgress: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [incrementProgressBy](increment-progress-by.md) | `fun incrementProgressBy(diff: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Increments the current progress value. |
-| [incrementSecondaryProgressBy](increment-secondary-progress-by.md) | `fun incrementSecondaryProgressBy(diff: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Increments the current secondary progress value. |
-| [onCreate](on-create.md) | `fun onCreate(savedInstanceState: Bundle?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>OnCreate Method |
-| [onStart](on-start.md) | `fun onStart(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>onStart Method |
-| [onStop](on-stop.md) | `fun onStop(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>onStop Method |
-| [setIndeterminateDrawable](set-indeterminate-drawable.md) | `fun setIndeterminateDrawable(d: Drawable): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Sets the drawable to be used to display the indeterminate progress value. |
-| [setMessage](set-message.md) | `fun setMessage(message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Set Text Message |
-| [setProgressDrawable](set-progress-drawable.md) | `fun setProgressDrawable(d: Drawable): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Sets the drawable to be used to display the progress value. |
-| [setProgressNumberFormat](set-progress-number-format.md) | `fun setProgressNumberFormat(format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Change the format of the small text showing current and maximum units of progress.  The default is "%1d/%2d". Should not be called during the number is progressing. |
-| [setProgressPercentFormat](set-progress-percent-format.md) | `fun setProgressPercentFormat(format: `[`NumberFormat`](http://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Change the format of the small text showing the percentage of progress. The default is [NumberFormat.getPercentageInstnace().](http://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html#getPercentInstance()) Should not be called during the number is progressing. |
-| [setProgressStyle](set-progress-style.md) | `fun setProgressStyle(style: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Sets the style of this ProgressDialog, either [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER](-s-t-y-l-e_-s-p-i-n-n-e-r.md) or [com.amnix.xtension.extras.ProgressDialog.STYLE_HORIZONTAL](-s-t-y-l-e_-h-o-r-i-z-o-n-t-a-l.md). The default is [com.amnix.xtension.extras.ProgressDialog.STYLE_SPINNER](-s-t-y-l-e_-s-p-i-n-n-e-r.md). |
+| [incrementProgressBy](increment-progress-by.md) | Increments the current progress value.`fun incrementProgressBy(diff: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [incrementSecondaryProgressBy](increment-secondary-progress-by.md) | Increments the current secondary progress value.`fun incrementSecondaryProgressBy(diff: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [onCreate](on-create.md) | `fun onCreate(savedInstanceState: `[`Bundle`](https://developer.android.com/reference/android/os/Bundle.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [onStart](on-start.md) | `fun onStart(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [onStop](on-stop.md) | `fun onStop(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setIndeterminateDrawable](set-indeterminate-drawable.md) | Sets the drawable to be used to display the indeterminate progress value.`fun setIndeterminateDrawable(d: `[`Drawable`](https://developer.android.com/reference/android/graphics/drawable/Drawable.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setMessage](set-message.md) | `fun setMessage(message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setProgressDrawable](set-progress-drawable.md) | Sets the drawable to be used to display the progress value.`fun setProgressDrawable(d: `[`Drawable`](https://developer.android.com/reference/android/graphics/drawable/Drawable.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setProgressNumberFormat](set-progress-number-format.md) | Change the format of the small text showing current and maximum units of progress.  The default is "%1d/%2d". Should not be called during the number is progressing.`fun setProgressNumberFormat(format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setProgressPercentFormat](set-progress-percent-format.md) | Change the format of the small text showing the percentage of progress. The default is [NumberFormat.getPercentageInstnace().](https://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html#getPercentInstance()) Should not be called during the number is progressing.`fun setProgressPercentFormat(format: `[`NumberFormat`](https://docs.oracle.com/javase/6/docs/api/java/text/NumberFormat.html)`?): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [setProgressStyle](set-progress-style.md) | Sets the style of this ProgressDialog, either [.STYLE_SPINNER](#) or [.STYLE_HORIZONTAL](#). The default is [.STYLE_SPINNER](#).`fun setProgressStyle(style: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
 
 ### Companion Object Properties
 
 | Name | Summary |
 |---|---|
-| [STYLE_HORIZONTAL](-s-t-y-l-e_-h-o-r-i-z-o-n-t-a-l.md) | `val STYLE_HORIZONTAL: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Creates a ProgressDialog with a horizontal progress bar. |
-| [STYLE_SPINNER](-s-t-y-l-e_-s-p-i-n-n-e-r.md) | `val STYLE_SPINNER: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Creates a ProgressDialog with a circular, spinning progress bar. This is the default. |
+| [STYLE_HORIZONTAL](-s-t-y-l-e_-h-o-r-i-z-o-n-t-a-l.md) | Creates a ProgressDialog with a horizontal progress bar.`const val STYLE_HORIZONTAL: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [STYLE_SPINNER](-s-t-y-l-e_-s-p-i-n-n-e-r.md) | Creates a ProgressDialog with a circular, spinning progress bar. This is the default.`const val STYLE_SPINNER: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 
 ### Companion Object Functions
 
 | Name | Summary |
 |---|---|
-| [show](show.md) | `fun show(context: Context, title: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`?, message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, indeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelable: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelListener: OnCancelListener? = null): `[`ProgressDialog`](./index.md)<br>Creates and shows a ProgressDialog. |
-
-### Extension Functions
-
-| Name | Summary |
-|---|---|
-| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`?`<br>helper Function to Cast things |
-| [castTo](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`?`<br>helper Function to Cast things |
+| [show](show.md) | Creates and shows a ProgressDialog.`fun show(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?, title: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`?, message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, indeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelable: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelListener: `[`OnCancelListener`](https://developer.android.com/reference/android/content/DialogInterface/OnCancelListener.html)`? = null): `[`ProgressDialog`](./index.md) |

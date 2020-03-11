@@ -2,7 +2,7 @@
 
 # fromValue
 
-`fun fromValue(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ShadowGravity`](index.md)
+`fun fromValue(value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): ShadowGravity`
 
 get Enum fron Int Value
 

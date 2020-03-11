@@ -4,5 +4,5 @@
 
 | Name | Summary |
 |---|---|
-| [castAs](cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](cast-as.md#T)`>): `[`T`](cast-as.md#T)`?`<br>helper Function to Cast things |
-| [castTo](cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](cast-to.md#T)`>): `[`T`](cast-to.md#T)`?`<br>helper Function to Cast things |
+| [castAs](cast-as.md) | helper Function to Cast things`fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>): T?` |
+| [castTo](cast-to.md) | helper Function to Cast things`fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>): T?` |

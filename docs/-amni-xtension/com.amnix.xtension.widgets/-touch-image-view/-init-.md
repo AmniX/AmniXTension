@@ -2,6 +2,6 @@
 
 # &lt;init&gt;
 
-`TouchImageView(context: Context)`
-`TouchImageView(context: Context, attrs: AttributeSet)`
-`TouchImageView(context: Context, attrs: AttributeSet, defStyle: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TouchImageView(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`!)`
+`TouchImageView(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`!, attrs: `[`AttributeSet`](https://developer.android.com/reference/android/util/AttributeSet.html)`!)`
+`TouchImageView(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`!, attrs: `[`AttributeSet`](https://developer.android.com/reference/android/util/AttributeSet.html)`!, defStyle: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`

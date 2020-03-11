@@ -2,10 +2,10 @@
 
 # getZoomedRect
 
-`open fun getZoomedRect(): RectF`
+`open fun getZoomedRect(): `[`RectF`](https://developer.android.com/reference/android/graphics/RectF.html)`!`
 
 Return a Rect representing the zoomed image.
 
 **Return**
-rect representing zoomed image
+[RectF](https://developer.android.com/reference/android/graphics/RectF.html)!: rect representing zoomed image
 

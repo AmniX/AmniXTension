@@ -2,4 +2,4 @@
 
 # getViewSizeChangeFixedPixel
 
-`open fun getViewSizeChangeFixedPixel(): `[`FixedPixel`](-fixed-pixel/index.md)
+`open fun getViewSizeChangeFixedPixel(): FixedPixel!`

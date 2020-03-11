@@ -2,7 +2,7 @@
 
 # getInputMethodManager
 
-`fun Context.getInputMethodManager(): InputMethodManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getInputMethodManager(): `[`InputMethodManager`](https://developer.android.com/reference/android/view/inputmethod/InputMethodManager.html)
 
 get InputMethod Manager
 

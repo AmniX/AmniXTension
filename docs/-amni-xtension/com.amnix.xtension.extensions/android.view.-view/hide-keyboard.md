@@ -2,7 +2,7 @@
 
 # hideKeyboard
 
-`fun View.hideKeyboard(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+`fun `[`View`](https://developer.android.com/reference/android/view/View.html)`.hideKeyboard(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 hide Keyboard
 

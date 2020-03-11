@@ -2,7 +2,7 @@
 
 # getLayoutInflater
 
-`fun Context.getLayoutInflater(): LayoutInflater`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getLayoutInflater(): `[`LayoutInflater`](https://developer.android.com/reference/android/view/LayoutInflater.html)`!`
 
 get Layout Inflater Service
 

@@ -2,7 +2,7 @@
 
 # getDropBoxManager
 
-`fun Context.getDropBoxManager(): DropBoxManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getDropBoxManager(): `[`DropBoxManager`](https://developer.android.com/reference/android/os/DropBoxManager.html)
 
 get DropBox Manager
 

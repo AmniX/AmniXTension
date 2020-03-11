@@ -2,7 +2,7 @@
 
 # getSearchManager
 
-`fun Context.getSearchManager(): SearchManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getSearchManager(): `[`SearchManager`](https://developer.android.com/reference/android/app/SearchManager.html)
 
 get Search Manager
 

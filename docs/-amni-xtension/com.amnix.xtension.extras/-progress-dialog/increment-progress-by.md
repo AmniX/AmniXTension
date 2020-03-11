@@ -9,4 +9,4 @@ Increments the current progress value.
 ### Parameters
 
 `diff` - the amount by which the current progress will be incremented,
-up to [com.amnix.xtension.extras.ProgressDialog.max](max.md)
+up to [.getMax](#)

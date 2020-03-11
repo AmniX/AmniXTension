@@ -2,7 +2,7 @@
 
 # show
 
-`@JvmOverloads fun show(context: Context, title: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`?, message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, indeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelable: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelListener: OnCancelListener? = null): `[`ProgressDialog`](index.md)
+`@JvmOverloads fun show(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?, title: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`?, message: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, indeterminate: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelable: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, cancelListener: `[`OnCancelListener`](https://developer.android.com/reference/android/content/DialogInterface/OnCancelListener.html)`? = null): `[`ProgressDialog`](index.md)
 
 Creates and shows a ProgressDialog.
 
@@ -18,9 +18,6 @@ Creates and shows a ProgressDialog.
 
 `cancelable` - true if the dialog is [cancelable](#),
 false otherwise
-
-`cancelListener` - the [listener](#)
-to be invoked when the dialog is canceled
 
 **Return**
 the ProgressDialog

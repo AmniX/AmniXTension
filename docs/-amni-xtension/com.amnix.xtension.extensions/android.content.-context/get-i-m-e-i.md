@@ -2,7 +2,7 @@
 
 # getIMEI
 
-`fun Context.getIMEI(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getIMEI(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`!`
 
 get Device IMEI
 

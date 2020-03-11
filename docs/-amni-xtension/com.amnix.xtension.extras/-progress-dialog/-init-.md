@@ -2,13 +2,13 @@
 
 # &lt;init&gt;
 
-`ProgressDialog(context: Context)`
+`ProgressDialog(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?)`
 
 Creates a Progress dialog.
 
 ### Parameters
 
-`context` - the parent context`ProgressDialog(context: Context, theme: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`context` - the parent context`ProgressDialog(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`?, theme: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Creates a Progress dialog.
 

@@ -2,7 +2,7 @@
 
 # getNotificationManager
 
-`fun Context.getNotificationManager(): NotificationManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getNotificationManager(): `[`NotificationManager`](https://developer.android.com/reference/android/app/NotificationManager.html)
 
 get Notification Manager
 

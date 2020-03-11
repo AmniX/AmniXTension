@@ -6,5 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [AmniXtension](-amni-xtension/index.md) | `object AmniXtension`<br>The Class to configure the Configurable variables for further Process. |
-| [BuildConfig](-build-config/index.md) | `class BuildConfig`<br>`class BuildConfig` |
+| [AmniXtension](-amni-xtension/index.md) | The Class to configure the Configurable variables for further Process.`object AmniXtension` |

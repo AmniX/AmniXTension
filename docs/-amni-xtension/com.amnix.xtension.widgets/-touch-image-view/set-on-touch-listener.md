@@ -2,4 +2,4 @@
 
 # setOnTouchListener
 
-`open fun setOnTouchListener(l: OnTouchListener): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setOnTouchListener(l: `[`OnTouchListener`](https://developer.android.com/reference/android/view/View/OnTouchListener.html)`!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

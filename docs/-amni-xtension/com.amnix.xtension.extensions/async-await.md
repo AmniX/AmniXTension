@@ -2,8 +2,8 @@
 
 # asyncAwait
 
-`fun <T> asyncAwait(asyncRunnable: () -> `[`T`](async-await.md#T)`?, awaitRunnable: (result: `[`T`](async-await.md#T)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): AsyncTask<`[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`T`](async-await.md#T)`>`
-`fun <T, P> asyncAwait(param: `[`P`](async-await.md#P)`, asyncRunnable: `[`P`](async-await.md#P)`.() -> `[`T`](async-await.md#T)`?, awaitRunnable: (result: `[`T`](async-await.md#T)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): AsyncTask<`[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`Void`](http://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`, `[`T`](async-await.md#T)`>`
+`fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`AsyncTask`](https://developer.android.com/reference/android/os/AsyncTask.html)`<`[`Void`](https://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`!, `[`Void`](https://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`!, T>`
+`fun <T, P> asyncAwait(param: P, asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`AsyncTask`](https://developer.android.com/reference/android/os/AsyncTask.html)`<`[`Void`](https://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`!, `[`Void`](https://docs.oracle.com/javase/6/docs/api/java/lang/Void.html)`!, T>`
 
 Want to run some code on another thread?
 

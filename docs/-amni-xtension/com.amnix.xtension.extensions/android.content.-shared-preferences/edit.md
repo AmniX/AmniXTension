@@ -2,7 +2,7 @@
 
 # edit
 
-`fun SharedPreferences.edit(editor: Editor.() -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`SharedPreferences`](https://developer.android.com/reference/android/content/SharedPreferences.html)`.edit(editor: `[`Editor`](https://developer.android.com/reference/android/content/SharedPreferences/Editor.html)`.() -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Inspired From Android KTX
 

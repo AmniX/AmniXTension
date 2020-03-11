@@ -2,7 +2,7 @@
 
 # getAlarmManager
 
-`fun Context.getAlarmManager(): AlarmManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAlarmManager(): `[`AlarmManager`](https://developer.android.com/reference/android/app/AlarmManager.html)
 
 get Alaram Manager
 

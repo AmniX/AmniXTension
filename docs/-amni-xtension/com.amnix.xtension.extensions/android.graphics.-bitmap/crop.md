@@ -2,7 +2,7 @@
 
 # crop
 
-`fun Bitmap.crop(r: Rect): Bitmap?`
+`fun `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)`.crop(r: `[`Rect`](https://developer.android.com/reference/android/graphics/Rect.html)`): `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)`?`
 
 Crop image easily.
 

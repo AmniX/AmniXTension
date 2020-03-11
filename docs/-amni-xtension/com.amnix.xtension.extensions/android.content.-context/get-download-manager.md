@@ -2,7 +2,7 @@
 
 # getDownloadManager
 
-`fun Context.getDownloadManager(): DownloadManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getDownloadManager(): `[`DownloadManager`](https://developer.android.com/reference/android/app/DownloadManager.html)
 
 get Download Manager
 

@@ -2,7 +2,7 @@
 
 # getPowerManager
 
-`fun Context.getPowerManager(): PowerManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getPowerManager(): `[`PowerManager`](https://developer.android.com/reference/android/os/PowerManager.html)
 
 get Power Manager
 

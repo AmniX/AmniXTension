@@ -2,7 +2,7 @@
 
 # getAccountManager
 
-`fun Context.getAccountManager(): AccountManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAccountManager(): `[`AccountManager`](https://developer.android.com/reference/android/accounts/AccountManager.html)
 
 get Account Manager
 

@@ -2,7 +2,7 @@
 
 # getConnectivityManager
 
-`fun Context.getConnectivityManager(): ConnectivityManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getConnectivityManager(): `[`ConnectivityManager`](https://developer.android.com/reference/android/net/ConnectivityManager.html)
 
 get Connectivity Manager
 

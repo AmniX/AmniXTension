@@ -2,7 +2,7 @@
 
 # getAudioManager
 
-`fun Context.getAudioManager(): AudioManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getAudioManager(): `[`AudioManager`](https://developer.android.com/reference/android/media/AudioManager.html)
 
 get Audio Manager
 

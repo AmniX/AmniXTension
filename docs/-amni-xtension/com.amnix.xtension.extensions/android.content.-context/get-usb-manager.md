@@ -2,7 +2,7 @@
 
 # getUsbManager
 
-`fun Context.getUsbManager(): UsbManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getUsbManager(): `[`UsbManager`](https://developer.android.com/reference/android/hardware/usb/UsbManager.html)
 
 get USB Manager
 

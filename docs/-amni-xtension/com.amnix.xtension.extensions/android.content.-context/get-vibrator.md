@@ -2,7 +2,7 @@
 
 # getVibrator
 
-`fun Context.getVibrator(): Vibrator`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getVibrator(): `[`Vibrator`](https://developer.android.com/reference/android/os/Vibrator.html)
 
 get Vibrater Service
 

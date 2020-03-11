@@ -2,7 +2,7 @@
 
 # isNetworkAvailable
 
-`fun Context.isNetworkAvailable(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.isNetworkAvailable(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 Check if Internet is Available or not. Requires ACCESS_NETWORK_STATE Permission.
 

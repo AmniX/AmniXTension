@@ -10,26 +10,19 @@ Class to wrap Camera and Provide Ease Modifications
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `AmniXCameraWrapper(camera: Camera?)`<br>Class to wrap Camera and Provide Ease Modifications |
+| [&lt;init&gt;](-init-.md) | Class to wrap Camera and Provide Ease Modifications`AmniXCameraWrapper(camera: `[`Camera`](https://developer.android.com/reference/android/hardware/Camera.html)`?)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [rawCamera](raw-camera.md) | `val rawCamera: Camera?`<br>Returns Raw Camera Object, Do Whatever You want |
+| [rawCamera](raw-camera.md) | Returns Raw Camera Object, Do Whatever You want`val rawCamera: `[`Camera`](https://developer.android.com/reference/android/hardware/Camera.html)`?` |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [release](release.md) | `fun release(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Release Camera Immediately |
-| [startPreview](start-preview.md) | `fun startPreview(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Starts Camera Directly |
-| [takePicture](take-picture.md) | `fun takePicture(onPictureClicked: (yuv: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>take Picture and Stop the Camera Preview. |
-| [takeSnapShot](take-snap-shot.md) | `fun takeSnapShot(onSnapShotClicked: (yuv: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>take SnapShot from the Preview. Doesn't Stops the Camera. |
-
-### Extension Functions
-
-| Name | Summary |
-|---|---|
-| [castAs](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castAs(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-as.md#T)`?`<br>helper Function to Cast things |
-| [castTo](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md) | `fun <T> `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.castTo(clazz: `[`Class`](http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<`[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`>): `[`T`](../../com.amnix.xtension.extensions/kotlin.-any/cast-to.md#T)`?`<br>helper Function to Cast things |
+| [release](release.md) | Release Camera Immediately`fun release(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [startPreview](start-preview.md) | Starts Camera Directly`fun startPreview(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [takePicture](take-picture.md) | take Picture and Stop the Camera Preview.`fun takePicture(onPictureClicked: (yuv: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
+| [takeSnapShot](take-snap-shot.md) | take SnapShot from the Preview. Doesn't Stops the Camera.`fun takeSnapShot(onSnapShotClicked: (yuv: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

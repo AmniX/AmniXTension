@@ -2,7 +2,7 @@
 
 # getUiModeManager
 
-`fun Context.getUiModeManager(): UiModeManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getUiModeManager(): `[`UiModeManager`](https://developer.android.com/reference/android/app/UiModeManager.html)
 
 get UiMode Manager
 

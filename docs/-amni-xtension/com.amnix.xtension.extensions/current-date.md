@@ -2,7 +2,7 @@
 
 # currentDate
 
-`fun currentDate(): `[`Date`](http://docs.oracle.com/javase/6/docs/api/java/util/Date.html)
+`fun currentDate(): `[`Date`](https://docs.oracle.com/javase/6/docs/api/java/util/Date.html)
 
 get Current Date.
 

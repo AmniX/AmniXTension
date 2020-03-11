@@ -2,4 +2,4 @@
 
 # setScaleType
 
-`open fun setScaleType(type: ScaleType): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setScaleType(type: `[`ScaleType`](https://developer.android.com/reference/android/widget/ImageView/ScaleType.html)`!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

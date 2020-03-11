@@ -2,7 +2,7 @@
 
 # getDevicePolicyManager
 
-`fun Context.getDevicePolicyManager(): DevicePolicyManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getDevicePolicyManager(): `[`DevicePolicyManager`](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html)
 
 get Device Policy manager
 

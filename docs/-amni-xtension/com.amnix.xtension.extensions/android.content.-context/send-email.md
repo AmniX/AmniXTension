@@ -2,7 +2,7 @@
 
 # sendEmail
 
-`fun Context.sendEmail(mailID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.sendEmail(mailID: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Open Default Email Client with the [mailID](send-email.md#com.amnix.xtension.extensions$sendEmail(android.content.Context, kotlin.String)/mailID) preSetted
 

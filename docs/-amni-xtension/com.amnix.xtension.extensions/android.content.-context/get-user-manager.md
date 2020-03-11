@@ -2,7 +2,7 @@
 
 # getUserManager
 
-`fun Context.getUserManager(): UserManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getUserManager(): `[`UserManager`](https://developer.android.com/reference/android/os/UserManager.html)
 
 get UserManager
 

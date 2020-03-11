@@ -2,7 +2,7 @@
 
 # getScaleType
 
-`fun getScaleType(): ScaleType`
+`fun getScaleType(): `[`ScaleType`](https://developer.android.com/reference/android/widget/ImageView/ScaleType.html)
 
 get Scale Type
 

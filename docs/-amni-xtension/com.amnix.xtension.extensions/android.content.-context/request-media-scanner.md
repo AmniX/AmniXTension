@@ -2,7 +2,7 @@
 
 # requestMediaScanner
 
-`fun Context.requestMediaScanner(url: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.requestMediaScanner(url: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 ask the system to scan your file easily with a broadcast.
 

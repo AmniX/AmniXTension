@@ -2,7 +2,7 @@
 
 # isBackground
 
-`fun Context.isBackground(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.isBackground(pName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = packageName): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 Checks if App is in Background
 

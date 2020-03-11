@@ -2,7 +2,7 @@
 
 # getLocationManager
 
-`fun Context.getLocationManager(): LocationManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getLocationManager(): `[`LocationManager`](https://developer.android.com/reference/android/location/LocationManager.html)
 
 get Location manager
 

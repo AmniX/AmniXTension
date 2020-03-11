@@ -3,6 +3,3 @@
 # onStop
 
 `protected fun onStop(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
-
-onStop Method
-

@@ -2,7 +2,7 @@
 
 # getNavigationBarSize
 
-`fun Activity.getNavigationBarSize(context: Context): Point`
+`fun `[`Activity`](https://developer.android.com/reference/android/app/Activity.html)`.getNavigationBarSize(context: `[`Context`](https://developer.android.com/reference/android/content/Context.html)`): `[`Point`](https://developer.android.com/reference/android/graphics/Point.html)
 
 Returns the NavigationBar Height in Pixels
 

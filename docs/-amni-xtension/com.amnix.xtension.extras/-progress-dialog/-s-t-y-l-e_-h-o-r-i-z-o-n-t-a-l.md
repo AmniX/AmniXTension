@@ -2,7 +2,7 @@
 
 # STYLE_HORIZONTAL
 
-`val STYLE_HORIZONTAL: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+`const val STYLE_HORIZONTAL: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
 Creates a ProgressDialog with a horizontal progress bar.
 

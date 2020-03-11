@@ -2,4 +2,4 @@
 
 # setViewSizeChangeFixedPixel
 
-`open fun setViewSizeChangeFixedPixel(viewSizeChangeFixedPixel: `[`FixedPixel`](-fixed-pixel/index.md)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`open fun setViewSizeChangeFixedPixel(viewSizeChangeFixedPixel: FixedPixel!): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)

@@ -7,5 +7,5 @@
 Get the current zoom. This is the zoom relative to the initial scale, not the original resource.
 
 **Return**
-current zoom multiplier.
+[Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html): current zoom multiplier.
 

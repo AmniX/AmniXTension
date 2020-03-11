@@ -4,5 +4,5 @@
 
 `var max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
-Max Progress
+Sets the maximum allowed progress value.
 

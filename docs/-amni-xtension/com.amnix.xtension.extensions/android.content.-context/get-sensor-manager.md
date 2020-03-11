@@ -2,7 +2,7 @@
 
 # getSensorManager
 
-`fun Context.getSensorManager(): SensorManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getSensorManager(): `[`SensorManager`](https://developer.android.com/reference/android/hardware/SensorManager.html)
 
 get Sensor Manager
 

@@ -2,7 +2,7 @@
 
 # getInputManager
 
-`fun Context.getInputManager(): InputManager`
+`fun `[`Context`](https://developer.android.com/reference/android/content/Context.html)`.getInputManager(): `[`InputManager`](https://developer.android.com/reference/android/hardware/input/InputManager.html)
 
 get Input Manager
 

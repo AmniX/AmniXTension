@@ -2,7 +2,7 @@
 
 # compressByQuality
 
-`fun Bitmap.compressByQuality(quality: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, recycle: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = true): Bitmap?`
+`fun `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)`.compressByQuality(quality: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, recycle: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = true): `[`Bitmap`](https://developer.android.com/reference/android/graphics/Bitmap.html)`?`
 
 Compress Bitmap by Quality
 

@@ -2,7 +2,7 @@
 
 # getActivity
 
-`fun View.getActivity(): Activity?`
+`fun `[`View`](https://developer.android.com/reference/android/view/View.html)`.getActivity(): `[`Activity`](https://developer.android.com/reference/android/app/Activity.html)`?`
 
 get Activity On Which View is inflated to
 
