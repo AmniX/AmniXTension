@@ -94,7 +94,7 @@ class ProgressDialog : AlertDialog {
     }
 
     @SuppressLint("HandlerLeak")
-    override fun onCreate(savedInstanceState: Bundle) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         val inflater = LayoutInflater.from(context)
         val a = context.obtainStyledAttributes(
             null,
@@ -150,8 +150,8 @@ class ProgressDialog : AlertDialog {
                     R.layout.progress_dialog
                 ), null
             )
-            mProgress = view.findViewById<View>(R.id.progress) as ProgressBar
-            mMessageView = view.findViewById<View>(R.id.message) as TextView
+            mProgress = view.findViewById<View>(android.R.id.progress) as ProgressBar?
+            mMessageView = view.findViewById<View>(android.R.id.message) as TextView?
             setView(view)
         }
         a.recycle()

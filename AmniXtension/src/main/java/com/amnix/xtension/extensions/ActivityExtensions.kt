@@ -185,10 +185,7 @@ fun FragmentActivity.requestPermission(permission: String, onResult: (isGranted:
         onResult(checkSelfPermissions(arrayOf(permission)))
     }
     lifecycle.addObserver(observer)
-    if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
-        ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
-    else
-        startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", packageName, null)))
+    ActivityCompat.requestPermissions(this, arrayOf(permission), 420)
 }
 
 /**
