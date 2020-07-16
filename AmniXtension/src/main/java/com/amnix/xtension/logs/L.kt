@@ -103,7 +103,7 @@ object L {
                 else -> trimJson
             }
         } catch (e: JSONException) {
-            L.wtf(e)
+            wtf(e)
             "An Error While Printing This Json. Please Check Above CrashLog"
 
         }

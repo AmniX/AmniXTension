@@ -26,6 +26,7 @@ import java.util.*
  * run it with the ease of async and leave it to be executed on a Worker Thread.
  * Make sure you don't do some context related stuff in async, It may cause an memory leak
  */
+@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
 fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
     override fun doInBackground(vararg params: Void?): Void? {
         runnable.invoke()
@@ -39,6 +40,7 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
  * run it with the ease of async and leave it to be executed on a Worker Thread.
  * Make sure you don't do some context related stuff in async, It may cause an memory leak
  */
+@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
 fun <T> async(param: T, runnable: T.() -> Unit) = object : AsyncTask<Void, Void, Void>() {
     override fun doInBackground(vararg params: Void?): Void? {
         runnable(param)
@@ -52,6 +54,7 @@ fun <T> async(param: T, runnable: T.() -> Unit) = object : AsyncTask<Void, Void,
  * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
  * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
  */
+@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
 fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit) =
     object : AsyncTask<Void, Void, T>() {
         override fun doInBackground(vararg params: Void?): T? {
@@ -76,6 +79,7 @@ fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit)
  * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
  * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
  */
+@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
 fun <T, P> asyncAwait(param: P, asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) =
     object : AsyncTask<Void, Void, T>() {
         override fun doInBackground(vararg params: Void?): T? {
@@ -125,41 +129,17 @@ fun putInMemory(key: String, any: Any?) = InMemoryCache.put(key, any)
 /**
  * helper Function to Cast things
  */
-fun <T> Any.castTo(clazz: Class<T>): T? = clazz.cast(this)
+inline fun <reified T> Any?.cast() = this as? T
 
 /**
- * helper Function to Cast things
+ * helper Function to Cast things Force fully
  */
-fun <T> Any.castAs(clazz: Class<T>): T? = clazz.cast(this)
+inline fun <reified T> Any.forceCast() = this as T
 
 /**
  * get Saved Data from memory, null if it os not exists
  */
 fun getFromMemory(key: String): Any? = InMemoryCache.get(key)
-
-/**
- * Try Catch within a single line
- */
-fun tryAndCatch(runnable: () -> Unit, onCatch: ((e: Throwable?) -> Unit)? = null, onFinally: (() -> Unit)? = null) =
-    try {
-        runnable.invoke()
-    } catch (e: Throwable) {
-        onCatch?.invoke(e)
-    } finally {
-        onFinally?.invoke()
-    }
-
-/**
- * Close All the CLosable safely.
- */
-fun closeSafely(vararg closeables: Closeable) {
-    closeables.forEach {
-        try {
-            it.close()
-        } catch (e: Error) {
-        }
-    }
-}
 
 /**
  * Check if Device is Rooted.

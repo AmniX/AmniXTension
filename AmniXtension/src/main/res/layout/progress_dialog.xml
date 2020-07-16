@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2019, AmniX
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -12,30 +11,28 @@
   ~  either express or implied. See the License for the specific language governing permissions and limitations under the License.
   -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/body"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="16dp">
 
-    <LinearLayout android:id="@+id/body"
-        android:orientation="horizontal"
+    <com.amnix.xtension.widgets.ColorProgressBar
+        android:id="@android:id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        app:color="?colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dip"
+        android:max="10000" />
+
+    <TextView
+        android:id="@android:id/message"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:baselineAligned="false"
-        android:paddingStart="8dip"
-        android:paddingTop="10dip"
-        android:paddingEnd="8dip"
-        android:paddingBottom="10dip">
-
-        <ProgressBar android:id="@android:id/progress"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:max="10000"
-            android:layout_marginEnd="12dip" />
-
-        <TextView android:id="@+id/message"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" />
+</LinearLayout>

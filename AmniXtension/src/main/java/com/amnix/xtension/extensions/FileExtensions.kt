@@ -158,3 +158,7 @@ private fun File.moveDirectory(dest: File) {
     copyDirectory(dest)
     deleteAll()
 }
+
+private fun File.lengthInKB(): Double = this.length() / 1024.toDouble()
+private fun File.lengthInMB(): Double = this.lengthInKB() / 1024.toDouble()
+private fun File.lengthInGB(): Double = this.lengthInMB() / 1024.toDouble()

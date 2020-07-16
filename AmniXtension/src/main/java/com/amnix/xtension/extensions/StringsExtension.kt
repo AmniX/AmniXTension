@@ -24,7 +24,6 @@ import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
 
-
 /**
  * Append String to Current
  */
@@ -36,6 +35,13 @@ fun String.append(other: String) = this + other
 fun String.isPhone(): Boolean {
     val p = "^1([34578])\\d{9}\$".toRegex()
     return matches(p)
+}
+
+/**
+ * Split and loop over a String
+ */
+inline fun String.splitAndLoop(delimiter: String, action: (String) -> Unit) {
+    split(delimiter).forEach(action)
 }
 
 /**
@@ -97,7 +103,7 @@ fun String.decodeToBase64(): String =
 fun String.toCamelCase(): String {
     if (length == 0)
         return this
-    val parts = split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+    val parts = trim().split(" ".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
     var camelCaseString = ""
     for (part in parts) camelCaseString = camelCaseString + part.toTitleCase() + " "
     return camelCaseString
@@ -205,3 +211,11 @@ internal fun bytes2Hex(bts: ByteArray): String {
     }
     return des
 }
+
+fun String.safeBoolean(default : Boolean = false) = try { toBoolean() } catch (e : Exception) { default }
+fun String.safeByte(default : Byte = 0) = toByteOrNull().safe(default)
+fun String.safeShort(default : Short = 0) = toShortOrNull().safe(default)
+fun String.safeInt(default : Int = 0) = toIntOrNull().safe(default)
+fun String.safeLong(default : Long = 0L) = toLongOrNull().safe(default)
+fun String.safeFloat(default : Float = 0f) = toFloatOrNull().safe(default)
+fun String.safeDouble(default : Double = 0.0) = toDoubleOrNull().safe(default)

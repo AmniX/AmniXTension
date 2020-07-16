@@ -20,10 +20,13 @@ import android.app.*
 import android.app.admin.DevicePolicyManager
 import android.bluetooth.BluetoothManager
 import android.content.ClipboardManager
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.hardware.SensorManager
 import android.hardware.display.DisplayManager
@@ -43,16 +46,16 @@ import android.os.storage.StorageManager
 import android.provider.MediaStore
 import android.provider.Settings
 import android.telephony.TelephonyManager
+import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import android.view.textservice.TextServicesManager
 import android.widget.RemoteViews
 import android.widget.Toast
-import androidx.annotation.ColorInt
-import androidx.annotation.DrawableRes
-import androidx.annotation.RequiresPermission
+import androidx.annotation.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
@@ -85,7 +88,131 @@ fun Context.showToast(msg: String, length: Int = Toast.LENGTH_LONG) = Toast.make
 /**
  * There is No Such Thing name Hard Toast, Its just an AlertDialog which will the [msg] you passed until user cancels it.
  */
-fun Context.showToastHard(msg: String) = AlertDialog.Builder(this).setMessage(msg).show()
+fun Context.showToastHard(msg: String, dismissButtonText : String? = null ) = AlertDialog.Builder(this).setMessage(msg).apply {
+    dismissButtonText?.let {
+        setPositiveButton(it,null)
+    }
+}.show()
+
+val Context?.statusBarHeight: Int
+    get() = if (this == null) 0 else resources.getIdentifier(
+        "status_bar_height",
+        "dimen",
+        "android"
+    )
+        .let { id -> if (id > 0) dimen(id) else 0 }
+
+val Context.actionBarHeight
+    get() = dimen<Int>(actionBarSizeResource)
+
+@JvmOverloads
+fun Context?.getNavigationBarHeight(orientation: Int = Configuration.ORIENTATION_PORTRAIT): Int =
+    if (this == null) 0 else (if (orientation == Configuration.ORIENTATION_PORTRAIT) "navigation_bar_height" else "navigation_bar_height_landscape").let { name ->
+        resources.getIdentifier(name, "dimen", "android").let { id -> if (id > 0) dimen(id) else 0 }
+    }
+
+/**
+ * RESOURCES
+ */
+
+fun Context?.string(@StringRes res: Int, vararg any: Any?) = this?.getString(res, *any).safe()
+
+fun Context?.integer(@IntegerRes res: Int) = this?.resources?.getInteger(res).safe()
+
+fun Context?.color(@ColorRes res: Int) = if (this == null) 0 else ContextCompat.getColor(this, res)
+
+inline fun <reified T : Number> Context?.dimen(@DimenRes res: Int): T =
+    (if (this == null) 0f else resources.getDimension(res)).let { dimen ->
+        when (T::class) {
+            Float::class -> dimen as T
+            Int::class -> dimen.toInt() as T
+            Double::class -> dimen.toDouble() as T
+            Long::class -> dimen.toLong() as T
+            Short::class -> dimen.toShort() as T
+            else -> throw IllegalArgumentException("Unknown dimen type")
+        }
+    }
+
+fun Context?.drawable(@DrawableRes res: Int): Drawable? =
+    when {
+        this == null -> null
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> getDrawable(res)
+        else -> resources.getDrawable(res)
+    }
+
+fun Context?.coloredDrawable(
+    @DrawableRes drawableResId: Int,
+    @ColorRes filterColorResourceId: Int
+): Drawable? =
+    drawable(drawableResId).apply {
+        this?.setColorFilter(
+            color(filterColorResourceId),
+            PorterDuff.Mode.SRC_ATOP
+        )
+    }
+
+fun Context?.quantityString(@PluralsRes res: Int, quantity: Int, vararg args: Any?) =
+    if (this == null) "" else resources.getQuantityString(res, quantity, *args)
+
+fun Context?.quantityString(@PluralsRes res: Int, quantity: Int) =
+    quantityString(res, quantity, quantity)
+
+fun Context.uriFromResource(@DrawableRes resId: Int): String = Uri.Builder()
+    .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
+    .authority(resources.getResourcePackageName(resId))
+    .appendPath(resources.getResourceTypeName(resId))
+    .appendPath(resources.getResourceEntryName(resId))
+    .build().toString()
+
+val Context.actionBarSizeResource: Int
+    get() = getResourceIdAttribute(android.R.attr.actionBarSize)
+
+val Context.selectableItemBackgroundResource: Int
+    get() = getResourceIdAttribute(android.R.attr.selectableItemBackground)
+
+val Context.actionBarItemBackgroundResource: Int
+    get() = getResourceIdAttribute(android.R.attr.actionBarItemBackground)
+
+fun Context.getResourceIdAttribute(@AttrRes attribute: Int): Int {
+    val typedValue = TypedValue()
+    theme.resolveAttribute(attribute, typedValue, true)
+    return typedValue.resourceId
+}
+
+val Context.inflater
+    get() = LayoutInflater.from(this)
+
+@JvmOverloads
+fun Context.inflate(
+    @LayoutRes layoutRes: Int,
+    container: ViewGroup? = null,
+    attachToRoot: Boolean = false
+) = inflater.inflate(layoutRes, container, attachToRoot)
+
+fun Context.colorString(@ColorRes res: Int) =
+    color(res).toUInt().toString(16).let {
+        if (it.length == 8) it else buildString {
+            for (i in 1..(8 - it.length)) {
+                append("0")
+            }
+            append(it)
+        }
+    }.let { "#$it" }
+
+val Context.currentLocale: Locale
+    get() = resources.configuration.run {
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> locales.get(0)
+            else -> locale
+        }
+    }
+
+fun Context.isFirstInstall(): Boolean = try {
+    packageManager.getPackageInfo(packageName, 0).run { firstInstallTime == lastUpdateTime }
+} catch (e: PackageManager.NameNotFoundException) {
+    e.printStackTrace()
+    true
+}
 
 /**
  * Want to Confirm the User Action? Just call showConfirmationDialog with required + optional params to do so.

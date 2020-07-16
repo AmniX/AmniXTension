@@ -17,10 +17,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Point
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Display
 import android.view.View
 import android.view.ViewTreeObserver
@@ -31,8 +29,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import com.amnix.xtension.extras.AmniXSnack
-import com.amnix.xtension.logs.L
 import java.lang.reflect.InvocationTargetException
 
 
@@ -114,35 +110,6 @@ fun Activity.onViewInflated(onInflated: () -> Unit) {
     })
 }
 
-/**
- * show Custom SnackBar Easily,
- *
- * @property message The Message is going to show on SnackBar
- * @property action the Pair of String and a #Unit which will replace the dismiss Action from SnackBar and provide callBack
- * @property bgColor the argb Form Color for the snackBar
- * @property textColor the argb Form Color for the SnackBar TextView
- * @property duration the Duration to show SnackBar till. if There is a Custom Action then Duration is Infinite.
- */
-
-fun Activity.showSnackBar(
-    message: String,
-    action: Pair<String, (v: View?) -> Unit>? = null,
-    @ColorInt bgColor: Int? = null,
-    @ColorInt textColor: Int? = null,
-    duration: Long = 3000
-) {
-    AmniXSnack(this).apply {
-        setMessage(message)
-        if (action != null)
-            setAction(action.first, action.second)
-        else
-            setDuration(duration)
-        if (bgColor != null)
-            setBackColor(bgColor)
-        if (textColor != null)
-            setTextColor(textColor)
-    }.show()
-}
 
 /**
  * get #rootVIew of the Activity

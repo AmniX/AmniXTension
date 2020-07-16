@@ -264,3 +264,16 @@ fun View.getActivity(): Activity? {
         return context as Activity
     return null
 }
+
+inline fun <reified V : View> V.onFirstAttachToWindow(crossinline whenAttached: V.() -> Unit) {
+    addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
+        override fun onViewDetachedFromWindow(v: View?) {
+            removeOnAttachStateChangeListener(this)
+        }
+
+        override fun onViewAttachedToWindow(v: View?) {
+            removeOnAttachStateChangeListener(this)
+            (v as? V)?.whenAttached()
+        }
+    })
+}

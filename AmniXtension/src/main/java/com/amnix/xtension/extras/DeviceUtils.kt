@@ -154,7 +154,7 @@ object DeviceUtils {
     /**
      * Provides the custom or Stock Rom Information
      */
-    val romInfo: RomInfo?
+    private val romInfo: RomInfo?
         get() {
             if (bean != null) return bean
             bean = RomInfo()
