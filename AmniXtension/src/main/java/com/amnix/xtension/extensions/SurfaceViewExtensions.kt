@@ -47,15 +47,15 @@ fun SurfaceView.setupCamera(
 ) {
     var camera: Camera?
     holder.addCallback(object : SurfaceHolder.Callback {
-        override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+        override fun surfaceChanged(p0: SurfaceHolder, p1: Int, p2: Int, p3: Int) {
 
         }
 
-        override fun surfaceDestroyed(holder: SurfaceHolder?) {
+        override fun surfaceDestroyed(p0: SurfaceHolder) {
 
         }
 
-        override fun surfaceCreated(holder: SurfaceHolder?) {
+        override fun surfaceCreated(p0: SurfaceHolder) {
             holder?.let {
                 camera = CameraHelper.getCamera(
                     context,
@@ -72,6 +72,8 @@ fun SurfaceView.setupCamera(
                 }
             }
         }
+
+
 
     })
 }
