@@ -14,10 +14,13 @@
 package com.amnix.xtension.widgets
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.widget.ProgressBar
 import androidx.annotation.ColorInt
+import androidx.core.graphics.drawable.DrawableCompat
 import com.amnix.xtension.R
 
 
@@ -51,10 +54,24 @@ class ColorProgressBar : ProgressBar {
     }
 
     /**
+     * Wrap the color into a state and tint the drawable
+     */
+    private fun Drawable.tint(@ColorInt color: Int): Drawable = tint(ColorStateList.valueOf(color))
+
+    /**
+     * Tint the drawable with a given color state list
+     */
+    private fun Drawable.tint(state: ColorStateList): Drawable {
+        val drawable = DrawableCompat.wrap(mutate())
+        DrawableCompat.setTintList(drawable, state)
+        return drawable
+    }
+
+    /**
      * Set Color Dynamically
      */
     fun setColor(@ColorInt color: Int): ColorProgressBar {
-        indeterminateDrawable.setColorFilter(color, android.graphics.PorterDuff.Mode.MULTIPLY)
+        indeterminateDrawable.tint(color)
         return this
     }
 }
