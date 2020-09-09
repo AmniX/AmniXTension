@@ -11,10 +11,10 @@
  *  either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
 
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 30
