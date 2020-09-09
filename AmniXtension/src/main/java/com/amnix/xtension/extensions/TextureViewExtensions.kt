@@ -44,34 +44,32 @@ fun TextureView.setupCamera(
 ) {
     surfaceTextureListener = object : TextureView.SurfaceTextureListener {
         var camera: Camera? = null
-        override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture?, width: Int, height: Int) {
+        override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {
 
         }
 
-        override fun onSurfaceTextureUpdated(surface: SurfaceTexture?) {
+        override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {
 
         }
 
-        override fun onSurfaceTextureDestroyed(surface: SurfaceTexture?): Boolean {
+        override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
 
             return true
         }
 
-        override fun onSurfaceTextureAvailable(surface: SurfaceTexture?, width: Int, height: Int) {
-            surface?.let {
-                camera = CameraHelper.getCamera(
-                    context,
-                    front,
-                    preViewWidth,
-                    previewHeight,
-                    desireFps,
-                    autoFocus,
-                    autoFlash,
-                    it
-                )
-                camera?.let{
-                    onReady(AmniXCameraWrapper(it))
-                }
+        override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
+            camera = CameraHelper.getCamera(
+                context,
+                front,
+                preViewWidth,
+                previewHeight,
+                desireFps,
+                autoFocus,
+                autoFlash,
+                surface
+            )
+            camera?.let{
+                onReady(AmniXCameraWrapper(it))
             }
         }
 
