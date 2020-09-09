@@ -166,6 +166,14 @@ fun <T : Any?> T?.isNotNull(runnable: (it: T) -> Unit) = this?.let {
 }
 
 /**
+ * invokes [runnable] if value is Not Null. Quite handy.
+ */
+fun <T : Any?> T?.isNull(runnable: () -> Unit){
+    if(this.isNull())
+        runnable()
+}
+
+/**
  * Run the UI Code on UI Thread From AnyWhere, No need the Activity Reference
  */
 fun runOnUIThread(runnable: () -> Unit) = Handler(Looper.getMainLooper()).post(runnable)

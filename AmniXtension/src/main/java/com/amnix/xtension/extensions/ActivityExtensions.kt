@@ -17,6 +17,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Point
+import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
 import android.view.Display
@@ -49,13 +50,9 @@ fun Activity.startActivityForResults(cls: Class<out Activity>, requestCode: Int,
 /**
  * Returns the StatusBarHeight in Pixels
  */
-fun Activity.getStatusBarHeight(): Int {
-    var result = 0
-    val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
-    if (resourceId > 0) {
-        result = resources.getDimensionPixelSize(resourceId)
-    }
-    return result
+fun Activity.getStatusBarHeight() =  Rect().run {
+        window.decorView.getWindowVisibleDisplayFrame(this)
+        this.top
 }
 
 /**
@@ -124,10 +121,7 @@ fun Activity.getRootView(): View? {
 /**
  * get #contentView of the Activity
  */
-fun Activity.getContentView(): View? {
-    return getRootView()
-}
-
+fun Activity.getContentView() = getRootView()
 /**
  * Request Permission WithOut Waiting For Any OnPermissionResult Callback.
  *
@@ -193,19 +187,7 @@ private fun getRealScreenSize(context: Context): Point {
     val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
     val display = windowManager.defaultDisplay
     val size = Point()
-
-    if (Build.VERSION.SDK_INT >= 17) {
-        display.getRealSize(size)
-    } else if (Build.VERSION.SDK_INT >= 14) {
-        try {
-            size.x = Display::class.java.getMethod("getRawWidth").invoke(display) as Int
-            size.y = Display::class.java.getMethod("getRawHeight").invoke(display) as Int
-        } catch (e: IllegalAccessException) {
-        } catch (e: InvocationTargetException) {
-        } catch (e: NoSuchMethodException) {
-        }
-
-    }
+    display.getRealSize(size)
     return size
 }
 
