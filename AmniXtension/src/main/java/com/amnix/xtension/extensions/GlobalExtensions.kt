@@ -13,12 +13,13 @@
 
 package com.amnix.xtension.extensions
 
-import android.os.AsyncTask
 import android.os.Handler
 import android.os.Looper
 import com.amnix.xtension.extras.InMemoryCache
-import java.io.Closeable
-import java.util.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.util.Date
 
 /**
  * Want to run some code on another thread?
@@ -26,13 +27,7 @@ import java.util.*
  * run it with the ease of async and leave it to be executed on a Worker Thread.
  * Make sure you don't do some context related stuff in async, It may cause an memory leak
  */
-@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
-fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
-    override fun doInBackground(vararg params: Void?): Void? {
-        runnable.invoke()
-        return null
-    }
-}.execute()!!
+fun async(runnable: () -> Unit) = GlobalScope.launch(Dispatchers.IO) {runnable()}
 
 /**
  * Want to run some code on another thread?
@@ -40,13 +35,19 @@ fun async(runnable: () -> Unit) = object : AsyncTask<Void, Void, Void>() {
  * run it with the ease of async and leave it to be executed on a Worker Thread.
  * Make sure you don't do some context related stuff in async, It may cause an memory leak
  */
-@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
-fun <T> async(param: T, runnable: T.() -> Unit) = object : AsyncTask<Void, Void, Void>() {
-    override fun doInBackground(vararg params: Void?): Void? {
-        runnable(param)
-        return null
+fun <T> async(param: T, runnable: T.() -> Unit) = GlobalScope.launch(Dispatchers.IO) { runnable(param) }
+
+/**
+ * Want to run some code on another thread?
+ *
+ * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
+ * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
+ */
+fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit) = GlobalScope.launch(Dispatchers.IO) {
+    asyncRunnable().let {
+        launch(Dispatchers.Main) { awaitRunnable(it) }
     }
-}.execute()!!
+}
 
 /**
  * Want to run some code on another thread?
@@ -54,49 +55,11 @@ fun <T> async(param: T, runnable: T.() -> Unit) = object : AsyncTask<Void, Void,
  * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
  * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
  */
-@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
-fun <T> asyncAwait(asyncRunnable: () -> T?, awaitRunnable: (result: T?) -> Unit) =
-    object : AsyncTask<Void, Void, T>() {
-        override fun doInBackground(vararg params: Void?): T? {
-            return try {
-                asyncRunnable()
-            } catch (e: Exception) {
-                e.printStackTrace()
-                null
-            }
-        }
-
-        override fun onPostExecute(result: T?) {
-            super.onPostExecute(result)
-            awaitRunnable(result)
-        }
-
-    }.execute()!!
-
-/**
- * Want to run some code on another thread?
- *
- * run it with the ease of asyncAwait [asyncRunnable] and leave it to be executed on a Worker Thread. [awaitRunnable] wil be invoked after the asyncRunnable with the result returned from [asyncRunnable]
- * Make sure you don't do some context related stuff in [asyncRunnable], It may cause an memory leak
- */
-@Deprecated("async Has Been Deprecated. Please Switch to Kotlin Coroutines Instead.")
-fun <T, P> asyncAwait(param: P, asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) =
-    object : AsyncTask<Void, Void, T>() {
-        override fun doInBackground(vararg params: Void?): T? {
-            return try {
-                asyncRunnable(param)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                null
-            }
-        }
-
-        override fun onPostExecute(result: T?) {
-            super.onPostExecute(result)
-            awaitRunnable(result)
-        }
-
-    }.execute()!!
+fun <T, P> asyncAwait(param: P, asyncRunnable: P.() -> T?, awaitRunnable: (result: T?) -> Unit) = GlobalScope.launch(Dispatchers.IO) {
+    asyncRunnable(param).let {
+        launch(Dispatchers.Main) { awaitRunnable(it) }
+    }
+}
 
 /**
  * try the code in [runnable], If it runs then its perfect if its not, It won't crash your app.
