@@ -20,10 +20,7 @@ import android.graphics.Point
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
-import android.view.Display
-import android.view.View
-import android.view.ViewTreeObserver
-import android.view.WindowManager
+import android.view.*
 import androidx.annotation.ColorInt
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentActivity
@@ -52,7 +49,7 @@ fun Activity.startActivityForResults(cls: Class<out Activity>, requestCode: Int,
  */
 fun Activity.getStatusBarHeight() =  Rect().run {
         window.decorView.getWindowVisibleDisplayFrame(this)
-        this.top
+        window.findViewById<View>(Window.ID_ANDROID_CONTENT).top - this.top
 }
 
 /**
