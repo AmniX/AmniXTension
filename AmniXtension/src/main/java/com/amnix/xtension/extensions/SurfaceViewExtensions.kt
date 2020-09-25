@@ -47,34 +47,29 @@ fun SurfaceView.setupCamera(
 ) {
     var camera: Camera?
     holder.addCallback(object : SurfaceHolder.Callback {
-        override fun surfaceChanged(p0: SurfaceHolder, p1: Int, p2: Int, p3: Int) {
+        override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
 
         }
 
-        override fun surfaceDestroyed(p0: SurfaceHolder) {
+        override fun surfaceDestroyed(holder: SurfaceHolder) {
 
         }
 
-        override fun surfaceCreated(p0: SurfaceHolder) {
-            holder?.let {
-                camera = CameraHelper.getCamera(
-                    context,
-                    front,
-                    preViewWidth,
-                    previewHeight,
-                    desireFps,
-                    autoFocus,
-                    autoFlash,
-                    it
-                )
-                camera?.let{
-                    onReady(AmniXCameraWrapper(it))
-                }
+        override fun surfaceCreated(holder: SurfaceHolder) {
+            camera = CameraHelper.getCamera(
+                context,
+                front,
+                preViewWidth,
+                previewHeight,
+                desireFps,
+                autoFocus,
+                autoFlash,
+                holder
+            )
+            camera?.let{
+                onReady(AmniXCameraWrapper(it))
             }
         }
-
-
-
     })
 }
 

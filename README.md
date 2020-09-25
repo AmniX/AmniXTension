@@ -15,6 +15,8 @@ A Kotlin extensions + Utils library with Bunch of Help inbuild.
 
 <div align="center">
 
+
+[ ![Build Status](https://app.bitrise.io/app/695e9ded2132c339/status.svg?token=cbdPWb4DWtdOX9ObshPkYg) ](https://app.bitrise.io/app/695e9ded2132c339)
 [ ![Download](https://api.bintray.com/packages/amnix/AmniXUtils/AmniXtension/images/download.svg) ](https://bintray.com/amnix/AmniXUtils/AmniXtension/_latestVersion)
 [![Dependencies](https://camo.githubusercontent.com/6266857d1c53194119edf1d9aafae7a4b301fa16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646570656e64656e636965732d7570253230746f253230646174652d627269676874677265656e2e737667)]()
 ![GitHub code size](https://img.shields.io/badge/Code%20size-44%20KB-blue.svg)
