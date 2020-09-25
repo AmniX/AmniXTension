@@ -14,14 +14,20 @@
 package com.amnix.xtension.extensions
 
 import android.Manifest
+import android.content.ContentValues
+import android.content.Context
 import android.graphics.*
 import android.graphics.Paint.ANTI_ALIAS_FLAG
+import android.os.Build
+import android.provider.MediaStore
 import android.util.Base64
 import androidx.annotation.ColorInt
+import androidx.annotation.RequiresApi
 import androidx.annotation.RequiresPermission
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
+import java.io.OutputStream
 
 /**
  * Returns Bitmap Width And Height Presented as a Pair of two Int where pair.first is width and pair.second is height
@@ -33,6 +39,7 @@ fun Bitmap.size(): Pair<Int, Int> = Pair(width, height)
  * Make Sure you have the permission to write the file to.
  */
 @RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+@Deprecated("Replace this with sibling function named save(ctx,file,...",level = DeprecationLevel.ERROR)
 fun Bitmap.save(
     to: String,
     format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
@@ -49,20 +56,57 @@ fun Bitmap.save(
     }
 
 /**
+ * Save Bitmap to the provided Path.
+ * Make Sure you have the permission to write the file to.
+ */
+@RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+fun Bitmap.save(
+    context: Context,
+    to: File,
+    format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
+    quality: Int = 100,
+    recycle: Boolean = true
+): Boolean? =
+    getOutputStream(context, to)?.use {
+        this.compress(format, quality, it)
+        it.flush()
+        it.close()
+        if (recycle)
+            recycle()
+        true
+    }
+
+/**
+ * Save Bitmap to the provided Path <b>Asynchronously</b> and private a callback when its done.
+ *
+ * Make Sure you have the permission to write the file to.
+ */
+@RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+@Deprecated("Replace this with sibling function named saveAsync(ctx,file,...",level = DeprecationLevel.ERROR)
+fun Bitmap.saveAsync(
+    to: String,
+    format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
+    quality: Int = 100,
+    recycle: Boolean = true,
+    onComplete: ((isSaved: String) -> Unit)? = null
+) = false
+
+/**
  * Save Bitmap to the provided Path <b>Asynchronously</b> and private a callback when its done.
  *
  * Make Sure you have the permission to write the file to.
  */
 @RequiresPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
 fun Bitmap.saveAsync(
-    to: String,
+    context: Context,
+    to: File,
     format: Bitmap.CompressFormat = Bitmap.CompressFormat.JPEG,
     quality: Int = 100,
     recycle: Boolean = true,
-    onComplete:((isSaved:String)->Unit)? = null
-) = asyncAwait( {
-    this.save(to, format, quality, recycle)
-},{
+    onComplete: ((saved: File?) -> Unit)? = null
+) = asyncAwait({
+    this.save(context, to, format, quality, recycle)
+}, {
     onComplete?.invoke(to)
 })
 
@@ -83,7 +127,13 @@ operator fun Bitmap.set(x: Int, y: Int, pixel: Int) = setPixel(x, y, pixel)
  * @return cropped #android.graphics.Bitmap
  */
 fun Bitmap.crop(r: Rect) =
-    if (Rect(0, 0, width, height).contains(r)) Bitmap.createBitmap(this, r.left, r.top, r.width(), r.height()) else null
+    if (Rect(0, 0, width, height).contains(r)) Bitmap.createBitmap(
+        this,
+        r.left,
+        r.top,
+        r.width(),
+        r.height()
+    ) else null
 
 /**
  * Converts Bitmap to Base64 Easily.
@@ -277,4 +327,18 @@ private fun calculateInSampleSize(
             inSampleSize = inSampleSize shl 1
     } while (true)
     return inSampleSize
+}
+
+private fun getOutputStream(mContext: Context, file: File): OutputStream? {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val resolver = mContext.contentResolver
+        val contentValues = ContentValues()
+        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, file.name);
+        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/${file.extension}");
+        contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, file.parent)
+        val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+        imageUri?.let { resolver.openOutputStream(it) }
+    } else {
+        FileOutputStream(file)
+    }
 }
