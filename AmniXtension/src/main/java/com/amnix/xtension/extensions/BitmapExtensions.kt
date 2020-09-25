@@ -28,6 +28,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
+import java.lang.RuntimeException
 
 /**
  * Returns Bitmap Width And Height Presented as a Pair of two Int where pair.first is width and pair.second is height
@@ -331,11 +332,19 @@ private fun calculateInSampleSize(
 
 private fun getOutputStream(mContext: Context, file: File): OutputStream? {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val picDir = if(file.absolutePath.contains("DCIM",false))
+            "DCIM"
+        else if(file.absolutePath.contains("Pictures",false))
+            "Pictures"
+        else
+            throw RuntimeException("allowed directories are [DCIM, Pictures] if Android >= 10")
         val resolver = mContext.contentResolver
         val contentValues = ContentValues()
         contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, file.name);
         contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/${file.extension}");
-        contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, file.parent)
+        contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, file.parent?.run {
+            substring(indexOf(picDir))
+        })
         val imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
         imageUri?.let { resolver.openOutputStream(it) }
     } else {
