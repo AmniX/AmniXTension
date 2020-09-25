@@ -333,7 +333,7 @@ fun Context.isAppInstalled(packageName: String) = guardRun {
  * Get them easily with the below method, Make Sure You have READ_EXTERNAL_STORAGE Permission
  */
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-fun Context.getAllImages(
+fun Context.getAllImagesFromStorage(
     sortBy: ContentColumns = ContentColumns.DATE_ADDED,
     order: ContentOrder = ContentOrder.DESCENDING
 ): List<String> {
@@ -365,7 +365,7 @@ fun Context.getAllImages(
  * Get them easily with the below method, Make Sure You have READ_EXTERNAL_STORAGE Permission
  */
 @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-fun Context.getAllVideos(
+fun Context.getAllVideosFromStorage(
     sortBy: ContentColumns = ContentColumns.DATE_ADDED,
     order: ContentOrder = ContentOrder.DESCENDING
 ): List<String> {
