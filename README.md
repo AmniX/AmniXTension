@@ -1,4 +1,5 @@
-# AmniXTension
+# AmniXTension [DEPRECATED]
+No Longer maintained. There are tons of ktx libraries prvided by google itself now which are more preferable over this.
 A Kotlin extensions + Utils library with Bunch of Help inbuild. 
 
 <div align="center">
